@@ -13,13 +13,16 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <header class="d-flex justify-content-center border-bottom align-items-center ">
+    
+    <div class="container justify-content-center">
+        
+        <header class="d-flex justify-content-center border-bottom align-items-center pt-2 pb-2 ">
             <a href="test.html" class="d-flex  mb-md-0 me-md-auto  text-dark text-decoration-none">
-                <img src="pic/logo.png" height="150">
-                <h1 class="display-5 fw-bold lh-1 mt-4">City School </br> Taunggyi</h1>
+                <img src="Logo/Logo.svg" height="120">
+                
+                <!-- <h1 class="display-5 fw-bold lh-1 mt-4">City School </br> Taunggyi</h1> -->
             </a>
+            
             <ul class="nav nav-pills ">
                 <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Programmes</a></li>
@@ -34,21 +37,63 @@
         </header>
     </div>
 
+    <style>
+        .button {
+          border-radius: 4px;
+          background-color: #f4511e;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 25px;
+          padding: 10px;
+          width: 200px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+        
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        
+        .button:hover span {
+          padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+        </style>
 
-    <div class="container-fluid vh-100 bg-silver">
-        <div class="text-md-center pt-5">
-            <h1 class="display-5 fw-bold">Welcome to City School Taunggyi</h1>
+    <div class="container-fluid vh-100" style="background-image: url(pic/index/wallpaper.jpg);">
+        <div class="text-md-center text-dark pt-5">
+            <h1 class="display-5 fw-bold align-items-center"></br></br></br>Welcome to your City School!</h1>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful
-                    JavaScript plugins.</p>
+                <p class="lead mb-4">At City School Taunggyi, every student is valued, respected and encourage. During IGCSE, students are guided by their teachers and Personal tutos to excel in their academic and social lives.
+                    During these crucial years of study, we help students to develop their independnce, initiative and social skills, which are essential in further academic studies and life.
+                </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                    <button type="button" class="button btn-lg px-4 gap-3"><span>Admission</span></button>             
                 </div>
+                
             </div>
         </div>
 
     </div>
+    
 
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -59,21 +104,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="pic/index/c1.webp" class="d-block min-vw-100 mw-100" alt="...">
+                <img src="pic/index/c3.png" class="d-block min-vw-100 mw-100" alt="...">
                 <div class="carousel-caption d-none d-md-block ">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="pic/index/c1.webp" class="d-block w-100" alt="...">
+                <img src="pic/index/c1.webp" class="d-block min-vw-100 mw-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="pic/index/c1.webp" class="d-block w-100" alt="...">
+                <img src="pic/index/c2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -95,12 +140,11 @@
                 <img src="pic/about/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful
-                    JavaScript plugins.</p>
+                <h1 class="display-5 fw-bold lh-1 mb-3">EdExcel IGCSE Programme</h1>
+                <p class="lead pt-3">International GCSE is a globally recognised qualification for international learners aged 14-16. It’s part of iProgress, our complete series of academic qualifications and resources for 5 to 19 year-olds, for international schools including iPrimary, iLowerSecondary, International GCSE (IG), GCSE, International Advanced level (IAL), GCE A level. It delivers a consistent learning journey, with world class support services, for students and teachers, everywhere in the world.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More!</button>
+                    
                 </div>
             </div>
         </div>
@@ -109,80 +153,41 @@
 
 
     <div class="container px-4 py-5 " id="custom-cards">
-        <h2 class="pb-2 border-bottom">Custom cards</h2>
+        <!-- <h2 class="pb-2 border-bottom">Custom cards</h2> -->
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5" style="background-color: #766e02">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill" />
-                </svg>
-                                <small>Earth</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#calendar3" />
-                </svg>
-                                <small>3d</small>
-                            </li>
-                        </ul>
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Highly Qualifed Teachers</h2>
+                        <p class="">All our teachers are subject specialists. They have passion in their respective fields</p>                      
                     </div>
                 </div>
             </div>
-
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg" style="background-color: #020451">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill" />
-                </svg>
-                                <small>Pakistan</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#calendar3" />
-                </svg>
-                                <small>4d</small>
-                            </li>
-                        </ul>
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Tailored Support</h2>
+                        <p class="">All our teachers are subject specialists. They have passion in their respective fields</p> 
                     </div>
                 </div>
             </div>
-
             <div class="col">
-                <div class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg" style="background-color: #4d0019">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill" />
-                </svg>
-                                <small>California</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#calendar3" />
-                </svg>
-                                <small>5d</small>
-                            </li>
-                        </ul>
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Small Classes</h2>
+                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This means plenty of one-to-one contact with your teacher..</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg" style="background-color: #888888">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Small Classes</h2>
+                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This means plenty of one-to-one contact with your teacher..</p>
+                        
                     </div>
                 </div>
             </div>
