@@ -7,111 +7,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="custom.css">
 
     <title>City School Education</title>
 </head>
 
 <body>
-    
+
     <div class="container justify-content-center">
-        
+
         <header class="d-flex justify-content-center border-bottom align-items-center pt-2 pb-2 ">
             <a href="test.html" class="d-flex  mb-md-0 me-md-auto  text-dark text-decoration-none">
-                <img src="Logo/Logo.svg" height="120">
-                
+                <img src="Logo/logo.jpg" height="120">
+
                 <!-- <h1 class="display-5 fw-bold lh-1 mt-4">City School </br> Taunggyi</h1> -->
             </a>
-            
-            <ul class="nav nav-pills ">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Programmes</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Admission</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
 
-                <div class="text-end">
-                    <a href="https://moodle.org/login/index.php" type="button" class="btn btn-warning ">Student Portal</a>
-                </div>
+            <ul class="nav nav-pills gap-2 ">
+                <li class="nav-item "><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark">Programmes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark">Admission</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link text-dark">About Us</a></li>
+
+
+
             </ul>
-
+            <a href="https://www.moodle.org/login/index.php"><button class="btn btn-warning px-4 me-md-2">
+                    <span>Student Portal</span>
+                </button>
+            </a>
         </header>
     </div>
 
-    <style>
-        .button {
-          border-radius: 4px;
-          background-color: #f4511e;
-          border: none;
-          color: #FFFFFF;
-          text-align: center;
-          font-size: 25px;
-          padding: 10px;
-          width: 200px;
-          transition: all 0.5s;
-          cursor: pointer;
-          margin: 5px;
-        }
-        
-        .button span {
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          transition: 0.5s;
-        }
-        
-        .button span:after {
-          content: '\00bb';
-          position: absolute;
-          opacity: 0;
-          top: 0;
-          right: -20px;
-          transition: 0.5s;
-        }
-        
-        .button:hover span {
-          padding-right: 25px;
-        }
-        
-        .button:hover span:after {
-          opacity: 1;
-          right: 0;
-        }
-        </style>
+
 
     <div class="container-fluid vh-100" style="background-image: url(pic/index/wallpaper.jpg);">
         <div class="text-md-center text-dark pt-5">
-            <h1 class="display-5 fw-bold align-items-center"></br></br></br>Welcome to your City School!</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">At City School Taunggyi, every student is valued, respected and encourage. During IGCSE, students are guided by their teachers and Personal tutos to excel in their academic and social lives.
-                    During these crucial years of study, we help students to develop their independnce, initiative and social skills, which are essential in further academic studies and life.
+            </br></br></br></br>
+            <div class="line">
+                <h1 class="lineUp display-5 fw-bold align-items-center">Welcome to your City School!</h1>
+            </div>
+
+            <div class="col-lg-6 mx-auto pt-2">
+                <p class="lead mb-4">At City School Taunggyi, every student is valued, respected and encourage. During
+                    IGCSE, students are guided by their teachers and Personal tutos to excel in their academic and
+                    social lives.
+                    During these crucial years of study, we help students to develop their independnce, initiative and
+                    social skills, which are essential in further academic studies and life.
                 </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="button btn-lg px-4 gap-3"><span>Admission</span></button>             
+                    <button type="button" class="button px-4"><span>Admission</span></button>
                 </div>
-                
+
             </div>
         </div>
 
     </div>
-    
 
+    <div class="container col-xxl-8 px-3 py-5 ">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="pic/index/pathways.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">EdExcel IGCSE Programme</h1>
+                <p class="lead pt-3">International GCSE is a globally recognised qualification for international
+                    learners aged 14-16. It delivers a consistent learning journey, with world class support services,
+                    for students and teachers,
+                    everywhere in the world.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="button btn-primary btn-lg px-4 me-md-2"><span>Learn
+                            More!</span></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="pic/index/c3.png" class="d-block min-vw-100 mw-100" alt="...">
+                <img src="pic/index/c5.jpeg" class="d-block h-75 min-vw-100 mw-100" alt="...">
                 <div class="carousel-caption d-none d-md-block ">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="pic/index/c1.webp" class="d-block min-vw-100 mw-100" alt="...">
+                <img src="pic/index/titration.jpeg" class="d-block min-vw-100 mw-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
@@ -125,30 +120,18 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="container col-xxl-8 px-3 py-5 ">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="pic/about/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">EdExcel IGCSE Programme</h1>
-                <p class="lead pt-3">International GCSE is a globally recognised qualification for international learners aged 14-16. It’s part of iProgress, our complete series of academic qualifications and resources for 5 to 19 year-olds, for international schools including iPrimary, iLowerSecondary, International GCSE (IG), GCSE, International Advanced level (IAL), GCE A level. It delivers a consistent learning journey, with world class support services, for students and teachers, everywhere in the world.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More!</button>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 
@@ -157,37 +140,45 @@
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5" style="background-color: #766e02">
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5"
+                    style="background-image : url(pic/index/suit.jpeg)">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Highly Qualifed Teachers</h2>
-                        <p class="">All our teachers are subject specialists. They have passion in their respective fields</p>                      
+                        <p class="">All our teachers are subject specialists. They have passion in their respective
+                            fields</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg" style="background-color: #020451">
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
+                    style="background-color: #020451">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Tailored Support</h2>
-                        <p class="">All our teachers are subject specialists. They have passion in their respective fields</p> 
+                        <p class="">All our teachers are subject specialists. They have passion in their respective
+                            fields</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg" style="background-color: #4d0019">
+                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg"
+                    style="background-color: #4d0019">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Small Classes</h2>
-                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This means plenty of one-to-one contact with your teacher..</p>
-                        
+                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This
+                            means plenty of one-to-one contact with your teacher..</p>
+
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg" style="background-color: #888888">
+                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg"
+                    style="background-color: #888888">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Small Classes</h2>
-                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This means plenty of one-to-one contact with your teacher..</p>
-                        
+                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This
+                            means plenty of one-to-one contact with your teacher..</p>
+
                     </div>
                 </div>
             </div>
@@ -195,11 +186,13 @@
     </div>
 
 
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5 ">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful
+                <h1 class="display-5 fw-bold lh-1 mb-3">After IGCSE</h1>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
+                    most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid
+                    system, extensive prebuilt components, and powerful
                     JavaScript plugins.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
@@ -207,7 +200,8 @@
                 </div>
             </div>
             <div class="col-10 col-sm-8 col-lg-6">
-                <img src="pic/about/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                <img src="pic/index/universities.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="900" height="700" loading="lazy">
             </div>
 
         </div>
@@ -260,33 +254,32 @@
             <!-- Grid row -->
             <div class="row mt-3">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold">Company name</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
+
                 <!-- Grid column -->
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold">Products</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p>
-                        <a href="#!" class="text-dark">MDBootstrap</a>
+                    <h6 class="text-uppercase fw-bold">City School Education Company Limited</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p><i class="fas fa-home mr-3"></i> 2/150, Padauk Street, Phayar Phyu Quarter </br>Taunggyi, Myanmar
                     </p>
-                    <p>
-                        <a href="#!" class="text-dark">MDWordPress</a>
+
+
+                </div>
+
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold">Address</h6>
+                    <hr class="mb-3 mt-2 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p><i class="fas fa-home mr-3"></i> 2/150, Padauk Street, Phayar Phyu Quarter </br>Taunggyi, Myanmar
                     </p>
-                    <p>
-                        <a href="#!" class="text-dark">BrandFlow</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-dark">Bootstrap Angular</a>
-                    </p>
+
+                    <p><i class="fas fa-envelope mr-3"></i> info@cityschoolmm.com</p>
+                    <p><i class="fas fa-phone mr-3"></i>cityschoolmm.com</p>
+
                 </div>
                 <!-- Grid column -->
 
@@ -294,31 +287,22 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold">Useful links</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
                     <p>
                         <a href="#!" class="text-dark">Your Account</a>
                     </p>
-                    <p>
-                        <a href="#!" class="text-dark">Become an Affiliate</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-dark">Shipping Rates</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-dark">Help</a>
-                    </p>
+
                 </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold">Address</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p><i class="fas fa-envelope mr-3"></i> info@cityschoolmm.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                    <h6 class="text-uppercase fw-bold">Title</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+
                 </div>
                 <!-- Grid column -->
             </div>
@@ -343,7 +327,9 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
