@@ -7,59 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 
-    <link rel="stylesheet" type="text/css" href="custom.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <title>City School Education</title>
+
+
+    <link rel="stylesheet" href="/assets/dist/css/custom.css">
+    <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
+
+
 </head>
 
 <body>
 
-    <div class="container justify-content-center">
+    <div class="container-fluid">
 
-        <header class="d-flex justify-content-center border-bottom align-items-center pt-2 pb-2 ">
-            <a href="test.html" class="d-flex  mb-md-0 me-md-auto  text-dark text-decoration-none">
-                <img src="Logo/logo.jpg" height="120">
+        <div class="container border-bottom">
 
-                <!-- <h1 class="display-5 fw-bold lh-1 mt-4">City School </br> Taunggyi</h1> -->
-            </a>
+            <nav class="navbar navbar-expand-lg navbar-light" aria-label=" Fourth navbar example">
 
-            <ul class="nav nav-pills gap-2 ">
-                <li class="nav-item "><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-dark">Programmes</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-dark">Admission</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link text-dark">About Us</a></li>
-
-
-
-            </ul>
-            <a href="https://www.moodle.org/login/index.php"><button class="btn btn-warning px-4 me-md-2">
-                    <span>Student Portal</span>
+                <a class="navbar-brand " href="#">
+                    <img src="/assets/brand/logo.jpg" height="100" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-            </a>
-        </header>
+
+                <div class="collapse navbar-collapse ml-auto p-2 justify-content-end " id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto gap-4 mb-2 mb-md-0  ">
+                        <li class="nav-item"> <a href="index.html" class="nav-link"> Home </a> </li>
+                        <li class="nav-item"> <a href="programme.html" class="nav-link"> Programmes </a>
+                        </li>
+                        <!-- <li class="nav-item"> <a href="404.html" class="nav-link"> Admission </a> </li> -->
+                        <li class="nav-item"> <a href="about.html" class="nav-link"> About Us</a> </li>
+                    </ul>
+
+                    <a class="justify-content-center pl-4" href="https://moodle.org/login/index.php">
+                        <s-button class="s-button btn btn-warning px-4 me-md-2">
+                            <span>Student Portal</span>
+                        </s-button>
+                    </a>
+                </div>
+
+        </div>
+        </nav>
+
     </div>
 
 
 
-    <div class="container-fluid vh-100" style="background-image: url(pic/index/wallpaper.jpg);">
-        <div class="text-md-center text-dark pt-5">
-            </br></br></br></br>
+    </div>
+
+
+    <!---------------------------------- New Block on Page ------------------------------------------------>
+
+    <div class="container-fluid d-block vh-100 min-vw-100 mw-100"
+        style="background-image: url(pic/index/wallpaper.jpg); padding-top: 150px;">
+        <div class="text-md-center pt-5">
+
             <div class="line">
-                <h1 class="lineUp display-5 fw-bold align-items-center">Welcome to your City School!</h1>
+                <h1 class="lineUp display-3 fw-bold text-center" style="color: rgb(0, 0, 0);">Welcome to your City
+                    School!</h1>
             </div>
 
-            <div class="col-lg-6 mx-auto pt-2">
+            <div class="col-lg-6 mx-auto pt-2 justify-content-sm-center ">
                 <p class="lead mb-4">At City School Taunggyi, every student is valued, respected and encourage. During
                     IGCSE, students are guided by their teachers and Personal tutos to excel in their academic and
                     social lives.
                     During these crucial years of study, we help students to develop their independnce, initiative and
                     social skills, which are essential in further academic studies and life.
                 </p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="button px-4"><span>Admission</span></button>
+                <div class="d-grid gap-2 d-sm-flex justify-content-center">
+                    <s-button type="button" class="button btn-warning btn-lg"><span>Admission</span></s-button>
                 </div>
 
             </div>
@@ -67,6 +92,7 @@
 
     </div>
 
+    <!---------------------------------- New Block on Page ------------------------------------------------>
     <div class="container col-xxl-8 px-3 py-5 ">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
@@ -74,19 +100,28 @@
                     width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">EdExcel IGCSE Programme</h1>
-                <p class="lead pt-3">International GCSE is a globally recognised qualification for international
+                <h1 class="display-5 fw-bold lh-1 mb-3" style="color: rgb(122, 0, 0);">EdExcel IGCSE Programme</h1>
+                <p class=" lead pt-3">International GCSE is a globally recognised qualification for international
                     learners aged 14-16. It delivers a consistent learning journey, with world class support services,
                     for students and teachers,
                     everywhere in the world.</p>
+
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="button btn-primary btn-lg px-4 me-md-2"><span>Learn
-                            More!</span></button>
+                    <a href="programme.html">
+                        <s-button type="button" href="programme.html" class="button btn-lg px-4 me-md-2"
+                            style="background-color: goldenrod;">
+                            <span>Learn More!</span>
+                        </s-button>
+
+
+                    </a>
 
                 </div>
             </div>
         </div>
     </div>
+
+    <!---------------------------------- New Block on Page ------------------------------------------------>
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -132,15 +167,14 @@
         </button>
     </div>
 
-
-
+    <!---------------------------------- New Block on Page ------------------------------------------------>
 
     <div class="container px-4 py-5 " id="custom-cards">
         <!-- <h2 class="pb-2 border-bottom">Custom cards</h2> -->
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5"
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
                     style="background-image : url(pic/index/suit.jpeg)">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Highly Qualifed Teachers</h2>
@@ -151,7 +185,7 @@
             </div>
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
-                    style="background-color: #020451">
+                    style="background-image: url(pic/index/student2.jpg); background-size: 560px;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Tailored Support</h2>
                         <p class="">All our teachers are subject specialists. They have passion in their respective
@@ -160,44 +194,49 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg"
-                    style="background-color: #4d0019">
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
+                    style="background-color: rgb(137, 143, 148); background-size: 400px;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Small Classes</h2>
-                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This
-                            means plenty of one-to-one contact with your teacher..</p>
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-white">Small Classes</h2>
+                        <p class="text-white">There will only be about 15 to 20 students per class on the IGCSE
+                            Programme.
+                            It means plenty of one-to-one interaction with your teacher.</p>
 
                     </div>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="card card-cover overflow-hidden text-white rounded-5 shadow-lg"
-                    style="background-color: #888888">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Small Classes</h2>
-                        <p>There are only 15 to 20 students per class on the Advanced Level Foundation programme.This
-                            means plenty of one-to-one contact with your teacher..</p>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
+    <!---------------------------------- New Block on Page ------------------------------------------------>
+
+
+    <div class="container-fluid p-5" style="padding: 200px; background-color: rgb(123, 0, 0);">
+        <h1 class=" display-5 fw-bold text-center" style="color: rgb(255, 193, 38)">IGCSE enables
+            progression to A-Level </br>
+            or to an Advanced Level Foundation "ALF"
+        </h1>
+    </div>
+
+
+    <!---------------------------------- New Block on Page ------------------------------------------------>
 
     <div class="container col-xxl-8 px-4 py-5 ">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">After IGCSE</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
-                    most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid
-                    system, extensive prebuilt components, and powerful
-                    JavaScript plugins.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-                </div>
+                <h1 class="display-5 fw-bold lh-1 mb-3">Pathways After IGCSE</h1>
+                <p class="lead">You will be on your path towards Advanced Level Foundation or A-Levels. Acumen
+                    International College awaits
+                    your arrival for higher Education. </p>
+                <a href="http://aic-college.com/">
+                    <s-button type="button" href="" class="button btn-lg px-4 me-md-2"
+                        style="background-color: goldenrod;">
+                        <span>Learn More!</span>
+                    </s-button>
+
+
+                </a>
             </div>
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="pic/index/universities.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
@@ -210,55 +249,47 @@
 </body>
 
 
-<!-- Remove the container if you want to extend the Footer to full width. -->
+<!---------------------------------- New Block on Page ------------------------------------------------>
 
 <!-- Footer -->
 <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
-    <!-- Section: Social media -->
+
     <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
-        <!-- Left -->
-        <div class="me-5">
+
+        <!-- <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+        </div> -->
+
+        </div>
+
+    </section>
+
+
+    <!-- <section class="d-flex justify-content-center align-items-center p-4 text-white"
+        style="background-color: goldenrod">
+        
+        <div class="me-5 align-items-center">
             <span>Get connected with us on social networks:</span>
         </div>
-        <!-- Left -->
 
-        <!-- Right -->
-        <div>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
+        <div class="gap-3">
+
+            <a href="https://www.facebook.com"><i class="bi bi-facebook"
+                    style="font-size: 2rem; color: rgb(6, 6, 6);"></i></a>
+            <a href="https://www.linkedin.com"><i class="bi bi-linkedin"
+                    style="font-size: 2rem; color: rgb(6, 6, 6);"></i></a>
+            <a href="#"><i class="bi bi-instagram" style="font-size: 2rem; color: rgb(6, 6, 6);"></i></a>
+
+
+        </div> -->
+
     </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
 
     <section class="">
         <div class="container-fluid text-center text-md-start">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
+            <div class="row mb-3">
 
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold">City School Education Company Limited</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto"
@@ -269,7 +300,7 @@
 
                 </div>
 
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold">Address</h6>
                     <hr class="mb-3 mt-2 d-inline-block mx-auto"
@@ -284,57 +315,28 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold">Useful links</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                        style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p>
-                        <a href="#!" class="text-dark">Your Account</a>
-                    </p>
 
-                </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold">Title</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                        style="width: 60px; background-color: #7c4dff; height: 2px" />
 
-                </div>
-                <!-- Grid column -->
+
             </div>
-            <!-- Grid row -->
+
         </div>
     </section>
-    <!-- Section: Links  -->
 
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2022 Copyright:
         <a class="text-dark" href="https://cityschoolmm.com/">City School Education</a>
     </div>
-    <!-- Copyright -->
+
+
 </footer>
-<!-- Footer -->
 
-<!-- End of .container -->
-
-
-
-<!-- Optional JavaScript; choose one of the two! -->
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 
 </html>
