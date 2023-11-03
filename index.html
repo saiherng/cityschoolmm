@@ -1,374 +1,299 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-    <title>City School Education</title>
-
-
-    <link rel="stylesheet" href="/assets/dist/css/custom.css">
-    <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sai Herng Portfolio</title>
+    <link rel="canonical" href="https://www.saiherng.tech/">
+    <meta property="og:url" content="https://www.saiherng.tech/">
+    <meta property="og:type" content="website">
+    <meta name="description" content="This is Sai Herng's Portfolio">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Sai Herng Portfolio",
+            "url": "https://www.saiherng.tech"
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=88704be0673e1c9dc722283df537b5ac">
+    <link rel="stylesheet" href="/assets/css/Source%20Sans%20Pro.css?h=9acd870904d847a20816fc6908b50e42">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Dark-Multi-Column-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
+    <link rel="stylesheet" href="/assets/css/Projects-Grid-images.css?h=18ba11f3df7c14ffe0532ec9bc3295eb">
+    <link rel="stylesheet" href="/assets/css/styles.css?h=96f6ed90f6c1f4c586795e5d59904484">
 </head>
 
 <body>
-
-    <div class="container-fluid">
-
-        <div class="container border-bottom">
-
-            <nav class="navbar navbar-expand-lg navbar-light" aria-label=" Fourth navbar example">
-
-                <a class="navbar-brand " href="index.html">
-                    <img src="/assets/brand/logo.jpg" height="100" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse ml-auto p-2 justify-content-end " id="navbarsExample04">
-                    <ul class="navbar-nav mr-auto gap-4 mb-2 mb-md-0  ">
-                        <li class="nav-item"> <a href="index.html" class="nav-link"> Home </a> </li>
-                        <li class="nav-item"> <a href="programme.html" class="nav-link"> Programmes </a>
-                        </li>
-
-                        <li class="nav-item"> <a href="about.html" class="nav-link"> About Us</a> </li>
-                    </ul>
-
-                    <a class="justify-content-center pl-4" href="https://moodle.org/login/index.php">
-                        <s-button class="s-button btn btn-warning px-4 me-md-2">
-                            <span>Student Portal</span>
-                        </s-button>
-                    </a>
+    <header class="flex-column flex-shrink-1 justify-content-between" id="header" style="background: #f4f4f4;">
+        <div class="container" data-aos="fade" data-aos-duration="450" style="background: #f4f4f4;">
+            <nav class="navbar navbar-expand-md py-md-4 py-xl-5 py-3 mb-5" style="font-size: 20px;">
+                <div class="container-fluid"><a class="navbar-brand" href="#">
+                        <h1 style="font-weight: bold;color: var(--bs-emphasis-color);">Portfolio</h1>
+                    </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-lg-end justify-content-xl-end" id="navcol" style="background: #f4f4f4;">
+                        <ul class="navbar-nav text-end" style="background: #f4f4f4;">
+                            <li class="nav-item"><a class="nav-link active text-uppercase" href="#">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase" href="#experiences">experiences</a></li>
+                            <li class="nav-item"><a class="btn btn-success btn-lg px-xl-4 mx-xxl-0 ms-xxl-4" role="button" style="border-radius: 30px;" href="#contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+                                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                        <path d="M447.1 0h-384c-35.25 0-64 28.75-64 63.1v287.1c0 35.25 28.75 63.1 64 63.1h96v83.98c0 9.836 11.02 15.55 19.12 9.7l124.9-93.68h144c35.25 0 64-28.75 64-63.1V63.1C511.1 28.75 483.2 0 447.1 0zM464 352c0 8.75-7.25 16-16 16h-160l-80 60v-60H64c-8.75 0-16-7.25-16-16V64c0-8.75 7.25-16 16-16h384c8.75 0 16 7.25 16 16V352z"></path>
+                                    </svg>&nbsp; Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-
+            </nav>
         </div>
-        </nav>
-
-    </div>
-
-
-
-    </div>
-
-
-    <!---------------------------------- New Block on Page ------------------------------------------------>
-
-    <div class="container-fluid d-block vh-100 " style="background-image: url(pic/index/wallpaper3.jpg);   background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-position: center; padding-top: 100px;">
-        <div class="text-md-center pt-5">
-
-            <div class="line">
-                <h1 class="lineUp display-2 fw-bold text-center" style="color: rgb(0, 0, 0);">Welcome to City
-                    School!</h1>
-            </div>
-
-            <div class="col-lg-6 mx-auto pt-2 justify-content-sm-center ">
-                <p class="lead text-dark mb-4">At City School Taunggyi, every student is valued, respected and
-                    encouraged. During
-                    IGCSE, students are guided by their Teachers and Personal tutors to excel in their academic and
-                    social lives.
-                    During these crucial years of study, we help students develop their independnce, initiative and
-                    social skills, which are essential in further academic studies and life.
-                </p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-center">
-                    <a href="/application.html">
-                        <s-button type="button" class="button btn-success btn-lg"><span>Apply</span>
-                        </s-button>
-                    </a>
-                    <a href="/payment.pdf">
-                        <s-button type="button" class="button btn-warning btn-lg"><span>Payment Info</span></s-button>
-                    </a>
+        <div class="container d-flex ps-xl-0" style="background: #f4f4f4;">
+            <div class="row gy-4 gy-md-0 d-flex d-xl-flex align-items-xl-center px-xl-0 mx-xl-4 my-xl-5 py-xl-0">
+                <div class="col-md-6 text-start px-xxl-0 mx-xl-0 px-xl-0">
+                    <div>
+                        <h1 class="display-3 text-uppercase fw-bold text-center text-sm-start text-md-start text-lg-start text-xl-start text-xxl-start" data-aos="fade-right" style="color: var(--bs-emphasis-color);"><span style="font-weight: normal !important;">Hello!&nbsp;</span><br><span style="font-weight: bold;">i am Sai Herng,</span></h1>
+                        <h2 class="text-center text-sm-start text-md-start text-lg-start text-xl-start text-xxl-start" data-aos="fade-right" data-aos-delay="50" style="color: var(--bs-form-valid-border-color);">a Software Engineer.</h2>
+                        <p class="lead my-3 py-xl-2" data-aos="fade-right" data-aos-duration="100" style="text-align: left;">Reliable and highly motivated software engineer seeking new learning opportunities. Leveraging skills from previous experience as a test engineer to become a full stack software developer. Passionate in solving problems, improving software quality and development process.</p>
+                    </div>
+                    <div class="d-flex d-md-flex justify-content-center justify-content-sm-start" data-aos="fade-up" data-aos-delay="150"><a class="btn btn-success btn-lg px-xl-4" role="button" style="border-radius: 15px;" href="saiherng_resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 18H17V16H7V18Z" fill="currentColor"></path>
+                                <path d="M17 14H7V12H17V14Z" fill="currentColor"></path>
+                                <path d="M7 10H11V8H7V10Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path>
+                            </svg>&nbsp;Resume</a><a class="btn btn-outline-dark btn-lg ms-xl-4 ms-lg-3 ms-3" role="button" style="border-radius: 15px;" href="#contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M447.1 0h-384c-35.25 0-64 28.75-64 63.1v287.1c0 35.25 28.75 63.1 64 63.1h96v83.98c0 9.836 11.02 15.55 19.12 9.7l124.9-93.68h144c35.25 0 64-28.75 64-63.1V63.1C511.1 28.75 483.2 0 447.1 0zM464 352c0 8.75-7.25 16-16 16h-160l-80 60v-60H64c-8.75 0-16-7.25-16-16V64c0-8.75 7.25-16 16-16h384c8.75 0 16 7.25 16 16V352z"></path>
+                            </svg>&nbsp;Contact Me</a></div>
                 </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!---------------------------------- New Block on Page ------------------------------------------------>
-    <div class="container col-xxl-8 px-3 py-5 ">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="pic/index/pathways.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
-                    width="700" height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3" style="color: rgb(122, 0, 0);">EdExcel IGCSE Programme</h1>
-                <p class=" lead pt-3">International GCSE is a globally recognised qualification for international
-                    learners aged 14-16. It delivers a consistent learning journey, with world class support services,
-                    for students and teachers,
-                    everywhere in the world.</p>
-
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a href="programme.html">
-                        <s-button type="button" href="programme.html" class="button btn-lg px-4 me-md-2"
-                            style="background-color: goldenrod;">
-                            <span>Learn More!</span>
-                        </s-button>
-
-
-                    </a>
-
+                <div class="col d-md-flex d-xl-flex justify-content-md-center align-items-md-center justify-content-xl-center px-xl-0" style="object-fit: cover;overflow: hidden;">
+                    <div><img class="rounded img-fluid" data-aos="fade" data-aos-duration="400" data-aos-delay="100" src="/assets/img/Untitled-1-1.webp?h=bf5c25f6a8a14f989ea4571878b0ada2" loading="lazy"></div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="arrow py-sm-3 py-2 py-xxl-0 pb-xxl-5" style="text-align: center;"><a href="#experiences" data-bs-target=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-down-square pb-xl-0 pt-xl-1 mt-xl-0 py-0 my-2 mb-lg-0 mb-xl-0" data-aos="fade" data-aos-duration="200" id="arrow" style="font-size: 40px;color: var(--bs-emphasis-color);">
+                    <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"></path>
+                </svg></a></div>
+    </header>
+    <section id="experiences" class="mt-0 pt-3">
+        <!-- Start: Features Large Icons -->
+        <div class="container py-4 py-xl-5">
+            <h1 class="display-3 fw-bold" data-aos="fade-up" data-aos-duration="450" style="text-align: center;">Experiences</h1>
+            <p class="lead fw-normal text-success w-lg-50" data-aos="fade-up" data-aos-duration="450" data-aos-delay="100" style="text-align: center;">Previous Professional Job Experiences</p>
+        </div><!-- End: Features Large Icons -->
+        <!-- Start: 1 Row 2 Columns -->
+        <div class="container px-4">
+            <div class="row g-0 justify-content-center">
+                <div class="col-md-10 col-lg-12 col-xl-9 col-xxl-9 ps-xl-5 ps-xxl-5 ms-xxl-5 mt-xl-3 py-xl-0 py-4" data-aos="fade-up" data-aos-duration="450" data-aos-delay="100">
+                    <h3 class="fw-semibold text-dark mb-xxl-3" style="font-weight: bold;">Software Test Engineer</h3>
+                    <div class="mb-xxl-0 pb-xxl-2">
+                        <div class="row d-flex flex-row flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row py-3 py-lg-0">
+                            <div class="col-2" style="width: 160px;">
+                                <h5 class="d-xxl-flex align-items-xxl-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-buildings" style="font-size: 20px;">
+                                        <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"></path>
+                                        <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"></path>
+                                    </svg>&nbsp;Sciplay Corp.</h5>
+                            </div>
+                            <div class="col-2 col-xxl-2" style="width: 170px;">
+                                <h5 class="d-xxl-flex justify-content-xxl-start align-items-xxl-center ps-xxl-0 ms-xxl-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 20px;">
 
-    <!---------------------------------- New Block on Page ------------------------------------------------>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.05025 4.05025C7.78392 1.31658 12.2161 1.31658 14.9497 4.05025C17.6834 6.78392 17.6834 11.2161 14.9497 13.9497L10 18.8995L5.05025 13.9497C2.31658 11.2161 2.31658 6.78392 5.05025 4.05025ZM10 11C11.1046 11 12 10.1046 12 9C12 7.89543 11.1046 7 10 7C8.89543 7 8 7.89543 8 9C8 10.1046 8.89543 11 10 11Z" fill="currentColor"></path>
+                                    </svg>&nbsp;Cedar Falls, IA</h5>
+                            </div>
+                            <div class="col-3 col-xxl-3" style="width: 233px;">
+                                <h5 class="d-xxl-flex align-items-xxl-center ms-xxl-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-calendar3" style="font-size: 20px;">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                                    </svg>&nbsp;Feb 2019 - Aug 2021</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="lead">▪ Slashed manual test time by 40% after integrating Selenium WebDriver for automating game assets.<br>▪ Developed REST API using Python to create tools that simulates A/B test environments.<br>▪ Expanded regression coverage by implementing bash scripts to facilitate smoke tests.<br>▪ Accelerated weekly Asset Release by 2 days after leading LiveOps testers in quality assurance process.</p>
+                </div>
+                <div class="col-xl-auto col-xxl-9 ps-xl-5 ps-xxl-5 ms-xxl-5 my-0 py-4" data-aos="fade-up" data-aos-duration="450" data-aos-delay="100">
+                    <h3 class="fw-semibold text-dark mb-xxl-3" style="font-weight: bold;">Student Researcher</h3>
+                    <div class="d-flex flex-column mb-xxl-0 pb-xxl-2">
+                        <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-3 d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row my-lg-2 py-3 py-lg-0">
+                            <div class="col-xl-4">
+                                <h5 class="d-xxl-flex align-items-xxl-center pe-xl-0 me-xl-0 pb-xl-0 mb-xl-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-buildings" style="font-size: 20px;">
+                                        <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"></path>
+                                        <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"></path>
+                                    </svg>&nbsp;University of Northern Iowa</h5>
+                            </div>
+                            <div class="col-2 ps-xl-0 pe-xl-0 pb-xl-0" style="width: 170px;">
+                                <h5 class="d-xxl-flex justify-content-xxl-start align-items-xxl-center ps-xxl-0 ms-xxl-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 20px;">
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="pic/index/titration.jpeg" class="d-block h-75 min-vw-100 mw-100" alt="...">
-                <div class="carousel-caption d-none d-md-block ">
-
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.05025 4.05025C7.78392 1.31658 12.2161 1.31658 14.9497 4.05025C17.6834 6.78392 17.6834 11.2161 14.9497 13.9497L10 18.8995L5.05025 13.9497C2.31658 11.2161 2.31658 6.78392 5.05025 4.05025ZM10 11C11.1046 11 12 10.1046 12 9C12 7.89543 11.1046 7 10 7C8.89543 7 8 7.89543 8 9C8 10.1046 8.89543 11 10 11Z" fill="currentColor"></path>
+                                    </svg>&nbsp;Cedar Falls, IA</h5>
+                            </div>
+                            <div class="col-3 col-xxl-3" style="width: 233px;">
+                                <h5 class="d-xxl-flex align-items-xxl-center ms-xxl-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-calendar3" style="font-size: 20px;">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                                    </svg>&nbsp;Aug 2018 - Dec 2018</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="lead">▪ Created shell scripts to analyze consistency, availability, and partition tolerance of distributed systems.<br>▪ Scaled datacenter by replicating Docker Nodes on Linux Server using VMware cluster machines.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="pic/index/c5.jpg" class="d-block min-vw-100 mw-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-
+        </div><!-- End: 1 Row 2 Columns -->
+        <div class="arrow" style="text-align: center;"><a href="#projects" data-bs-target="#project"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-down-square pb-xl-0 pt-xl-1 mt-xl-0 mb-xl-4 py-xxl-0 my-xxl-5" data-aos="fade" id="arrow-1" style="font-size: 40px;color: var(--bs-emphasis-color);">
+                    <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"></path>
+                </svg></a></div>
+    </section>
+    <section id="projects" class="pt-xl-5">
+        <!-- Start: Projects Grid -->
+        <div class="container py-4 py-xl-5 pt-xl-0 pt-5">
+            <div class="row mb-5" data-aos="fade-up" data-aos-duration="450">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h1 class="display-3 fw-bold">Projects</h1>
+                    <p class="lead fw-normal text-success w-lg-50 mb-0">These are my humble projects</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="pic/index/c3.png" class="d-block  min-vw-100 mw-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <!-- <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p> -->
+            <div class="row gx-5 gy-5 row-cols-3 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 text-start d-flex justify-content-start mt-0" data-aos="fade-up" data-aos-duration="450">
+                <div class="col-auto d-flex flex-column justify-content-between px-xl-3 mx-0 px-3 mt-0 pt-5">
+                    <div class="d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-center" style="overflow: hidden;"><img class="img-fluid d-xxl-flex d-block fit-cover" style="height: 250px;overflow: hidden;text-align: center;" src="/assets/img/logo1.jpg?h=dc3d80b9079854c6c38f17882b022252" width="356" height="200">
+                        <div class="py-4 px-3 px-md-0">
+                            <h3 class="fw-semibold text-start">CitySchool&nbsp;<span class="fw-lighter text-warning" style="font-size: 18px;">&nbsp; (Under Construction)</span></h3>
+                            <h4>Bootstrap, HTML/CSS</h4>
+                            <p class="lead" style="text-align: justify;font-size: 18px;">Designing a responsive website for CitySchool using JavaScript and Bootstrap CSS. Implementing a modern and minimalistic design approach for great user experience.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start justify-content-xxl-start pe-0 ms-0 ps-0"><a class="btn btn-dark btn-lg disabled ms-xl-0" role="button" style="border-radius: 15px;" href="https://github.com/saiherng/ecommerce" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>&nbsp;Github</a><a class="btn btn-success btn-lg ms-xl-2 ms-3" role="button" style="border-radius: 15px;background: var(--bs-green);" href="https://www.cityschoolmm.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-globe-central-south-asia">
+                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM4.882 1.731a.482.482 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.721.721 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a.996.996 0 0 0-.462-.04 7.03 7.03 0 0 1 2.45-2.027Zm-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.78.78 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.454.454 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282a.61.61 0 0 0 .04-.001 7.003 7.003 0 0 1-12.658.905Z"></path>
+                            </svg>&nbsp;View Live</a></div>
+                </div>
+                <div class="col-auto d-flex flex-column align-items-xxl-start px-xl-3 mx-0 px-3">
+                    <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 250px;" src="/assets/img/depositphotos_390446302-stock-illustration-couple-doctors-professionals-avatars-characters.jpg?h=525fb9960bd6ce09fe873c5cddf1acc8" height="250" width="340">
+                        <div class="py-4 px-3 px-md-0">
+                            <h3 class="fw-semibold text-start">Medical Referral System</h3>
+                            <h4>PHP, Bootstrap, MYSQL</h4>
+                            <p class="lead" style="text-align: justify;font-size: 18px;">Built a web application that assist doctors and healthcare providers to schedule meetups and acquire referrals. Implemented login system with secure password hash and user sessions.&nbsp;</p>
+                        </div><a class="btn btn-success btn-lg ms-xl-0 ms-0" role="button" style="border-radius: 15px;" href="https://github.com/saiherng/medicalreferral" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>&nbsp;Github</a>
+                    </div>
+                </div>
+                <div class="col-auto d-flex flex-column align-items-start align-items-xxl-start px-xl-3 mx-0 px-3">
+                    <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 250px;" src="/assets/img/Free-Eccomerce-Illustrations-Vector-16.png?h=6564ba2e4414454186678022c386c1c4" width="456" height="200">
+                        <div class="py-4 px-3 px-md-0">
+                            <h3 class="fw-semibold text-start d-xxl-flex justify-content-xxl-start">E-Commerce</h3>
+                            <h4>Python, Flask, SQLite</h4>
+                            <p class="lead" style="text-align: justify;font-size: 18px;">Built an e-commerce platform that helps vendors sell products online. Developed backend using Flask framework and SQLite. Secured API routes using JSON Web Tokens. Implemented frontend using Bootstrap.</p>
+                        </div>
+                    </div><a class="btn btn-success btn-lg ms-xl-0 ms-0" role="button" style="border-radius: 15px;" href="https://github.com/saiherng/ecommerce" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>&nbsp;Github</a>
+                </div>
+                <div class="col-auto text-start d-flex flex-column justify-content-between align-items-start align-items-xxl-start px-xl-3 mx-0 px-3">
+                    <div style="overflow: hidden;"><img class="img-fluid d-block w-100 fit-cover" style="height: 250px;overflow: hidden;" src="/assets/img/Machine-learning-def-.png?h=935eeddff68886fdac9f09e6819d78a3">
+                        <div class="py-4 px-3 px-md-0">
+                            <h3 class="fw-semibold text-start">Machine Learning Model</h3>
+                            <h4>Python</h4>
+                            <p class="lead" style="text-align: justify;font-size: 18px;">Built predictive models using various regression algorithms such as KNN and random forest. Preprocessed large datasets and conducted feature analysis to handle overfitting.&nbsp;</p>
+                        </div>
+                    </div><a class="btn btn-success btn-lg d-flex justify-content-center align-items-center justify-content-xxl-center ms-xl-0 ms-0" role="button" style="border-radius: 15px;" href="https://github.com/saiherng/machine-learning" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>&nbsp;Github</a>
+                </div>
+                <div class="col-auto d-flex flex-column align-items-start align-items-xl-start align-items-xxl-start px-xl-3 mx-0 px-3">
+                    <div style="overflow: visible;"><img class="img-fluid d-flex justify-content-start d-block w-100 fit-cover" style="height: 250px;" src="/assets/img/1_AwbXqUNmwtPi7afAqf150A.png?h=fea9d09f8afd44f7fda7b2b3ac993422">
+                        <div class="py-4 px-3 px-md-0">
+                            <h3 class="fw-semibold text-start">Compiler</h3>
+                            <h4>Python,&nbsp; TM Assembly Code</h4>
+                            <p class="lead" style="text-align: justify;font-size: 18px;">Built a compiler that translated FLAIRs programming language to machine code. Implemented parser, scanner and semantic analyzer to construct Abstract Syntax Tree as input for code generator.</p>
+                        </div>
+                    </div><a class="btn btn-success btn-lg ms-xl-0 ms-0" role="button" style="border-radius: 15px;" href="https://github.com/saiherng/FLAIR-Compilers"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>&nbsp;Github</a>
                 </div>
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <!---------------------------------- New Block on Page ------------------------------------------------>
-
-    <div class="container px-4 py-5 " id="custom-cards" style="background-image: url(/pic/index/exam.webp); background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: center;">
-        <!-- <h2 class="pb-2 border-bottom">Custom cards</h2> -->
-
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg" style="background-color:goldenrod;
-                    ">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Highly Qualifed Teachers</h2>
-                        <p class="">All our teachers are subject specialists. They have passion in their respective
-                            fields</p>
+            <div class="arrow py-xxl-5 my-lg-0 py-lg-0 py-3" style="text-align: center;"><a href="#contact" data-bs-target="#project"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-down-square pb-xl-0 pt-xl-1 mt-xl-0 mb-xl-4" data-aos="fade" id="arrow-2" style="font-size: 40px;color: var(--bs-emphasis-color);">
+                        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"></path>
+                    </svg></a></div>
+        </div><!-- End: Projects Grid -->
+    </section>
+    <section id="contact" class="position-relative py-xl-5 mb-0 py-0 mb-xl-0 pb-xl-0 pt-xl-5 pt-lg-5 mt-lg-0 pb-lg-0 mb-lg-0 pt-md-0 pt-sm-0 pt-3 pt-xxl-5" style="background: #ededed;min-height: 400px;">
+        <div class="container position-relative py-md-4" style="background: #ededed;border-radius: 20px;">
+            <div class="row mb-md-0 mt-0 pt-4 mb-3" data-aos="fade-up" data-aos-duration="450">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h1 class="display-3 fw-bold d-xl-flex justify-content-xl-center" style="text-align: center;">Contact Me</h1>
+                    <p class="lead fw-normal text-success w-lg-50" style="text-align: center;">If you are an employer, please do no hesitate to contact me.</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center pt-3">
+                <div class="col-md-6 col-lg-4 col-xl-5">
+                    <div class="d-flex flex-column justify-content-center align-items-start justify-content-xxl-center h-100" data-aos="fade-right" data-aos-duration="450" data-aos-delay="100">
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope" style="color: var(--bs-emphasis-color);">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                                </svg></div>
+                            <div class="px-2">
+                                <h6 class="fw-bold text-dark mb-0">Email</h6>
+                                <p class="lead fw-normal mb-0">saiherng@csu.fullerton.edu</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-linkedin" style="color: var(--bs-emphasis-color);">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
+                                </svg></div>
+                            <div class="px-2">
+                                <h6 class="fw-semibold mb-0">LinkedIn</h6>
+                                <p class="lead fw-normal mb-0">linkedin.com/in/saiherng14</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github" style="color: var(--bs-emphasis-color);">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                </svg></div>
+                            <div class="px-2">
+                                <h6 class="fw-semibold mb-0">GitHub</h6>
+                                <p class="lead fw-normal mb-0">github.com/saiherng</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-globe-americas" style="color: var(--bs-emphasis-color);">
+                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"></path>
+                                </svg></div>
+                            <div class="px-2">
+                                <h6 class="fw-semibold mb-0">Portfolio</h6>
+                                <p class="lead fw-normal mb-0">www.saiherng.tech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5 col-xl-4">
+                    <div>
+                        <form data-aos="fade" data-aos-duration="450" data-aos-delay="150" class="p-3 p-xl-4" data-bss-recipient="19bc99b860db9a822d70a49972594532">
+                            <!-- Start: Success Example -->
+                            <div class="mb-3"><input class="border rounded form-control form-control-lg" type="text" id="name-1" name="name" placeholder="Name" style="font-family: 'Source Sans Pro', sans-serif;" required="" autocomplete="off"></div><!-- End: Success Example -->
+                            <!-- Start: Error Example -->
+                            <div class="mb-3"><input class="border rounded form-control form-control-lg" type="email" id="email-1" name="email" placeholder="Email" required="" inputmode="email" autocomplete="off"></div><!-- End: Error Example -->
+                            <div class="mb-3"><textarea class="border rounded form-control form-control-lg" id="message-1" name="message" rows="6" placeholder="Message" required="" autocomplete="off" spellcheck="true"></textarea></div>
+                            <div><button class="btn btn-success btn-lg d-block w-100" type="submit" style="border-radius: 20px;">Send </button></div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
-                    style="background-color: rgb(244, 244, 244); background-size: 560px;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold" style="color:  rgb(122, 0, 0);">Tailored
-                            Support</h2>
-                        <p class="text-dark">You will have regular personal progress testing and skills analysis.
-                            Dedicated
-                            professional care and support teams are always available for help and advice.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
-                    style="background-color: rgb(0, 60, 109); background-size: 400px;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-white">Small Classes</h2>
-                        <p class="text-white">There will only be about 15 to 20 students per class on the IGCSE
-                            Programme.
-                            It means plenty of one-to-one interaction with your teacher.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg"
-                    style="background-color: rgb(137, 143, 148); background-size: 400px;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-white">Flexible Program Length</h2>
-                        <p class="text-white">We have different course durations available according to student needs
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-
-    <!---------------------------------- New Block on Page ------------------------------------------------>
-
-
-    <div class="container-fluid p-5" style="padding: 200px; background-color: rgb(123, 0, 0);">
-        <h1 class=" display-5 fw-bold text-center" style="color: rgb(255, 193, 38)">IGCSE enables
-            progression to A-Level </br>
-            or to University Foundation Programs.
-        </h1>
-    </div>
-
-
-    <!---------------------------------- New Block on Page ------------------------------------------------>
-
-    <div class="container col-xxl-8 px-4 py-5 ">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Pathways After IGCSE</h1>
-                <p class="lead">You will be on your path towards University Foundation Program or A-Levels. Acumen
-                    International College awaits
-                    your arrival for higher Education. </p>
-                <!-- <a href="http://aic-college.com/">
-                    <s-button type="button" href="" class="button btn-lg px-4 me-md-2"
-                        style="background-color: goldenrod;">
-                        <span>Learn More!</span>
-                    </s-button>
-
-
-                </a> -->
-            </div>
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="pic/index/universities.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
-                    width="900" height="700" loading="lazy">
-            </div>
-
-        </div>
-    </div>
-
+    </section><!-- Start: Footer Dark -->
+    <footer class="text-center bg-dark pb-xxl-0 mb-0 pb-4">
+        <div class="container text-white py-lg-5 py-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-light" href="#experiences" style="text-decoration: none;">Experiences</a></li>
+                <li class="list-inline-item me-4"><a class="link-light" href="#projects" style="text-decoration: none;">Projects</a></li>
+                <li class="list-inline-item"><a class="link-light" href="#contact" style="text-decoration: none;">Contact</a></li>
+            </ul>
+            <p class="text-light mb-0">Copyright © 2023 Sai Herng&nbsp; |&nbsp; Portfolio&nbsp;</p>
+        </div><a href="#header" data-bs-target="#project"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-up-square pb-xl-0 pt-xl-1 mt-xl-0 mb-xl-4" id="arrow-2" style="font-size: 40px;color: var(--bs-body-bg);">
+                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"></path>
+            </svg></a>
+    </footer><!-- End: Footer Dark -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/smart-forms.min.js?h=e020daad4628441515be04aa856e08f4"></script>
+    <script src="/assets/js/bs-init.js?h=d0c6de1d0ecd5065d55e7b94664b5b10"></script>
 </body>
-
-
-<!---------------------------------- New Block on Page ------------------------------------------------>
-
-<!-- Footer -->
-<footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
-
-    <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
-
-        <!-- <div class="me-5">
-            <span>Get connected with us on social networks:</span>
-        </div> -->
-
-        </div>
-
-    </section>
-
-
-    <!-- <section class="d-flex justify-content-center align-items-center p-4 text-white"
-        style="background-color: goldenrod">
-        
-        <div class="me-5 align-items-center">
-            <span>Get connected with us on social networks:</span>
-        </div>
-
-        <div class="gap-3">
-
-            <a href="https://www.facebook.com"><i class="bi bi-facebook"
-                    style="font-size: 2rem; color: rgb(6, 6, 6);"></i></a>
-            <a href="https://www.linkedin.com"><i class="bi bi-linkedin"
-                    style="font-size: 2rem; color: rgb(6, 6, 6);"></i></a>
-            <a href="#"><i class="bi bi-instagram" style="font-size: 2rem; color: rgb(6, 6, 6);"></i></a>
-
-
-        </div> -->
-
-    </section>
-
-    <section class="">
-        <div class="container-fluid text-center text-md-start">
-            <div class="row mb-3">
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-4">
-
-                    <h6 class="text-uppercase fw-bold">City School Education Company Limited</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                        style="width: 60px; background-color: #7c4dff; height: 2px" />
-
-
-
-                </div>
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold">Phone Number</h6>
-                    <hr class="mb-3 mt-2 d-inline-block mx-auto"
-                        style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p><i class="fas fa-home mr-3"></i> 09 786-365752 </p>
-                    <p><i class="fas fa-home mr-3"></i> 09 770-102880 </p>
-
-
-
-                </div>
-
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold">Address</h6>
-                    <hr class="mb-3 mt-2 d-inline-block mx-auto"
-                        style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p><i class="fas fa-home mr-3"></i> 2/150, Padauk Street, Phayar Phyu Quarter </br>Taunggyi, Myanmar
-                    </p>
-
-                    <p><i class="fas fa-envelope mr-3"></i> info@cityschoolmm.com</p>
-                    <p><i class="fas fa-phone mr-3"></i>cityschoolmm.com</p>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-
-
-            </div>
-
-        </div>
-    </section>
-
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2022 Copyright:
-        <a class="text-dark" href="https://cityschoolmm.com/">City School Education</a>
-    </div>
-
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-
 
 </html>
