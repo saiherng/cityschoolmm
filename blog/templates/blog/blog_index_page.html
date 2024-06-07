@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-blogindexpage{% endblock %}
 
@@ -11,21 +11,29 @@
         <h1>{{ page.title }}</h1>
         <div class="intro">{{ page.intro|richtext }}</div>
         
-        {% for post in page.get_children %}
+        <div class="d-flex gap-5">
+          {% for post in blogpages %}
             {% with post=post.specific %}
-            
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+              {% with post.main_image as main_image %}
+              {% if main_image %}
+              <div style="width: 100%;">
+                {% image main_image fill-200x100 %}
+              </div>
+              {% endif %}
+              {% endwith %}
                 <div class="card-body">
                   <h5 class="card-title">{{ post.title }}</h5>
                   <p class="card-text">{{ post.intro }}</p>
+                  <p class="card-text">{{ post.date }}</p>
                   <a href="{% pageurl post %}" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
             
-
             {% endwith %}
         {% endfor %}
+        </div>
+        
 
 
 
