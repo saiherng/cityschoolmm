@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags wagtailimages_tags %}
 
+
 {% block body_class %}template-homepage{% endblock %}
 
+
 {% block content %}
-  {{ page.body|richtext }}
+<section id="header">
+
+  {% include "includes/light_nav.html" %}
+  <div class="container">
+    
+    {{ page.body|richtext }}
+  </div>
+
+  </section>
 {% endblock content %}

@@ -1,13 +1,28 @@
 {% extends "base.html" %}
-
 {% load wagtailcore_tags wagtailimages_tags %}
+
 
 {% block body_class %}template-blogindexpage{% endblock %}
 
 {% block content %}
+    {% include "includes/dark_nav.html" %}
+
+    <section class="page-header">
+      <div class="page-header" style="background: linear-gradient(-90deg, rgba(101,101,101,0.8) 0%, rgba(255,255,255,0.17) 100%), url('/media/original_images/pexels-andrea-piacquadio-3768126.webp') center / cover no-repeat;">
+          <div class="container h-100">
+              <div class="row d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end h-100">
+                  <div class="col-md-6 text-md-start d-flex d-sm-flex align-items-center justify-content-sm-end align-items-sm-center">
+                      <div class="d-flex d-xl-flex flex-column align-items-end align-items-xl-end">
+                          <h1 class="display-3 text-uppercase fw-bold text-end">Blogs</h1>
+                          <p class="lead text-end my-3"> We value your feedback and inquiries. We&#39;re here to provide you with the support you need. </p><a class="btn btn-warning btn-lg text-end d-flex d-xl-flex" role="button" href="#contact-hero">Send Us a Message</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
     <div class="container">
-        
         <h1>{{ page.title }}</h1>
         <div class="intro">{{ page.intro|richtext }}</div>
         
