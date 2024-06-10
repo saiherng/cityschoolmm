@@ -178,7 +178,7 @@ input:hover {
 }
 
 .contact-card:hover {
-  background-color: var(--bs-secondary);
+  background-color: #e4ce08;
   transition: 0.2s ease-out;
   box-shadow: none;
 }
@@ -243,7 +243,7 @@ input:hover {
 }
 
 #contact-hero {
-  background: url("pexels-andrea-piacquadio-3768126.webp") left / cover no-repeat fixed, #e8e7e7;
+  background: url('/media/original_images/pexels-andrea-piacquadio-3768126.webp') left / cover no-repeat fixed, #e8e7e7;
 }
 
 form {
@@ -262,6 +262,10 @@ form {
 #footer svg:hover {
   font-size: 30px;
   color: #e4ce08;
+}
+
+a {
+  text-decoration: none;
 }
 
 #footer svg {
