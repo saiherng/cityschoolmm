@@ -17,38 +17,60 @@ class HomePage(Page):
         related_name="+",
         help_text="Homepage image",
     )
-    hero_text = models.CharField(
+    hero_heading = models.CharField(
         blank=True,
         max_length=255, help_text="Write an introduction for the site"
     )
-    hero_cta = models.CharField(
+
+    hero_subheading = models.CharField(
         blank=True,
-        verbose_name="Hero CTA",
+        max_length=255, help_text="Write sub heading for the site"
+    )
+    hero_cta1 = models.CharField(
+        blank=True,
+        verbose_name="Hero CTA 1",
         max_length=255,
         help_text="Text to display on Call to Action",
     )
-    hero_cta_link = models.ForeignKey(
+    hero_cta1_link = models.ForeignKey(
         "wagtailcore.Page",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
         related_name="+",
-        verbose_name="Hero CTA link",
+        verbose_name="Hero CTA link 1",
+        help_text="Choose a page to link to for the Call to Action",
+    )
+    hero_cta2 = models.CharField(
+        blank=True,
+        verbose_name="Hero CTA 2",
+        max_length=255,
+        help_text="Text to display on Call to Action",
+    )
+
+    hero_cta2_link = models.ForeignKey(
+        "wagtailcore.Page",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+",
+        verbose_name="Hero CTA link 2",
         help_text="Choose a page to link to for the Call to Action",
     )
 
-    body = RichTextField(blank=True)
 
     # modify your content_panels:
     content_panels = Page.content_panels + [
         MultiFieldPanel(
             [
                 FieldPanel("image"),
-                FieldPanel("hero_text"),
-                FieldPanel("hero_cta"),
-                FieldPanel("hero_cta_link"),
+                FieldPanel("hero_heading"),
+                FieldPanel("hero_subheading"),
+                FieldPanel("hero_cta1"),
+                FieldPanel("hero_cta1_link"),
+                FieldPanel("hero_cta2"),
+                FieldPanel("hero_cta2_link"),
             ],
             heading="Hero section",
-        ),
-        FieldPanel('body'),
+        )
     ]
