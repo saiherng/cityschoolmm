@@ -73,9 +73,9 @@ class HomePage(Page):
                 FieldPanel("hero_cta2"),
                 FieldPanel("hero_cta2_link"),
             ],
-            heading="Hero section",
+            heading="Main Header Section",
         ),
-        InlinePanel('gallery_images', label="Gallery University and Agencies Logo")
+        InlinePanel('gallery_images', label="Logo Gallery of University and Agencies")
         
     ]
 
