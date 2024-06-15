@@ -266,8 +266,16 @@
 <section id="brands" class="py-5 pt-sm-5" style="background: #ffffff;">
     <div class="container text-center">
         <p data-aos="fade-up" data-aos-duration="550" class="my-4" style="font-weight: bold;font-family: Abel, sans-serif;line-height: 62px;font-size: 3.0rem;color: var(--bs-primary-text-emphasis);">We also collaborate with 100+ Leading<br>Universities and Agency</p>
-        <div class="d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"><a data-aos="slide-up" data-aos-duration="1000" data-aos-delay="150" href="#"> <img class="img-fluid m-3 py-0 my-0 mx-0 px-md-0 mx-md-4" data-aos="flip-left" data-aos-duration="600" src="media/original_images/brands/logo.webp" width="200px" height="200px"></a><a data-aos="slide-up" data-aos-duration="1000" data-aos-delay="150" href="#"> <img class="img-fluid m-3 py-0 my-0 mx-0 px-md-0 mx-md-4" data-aos="flip-left" data-aos-duration="600" data-aos-delay="200" src="media/original_images/brands/ibe.jpg" width="200px" height="200px"></a><a data-aos="slide-up" data-aos-duration="1000" data-aos-delay="150" href="#"> <img class="img-fluid m-3 py-0 my-0 mx-0 px-md-0 mx-md-4" data-aos="flip-left" data-aos-duration="600" data-aos-delay="400" src="media/original_images/brands/logo.png" width="200px" height="200px" style="height: 100px;object-fit: contain;border-radius: 20px;"></a></div>
-    </div>
+        
+        <div class="d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
+            
+            {% for logo in page.gallery_images.all %}
+                <a class=""data-aos="slide-up" data-aos-duration="1000" data-aos-delay="150" href="#"> 
+                <img class="img-fluid m-3 py-0 my-0 mx-0 px-md-0 mx-md-4" data-aos="flip-left" data-aos-duration="600" src="{{ logo.image.file.url }}" width="200px" height="200px"></a>
+            
+            {% endfor %}
+            
+         </div>
     <div class="container py-4 py-xl-5">
         <div class="row gx-5 gy-5 gy-md-0 mt-xxl-0 pt-xxl-5 mt-0 pt-0">
             <div class="col-auto col-sm-auto col-md-12 col-lg-6 col-xl-6 col-xxl-6"><img class="img-fluid" src="media/original_images/649290101371d99bc99d79aa_home-about-two.png" style="border-radius: 25px;width: 100%;height: 100%;object-fit: cover;"></div>
