@@ -8,7 +8,9 @@ from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
 class ContactsIndexPage(Page):
     
+    school_name = models.CharField(max_length=250, blank=False)
     phone_number = models.CharField(max_length=250)
+    image = models.ImageField()
     address = models.TextField(help_text="Address Field", blank=True)
     email = models.EmailField(max_length= 250)
     page_url = models.URLField(help_text="Social Media Page URL")
