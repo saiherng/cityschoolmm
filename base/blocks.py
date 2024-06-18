@@ -8,6 +8,24 @@ from wagtail.blocks import (
 )
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
+from wagtail import blocks
+
+
+class LocationDetailsBlock(StructBlock):
+    """Information of School"""
+
+    school_name = blocks.CharBlock(required=True, help_text="Name of School")
+    image= ImageChooserBlock(required=True, help_text="Campus Image")
+    phone_number = blocks.CharBlock(required=False, help_text="Input Phone Number")
+    email = blocks.EmailBlock(required=False, help_text="Input School Email")
+    location = blocks.TextBlock(required=True, help_text="Address of School")
+    social_media_url = blocks.URLBlock(required=False, help="Social Media URL")
+
+    class Meta:
+        template = "blocks/location_details_block.html"
+        icon= "placeholder"
+        label = "Add New School Location Details"
+
 
 
 class ImageBlock(StructBlock):

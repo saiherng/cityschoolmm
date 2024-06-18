@@ -6,6 +6,7 @@ from wagtail.fields import RichTextField
 # import MultiFieldPanel:
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
+from base import blocks
 
 class HomePage(Page):
     # add the Hero section of HomePage:
