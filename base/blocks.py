@@ -14,12 +14,18 @@ from wagtail import blocks
 class LocationDetailsBlock(StructBlock):
     """Information of School"""
 
-    school_name = blocks.CharBlock(required=True, help_text="Name of School")
+    school_branch = blocks.CharBlock(required=True, help_text="CitySchool Branch ex: 'Yangon', 'Taunggyi'")
     image= ImageChooserBlock(required=True, help_text="Campus Image")
+    image_caption = blocks.CharBlock(required=False, help_text="Campus Image Caption")
     phone_number = blocks.CharBlock(required=False, help_text="Input Phone Number")
     email = blocks.EmailBlock(required=False, help_text="Input School Email")
     location = blocks.TextBlock(required=True, help_text="Address of School")
     social_media_url = blocks.URLBlock(required=False, help="Social Media URL")
+    background = blocks.ChoiceBlock( choices=[
+        ('#ffffff','Light'),
+        ('#10335b', 'Dark')
+    ], required=True, help="Select background theme"
+    )
 
     class Meta:
         template = "blocks/location_details_block.html"

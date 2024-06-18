@@ -1,18 +1,18 @@
 {% load wagtailimages_tags %}
 
 
-    <section class="position-relative py-4 py-xl-5 contact-info pb-xl-5" style="height: auto;">
+    <section class="position-relative py-4 py-xl-5 contact-info pb-xl-5" style="height: auto; background: {{ self.background }};">
         <div class="container position-relative">
             <div class="row" style="margin-bottom: 35px;padding-top: 30px;padding-bottom: 0px;">
                 <div class="col d-flex d-lg-flex d-xxl-flex justify-content-center align-items-center justify-content-lg-start justify-content-xxl-start align-items-xxl-center pt-xl-0 pt-2" style="padding-top: 40px;">
-                    <h1 class="text-uppercase d-xxl-flex justify-content-center justify-content-md-center justify-content-xl-start justify-content-xxl-center px-xl-4 my-xl-2 py-xl-2 py-2 px-3 name-banner">City<span class="text-secondary" style="--bs-secondary: #ffda00;--bs-secondary-rgb: 255,218,0;">School</span>&nbsp;|&nbsp;<strong>Yangon</strong></h1>
+                    <h1 class="text-uppercase d-xxl-flex justify-content-center justify-content-md-center justify-content-xl-start justify-content-xxl-center px-xl-4 my-xl-2 py-xl-2 py-2 px-3 name-banner">City<span class="text-secondary" style="--bs-secondary: #ffda00;--bs-secondary-rgb: 255,218,0;">School</span>&nbsp;|&nbsp;<strong>{{ self.school_branch }}</strong></h1>
                 </div>
             </div>
             <div class="row d-flex" style="padding-top: 0px;">
                 <div class="col py-xl-1">
                     <div class="card contact-card-img" style="border-radius: 20px;overflow: hidden;"><img class="card-img w-100 d-block" src=" {{ self.image.file.url }}" width="734" height="513" style="object-fit: cover;height: 400px;">
                         <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
-                            <h4 class="d-xl-flex align-items-xl-end px-xl-0 px-3 py-lg-2 mx-lg-0 py-1 contact-heading">Times City , Jewelry Mall</h4>
+                            <h4 class="d-xl-flex align-items-xl-end px-3 py-2 contact-heading">{{ self.image_caption }}</h4>
                         </div>
                     </div>
                 </div>
@@ -43,16 +43,16 @@
                                 </svg></div>
                             <div class="px-2">
                                 <h6 class="mb-0">Location</h6>
-                                <p class="mb-0">{{ self.location}}&nbsp;&nbsp;</p>
+                                <p class="mb-0">{{ self.location }}&nbsp;&nbsp;</p>
                             </div>
-                        </div><a  style="text-decoration: none;" href="{{ school.social_medial_url }}">
+                        </div><a  style="text-decoration: none;" href="{{ self.social_media_url }}" target="_blank" rel="noopener noreferrer ">
                             <div class="d-flex align-items-center align-content-center p-3 contact-card mb-3">
                                 <div class="bs-icon-md bs-icon-rounded d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
                                         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
                                     </svg></div>
                                 <div class="px-2">
                                     <h6 class="mb-0">Facebook</h6>
-                                    <p class="mb-0">{{ self.school_name }}</p>
+                                    <p class="mb-0">CitySchool {{ self.school_branch }}</p>
                                 </div>
                             </div>
                         </a>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col"><iframe class="border rounded map" allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCMDQO7BD8TcoPk9q3JW_7NrzGf4sldh-o&amp;q=City+School+Yangon&amp;zoom=16" data-aos="fade-up" data-aos-duration="950" width="100%" height="100%"></iframe></div>
+                <div class="col"><iframe class="border rounded map" allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCMDQO7BD8TcoPk9q3JW_7NrzGf4sldh-o&amp;q=City+School+{{ self.school_branch }}&amp;zoom=16" data-aos="fade-up" data-aos-duration="950" width="100%" height="100%"></iframe></div>
             </div>
         </div>
     </section>
