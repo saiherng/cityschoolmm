@@ -6,6 +6,7 @@ from wagtail.fields import RichTextField
 # import MultiFieldPanel:
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
+from wagtail.fields import StreamField
 from base import blocks
 
 class HomePage(Page):
@@ -59,8 +60,13 @@ class HomePage(Page):
         help_text="Choose a page to link to for the Call to Action",
     )
 
-
-
+    faqs = StreamField(
+        [
+            ("faqs", blocks.FaqsBlock(help_text="Input Frequently Asked Questions"))
+         ],
+        null=True,
+        blank=True
+    )
 
     # modify your content_panels:
     content_panels = Page.content_panels + [
@@ -76,8 +82,8 @@ class HomePage(Page):
             ],
             heading="Main Header Section",
         ),
-        InlinePanel('gallery_images', label="Logo Gallery of University and Agencies")
-        
+        InlinePanel('gallery_images', label="Logo Gallery of University and Agencies"),
+        FieldPanel('faqs')
     ]
 
 class HomePageLogoGallery(Orderable):
@@ -93,3 +99,4 @@ class HomePageLogoGallery(Orderable):
         FieldPanel('image'),
         FieldPanel('caption'),
     ]
+

@@ -11,6 +11,27 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail import blocks
 
 
+class FaqsBlock(StructBlock):
+    """ AccordionBlock"""
+
+    title = blocks.CharBlock(required=True, help_text="FAQ Section Title")
+    subtitle = blocks.TextBlock(required=False, help_text="FAQ Section Subtitle")
+
+    faqs = blocks.ListBlock(
+        blocks.StructBlock(
+            [
+                ('question', TextBlock(required=True, help_text="Input Question")),
+                ('answer', TextBlock(required=True, help_text="Input Question"))
+            ]
+        )
+    )
+   
+
+    class Meta:
+        template = "blocks/faqs_block.html"
+        icon= "placeholder"
+        label = "Add FAQ "
+
 class LocationDetailsBlock(StructBlock):
     """Information of School"""
 
@@ -31,7 +52,6 @@ class LocationDetailsBlock(StructBlock):
         template = "blocks/location_details_block.html"
         icon= "placeholder"
         label = "Add New School Location Details"
-
 
 
 class ImageBlock(StructBlock):

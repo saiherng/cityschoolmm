@@ -18,7 +18,6 @@ class ContactsIndexPage(Page):
     school_locations = StreamField(
 
         [   
-            ('paragraph', blocks.RichTextBlock()),
             ("locations", blocks.LocationDetailsBlock())
          
         ],

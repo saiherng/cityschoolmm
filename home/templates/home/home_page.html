@@ -372,46 +372,11 @@
         </div>
     </div>
 </section>
-<section id="faq" class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-duration="950">
-                    <div class="col-12 col-lg-8 col-xl-7 text-center mb-4">
-                        <h1 class="display-2 fw-bolder mt-2 mb-3" style="font-weight: bold;">Frequently Asked Questions</h1>
-                        <p class="lead fs-4 text-dark">These are a few questions that we receive from our students and parents. We hope it helps what you need to know. If not, please do not hesitate to contact us.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion" role="tablist" id="accordion-1">
-            <div class="accordion-item">
-                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">Question 1</button></h2>
-                <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
-                    <div class="accordion-body">
-                        <p class="mb-0" style="color: var(--bs-primary-text-emphasis);">Answer 1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">Question 2</button></h2>
-                <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
-                    <div class="accordion-body">
-                        <p class="mb-0" style="color: var(--bs-primary-text-emphasis);">Answer 2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="true" aria-controls="accordion-1 .item-3">Question 3</button></h2>
-                <div class="accordion-collapse collapse show item-3" role="tabpanel" data-bs-parent="#accordion-1">
-                    <div class="accordion-body">
-                        <p class="mb-0" style="color: var(--bs-primary-text-emphasis);">Answer 3</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    
+    {% for block in page.faqs %}
+        {% include_block block %}
+    {% endfor %}
+
 <section class="py-4 py-xl-5">
     <div class="container">
         <div class="shadow-lg d-flex d-xxl-flex flex-column justify-content-center align-items-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" style="background: url('media/original_images/pexels-ketut-subiyanto-4126705.webp') center / cover, rgba(232,232,232,0.74);height: 400px;border-radius: 30px;">
