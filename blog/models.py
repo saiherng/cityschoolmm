@@ -33,6 +33,16 @@ class BlogPage(Page):
         BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
     )
 
+    signup_button = models.ForeignKey(
+        "wagtailcore.Page",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+",
+        verbose_name="Signup Button",
+        help_text="Choose a page to link to for the Call to Action",
+    )
+
     authors = ParentalManyToManyField('blog.Author', blank=True)
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
@@ -58,6 +68,7 @@ class BlogPage(Page):
         ], heading="Blog information"),
         FieldPanel('intro'),
         FieldPanel('body'),
+        FieldPanel('signup_button'),
         InlinePanel('gallery_images', label="Gallery images"),
     ]
 
