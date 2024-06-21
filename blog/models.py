@@ -6,13 +6,15 @@ from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
 from wagtail.models import Page, Orderable
-from wagtail.fields import RichTextField
+from wagtail.fields import RichTextField, StreamField
 
 from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
 
 from wagtail.search import index
 from wagtail.snippets.models import register_snippet
 
+from base import blocks
+from base.blocks import BaseStreamBlock
 
 
 # keep the definition of BlogIndexPage model, and add the BlogPage model:
@@ -27,7 +29,9 @@ class BlogPageTag(TaggedItemBase):
 class BlogPage(Page):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
-    body = RichTextField(blank=True)
+    body = StreamField(
+        BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
+    )
 
     authors = ParentalManyToManyField('blog.Author', blank=True)
 

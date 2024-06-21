@@ -5,7 +5,7 @@ from wagtail.fields import RichTextField, StreamField
 
 # import MultiFieldPanel:
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
-from wagtail.fields import StreamField
+
 
 
 from base import blocks
