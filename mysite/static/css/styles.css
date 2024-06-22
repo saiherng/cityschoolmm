@@ -190,25 +190,34 @@
   /*background: linear-gradient(71deg, rgba(0,2,46,0.4) 0%, rgba(0,19,65,0.04) 100%), url("DSC07289.webp") center / cover no-repeat, rgb(255,255,255);*/
 }
 
-.btn {
+.button {
   font-weight: bolder;
-  border-style: solid;
+  border-style: none;
   color: #ffffff;
   padding-right: 44px;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 44px;
   border-radius: 20px;
+  background-color: #161d46;
+  text-decoration: none;
 }
 
-.btn:hover svg {
+
+  
+
+
+.button:hover svg {
   color: black;
 }
 
-.btn:hover {
+
+
+.button:hover {
   background-color: #f4c007;
   transition: 0.5s;
   color: black;
+  text-decoration: none;
 }
 
 #about-us h2 {
@@ -258,9 +267,6 @@
     transition: transform 1s;
     height: 250px;
   }
-}
-
-#about-us {
 }
 
 #about-us .feature-card {

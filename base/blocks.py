@@ -68,7 +68,6 @@ class ImageBlock(StructBlock):
         icon = "image"
         template = "blocks/image_block.html"
 
-
 class HeadingBlock(StructBlock):
     """
     Custom `StructBlock` that allows the user to select h2 - h4 sizes for headers
@@ -90,7 +89,6 @@ class HeadingBlock(StructBlock):
         icon = "title"
         template = "blocks/heading_block.html"
 
-
 class BlockQuote(StructBlock):
     """
     Custom `StructBlock` that allows the user to attribute a quote to the author
@@ -103,6 +101,19 @@ class BlockQuote(StructBlock):
         icon = "openquote"
         template = "blocks/blockquote.html"
 
+class ButtonBlock(StructBlock):
+
+    """
+    Custom button block that allows users to add a link to another page.
+    """
+    
+    title = blocks.CharBlock(required=True, help_text="Button Title")
+    
+    button_url = blocks.PageChooserBlock(required=True, help="Choose Link To Internal Page")
+
+    class Meta:
+        icon = "edit"
+        template = "blocks/button_block.html"
 
 # StreamBlocks
 class BaseStreamBlock(StreamBlock):
@@ -116,8 +127,9 @@ class BaseStreamBlock(StreamBlock):
     )
     image_block = ImageBlock()
     block_quote = BlockQuote()
-    embed_block = EmbedBlock(
+    embed_block = EmbedBlock(max_width=800, max_height=400,
         help_text="Insert an embed URL e.g https://www.youtube.com/watch?v=SGJFWirQ3ks",
         icon="media",
         template="blocks/embed_block.html",
     )
+    button_block = ButtonBlock()
