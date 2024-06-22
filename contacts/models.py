@@ -13,7 +13,8 @@ from base import blocks
 class ContactsIndexPage(Page):
     
     header_title = models.CharField(max_length=100, null=True, blank=True)
-    subtitle = models.CharField(max_length=100, null=True, blank=True)
+    header_subtitle = models.CharField(max_length=100, null=True, blank=True)
+
 
     school_locations = StreamField(
 
@@ -27,7 +28,7 @@ class ContactsIndexPage(Page):
     content_panels = Page.content_panels + [
 
         FieldPanel("header_title"),
-        FieldPanel("subtitle"),
+        FieldPanel("header_subtitle"),
         FieldPanel("school_locations")
 
     ]

@@ -42,6 +42,7 @@ class LocationDetailsBlock(StructBlock):
     email = blocks.EmailBlock(required=False, help_text="Input School Email")
     location = blocks.TextBlock(required=True, help_text="Address of School")
     social_media_url = blocks.URLBlock(required=False, help="Social Media URL")
+    
     background = blocks.ChoiceBlock( choices=[
         ('#ffffff','Light'),
         ('#10335b', 'Dark')

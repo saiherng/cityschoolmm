@@ -86,6 +86,8 @@ class BlogPageGalleryImage(Orderable):
 
 class BlogTagIndexPage(Page):
 
+    
+
     def get_context(self, request):
 
         # Filter by tag
@@ -119,11 +121,26 @@ class Author(models.Model):
 
 
 class BlogIndexPage(Page):
-    intro = RichTextField(blank=True)
+
+    header_title = models.CharField(max_length=100, null=True, blank=True)
+    header_subtitle = models.CharField(max_length=100, null=True, blank=True)
+    header_image = models.ImageField(null=True,blank=True)
+
+    
     # add the get_context method:
+
+
+    content_panels = Page.content_panels + [
+        FieldPanel('header_title'),
+        FieldPanel('header_subtitle'),
+        FieldPanel('header_image')
+    ]
+
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
         blogpages = self.get_children().live().order_by('-first_published_at')
         context['blogpages'] = blogpages
         return context
+    
+    
