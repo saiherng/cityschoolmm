@@ -47,6 +47,7 @@ class BlogPage(Page):
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
+
     def main_image(self):
         gallery_item = self.gallery_images.first()
         if gallery_item:
