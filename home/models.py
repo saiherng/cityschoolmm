@@ -9,6 +9,10 @@ from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.fields import StreamField
 from base import blocks
 
+
+from blog.models import BlogPage
+
+
 class HomePage(Page):
     # add the Hero section of HomePage:
     image = models.ForeignKey(
@@ -68,6 +72,16 @@ class HomePage(Page):
         blank=True
     )
 
+    def get_context(self, request):
+        # Update context to include only published blog pages, ordered by reverse-chron
+        context = super().get_context(request)
+        context['blog_pages'] = BlogPage.objects.live().order_by('-date')[:3]
+        return context
+    
+    
+
+
+
     # modify your content_panels:
     content_panels = Page.content_panels + [
         MultiFieldPanel(
@@ -89,7 +103,6 @@ class HomePage(Page):
 class HomePageLogoGallery(Orderable):
 
     page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='gallery_images')
-
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )

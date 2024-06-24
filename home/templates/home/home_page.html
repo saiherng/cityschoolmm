@@ -316,61 +316,38 @@
         </div>
     </section>
 </div>
-<section style="/*background: #eeeeee;*/min-height: 100vh;">
+
+<section style="/*background: #eeeeee;*/ min-height: 100vh;">
     <div class="container py-4 py-xl-5">
-        <div class="row py-0 mb-0 pb-md-0 mb-md-4 mb-xxl-5 mb-xl-5 mb-lg-5" style="margin-top: 25px;margin-bottom: 60px;">
-            <div class="col text-center">
-                <h5 class="fw-bold text-warning mb-md-0" data-aos="fade" style="font-family: 'Source Sans Pro', sans-serif;color: #ff6b00;">Read Our Blogs</h5>
-                <h1 class="display-4 text-center" data-aos="fade-up" style="color: var(--bs-body-color);font-weight: bold;">News and Resources</h1>
+            <div class="row py-0 mb-0 pb-md-0 mb-md-4 mb-xxl-5 mb-xl-5 mb-lg-5" style="margin-top: 25px;margin-bottom: 60px;">
+                <div class="col text-center">
+                    <h5 class="fw-bold text-warning mb-md-0" data-aos="fade" style="color: #ff6b00;">Read Our Blogs</h5>
+                    <h1 class="display-3 text-center" data-aos="fade-up" style="color: var(--bs-body-color);font-weight: bold;">News and Resources</h1>
             </div>
-        </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col" style="border-style: none;">
-                <div class="card" style="overflow: hidden;border-style: none;"><img class="card-img-top w-100 d-block fit-cover" src="media/original_images/352515327_233797346073376_8243856758991283326_n.jpg" style="height: 300px;">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Article</p>
-                        <h4 class="card-title" style="font-weight: bold;">What can primary students learn at CST?</h4>
-                        <p class="card-text" style="color: var(--bs-primary-text-emphasis);">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="media/original_images/logo2.jpg">
-                            <div>
-                                <p class="fw-bold mb-0" style="color: var(--bs-primary-text-emphasis);">CitySchool Taunggyi</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+    </div>
+
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 pt-4">
+
+            {% for blog_page in blog_pages %}
+                <div class="col" style="border-style: none;">
+                    <div class="card" style="background-color: #ffffff; border-style: none;" >
+                        <div class="card-body p-4">
+                            <div style="overflow: hidden; border-style: none;">
+                                <img class="card-img-top w-100 d-block fit-cover" src="{{ blog_page.main_image.file.url }}">
                             </div>
+
+                            <p class="text-primary card-text mb-1 ">{{ blog_page.date }}</p>
+                            <h4 class="card-title fw-bold mb-0 mt-2" >{{ blog_page.title }}</h4>
+                            <p class="card-text muted" style="color: var(--bs-primary-text-emphasis);">{{ blog_page.intro }}</p>
+
+                            <a href="{% pageurl blog_page %}" class="btn btn-outline-primary mt-3 mb-2 px-4">Read More!</a>
                         </div>
                     </div>
+                        
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="overflow: hidden;border-style: none;"><img class="card-img-top w-100 d-block fit-cover" style="height: 300px;overflow: hidden;" src="media/original_images/352321828_238022545618681_8006764430526843772_n.jpg">
-                    <div class="card-body p-4" style="border-style: none;">
-                        <p class="text-primary card-text mb-0">Article</p>
-                        <h4 class="card-title" style="font-weight: bold;">You are cordially invited to our event! Join Us and Learn More!</h4>
-                        <p class="card-text" style="color: var(--bs-primary-text-emphasis);">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="media/original_images/logo2.jpg">
-                            <div>
-                                <p class="fw-bold mb-0" style="font-weight: bold;color: var(--bs-primary-text-emphasis);">CitySchool Yangon</p>
-                                <p class="text-muted mb-0">Erat netus</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="overflow: hidden;">
-                <div class="card" style="overflow: hidden;border-style: none;"><img class="card-img-top w-100 d-block fit-cover" style="height: 300px;" src="media/original_images/349185182_5988904591218975_8296283545679435070_n.jpg">
-                    <div class="card-body p-4" style="border-style: none;">
-                        <p class="text-primary card-text mb-0">Article</p>
-                        <h4 class="card-title" style="font-weight: bold;">Admissions are open! Receive $500 Discount.</h4>
-                        <p class="card-text" style="color: var(--bs-primary-text-emphasis);">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="media/original_images/logo2.png">
-                            <div>
-                                <p class="fw-bold mb-0" style="color: var(--bs-primary-text-emphasis);">CitySchool Taunggyi</p>
-                                <p class="text-muted mb-0">Erat netus</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            {% endfor %}
+
+        
     </div>
 </section>
     
