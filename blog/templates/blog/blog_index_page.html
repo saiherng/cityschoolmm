@@ -40,17 +40,17 @@
       <div class="d-flex gap-5 row">
         {% for post in blogpages %}
           {% with post=post.specific %}
-            <div class="card" style="width: 18rem;">
-              <div style="overflow: hidden; border-style: none;">
+            <div class="card" style="width: 400px; background-color: #f4f4f4; border-radius: 20px; border-style: none;">
+              <div class="pt-3"style="overflow: hidden; border-style: none; height:300px; border-radius: 20px;">
                 {% with post.main_image as main_image %}
                   
-                      <img class="card-img-top w-100 d-block fit-cover" src="{% if main_image %}{{ main_image.file.url }} {% endif %}">
+                      <img class="card-img-top d-block fit-cover" style="height: 100%; object-fit: cover;"  src="{% if main_image %}{{ main_image.file.url }} {% endif %}">
                  
                 {% endwith %}
               </div>
-              <div class="card-body">
+              <div class="card-body " >
                 <h4 class="card-title fw-bold" style="font-family: Abel, sans-serif;">{{ post.title }}</h4>
-                <p class="card-text">{{ post.intro }}</p>
+                <p class="card-text" style="text-overflow: ellipsis;">{{ post.intro }}</p>
                 <p class="card-text muted">{{ post.date }}</p>
                 <a href="{% pageurl post %}" class="btn btn-outline-primary">Read More! <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
