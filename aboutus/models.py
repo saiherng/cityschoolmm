@@ -6,6 +6,7 @@ from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import FieldPanel
 
 from base import blocks
+from base.blocks import BaseStreamBlock
 
 class AboutUsIndexPage(Page):
     intro = RichTextField(blank=True)
@@ -14,8 +15,9 @@ class AboutUsIndexPage(Page):
     staff_cards = StreamField(
 
         [   
+    
             ("cards", blocks.CardsBlock())
-         
+           
         ],
         null=True,
         blank=True,)
