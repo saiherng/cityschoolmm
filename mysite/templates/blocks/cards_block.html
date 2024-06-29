@@ -1,0 +1,32 @@
+{% load wagtailimages_tags %}
+
+<div class="container py-4 py-xl-5">
+        <div class="row mb-4 mb-lg-5 mb-xl-0">
+            <div class="col-xl-10 text-center mx-auto mb-xl-0 pb-xl-0" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+                <h1 class="display-1 fw-bold">{{ self.title}} </h1>
+                <p class="lead fs-4 w-lg-50 mb-xl-4" style="font-family: Abel, sans-serif;color: var(--bs-primary-text-emphasis);">{{ self.subtitle }}</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-3 mt-xl-0">
+        {% for card in self.cards %}
+            <div class="col pt-0 mt-0">
+                <div class="card border-0 shadow-none card-body" data-aos="fade-up" data-aos-duration="650" style="background: #fafafa;">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0">
+                        <div style="overflow: hidden; width: 230px; border-radius: 20px; height:400px "><img class="mb-3 fit-cover pt-2 px-0" style="height:100%" src={{ card.image.file.url }} height="400px"></div>
+                        <h2 class="fw-lighter card-title mb-0" style="color: var(--bs-primary);"><strong>{{ card.name }}</strong></h2>
+                        <p class="lead text-muted card-text mb-2" style="/*color: var(--bs-primary-bg-subtle);*/font-weight: bold;">{{ card.subtitle }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+</div>
+
+
+
+    
+
+
+
+                
+

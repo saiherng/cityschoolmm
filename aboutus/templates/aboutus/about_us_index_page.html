@@ -58,42 +58,11 @@
             </div>
         </div>
     </section>
-    <div class="container py-4 py-xl-5">
-        <div class="row mb-4 mb-lg-5 mb-xl-0">
-            <div class="col-xl-10 text-center mx-auto mb-xl-0 pb-xl-0" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
-                <h1 class="display-1 fw-bold">Our Teachers</h1>
-                <p class="lead fs-4 w-lg-50 mb-xl-4" style="font-family: Abel, sans-serif;color: var(--bs-primary-text-emphasis);">Our faculty and staff are the most hardworking and certified individuals. Together we come to provide the best educational services in the country.&nbsp;&nbsp;</p>
-            </div>
-        </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-3 mt-xl-0">
-            <div class="col pt-0 mt-0">
-                <div class="card border-0 shadow-none card-body" data-aos="fade-up" data-aos-duration="650" style="background: #fafafa;">
-                    <div class="card-body text-center d-flex flex-column align-items-center p-0">
-                        <div style="overflow: hidden;width: 80%;border-radius: 20px;/*background: #61b7ea;*/"><img class="mb-3 fit-cover" src="../media/original_images/seamus.png" height="400px"></div>
-                        <h2 class="fw-lighter card-title mb-0" style="color: var(--bs-primary);"><strong>Seamus O Corragain</strong></h2>
-                        <p class="lead text-muted card-text mb-2" style="/*color: var(--bs-primary-bg-subtle);*/font-weight: bold;">Secondary Teacher</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col pt-0 mt-0">
-                <div class="card border-0 shadow-none card-body" data-aos="fade-up" data-aos-duration="650" style="background: #fafafa;">
-                    <div class="card-body text-center d-flex flex-column align-items-center p-0" style="color: #ffffff;">
-                        <div style="/*background: #163b66;*/overflow: hidden;width: 80%;border-radius: 20px;" class="mb-0 pb-0"><img class="mb-3 fit-cover" src="../media/original_images/seamus.png" height="400px"></div>
-                        <h2 class="fw-lighter card-title mb-0" style="color: var(--bs-emphasis-color);"><strong>Janfaye Capinpin</strong></h2>
-                        <p class="lead text-muted card-text mb-2" style="font-weight: bold;">Primary Homeroom Teacher</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col pt-0 mt-0">
-                <div class="card border-0 shadow-none card-body" data-aos="fade-up" data-aos-duration="650" style="background: #fafafa;">
-                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="mb-3 fit-cover" src="../media/original_images/gerald.webp" height="400px">
-                        <h2 class="fw-light card-title mb-0" style="color: var(--bs-emphasis-color);"><strong>Gerald Capinpin</strong></h2>
-                        <p class="lead fs-5 text-muted card-text mb-2" style="font-weight: bold;">Secondary Teacher&nbsp;</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    {% for block in page.staff_cards %}
+        {% include_block block %}
+    {% endfor%}
+    
     <div class="container px-4 py-5">
         <div class="row row-cols-md-2 align-items-md-center g-5 py-5 mb-0 pb-0">
             <div class="col-12 col-sm-auto col-md-auto col-lg-auto col-xxl-12" data-aos="fade-right" data-aos-duration="500">

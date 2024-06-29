@@ -11,6 +11,27 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail import blocks
 
 
+
+class CardsBlock(StructBlock):
+
+    title = blocks.CharBlock(required=True, help_text="Section Title")
+    subtitle = blocks.TextBlock(required=True, help_text="Section Subtitle")
+
+    cards = blocks.ListBlock(
+        blocks.StructBlock(
+            [
+                ('image', ImageChooserBlock(required=True, help_text="Card Image")),
+                ('name', CharBlock(required=True, help_text="Input Name")),
+                ('subtitle', CharBlock(required=True, help_text="Card Subtitle")),
+            ]
+        )
+    )
+
+    class Meta:
+        template = "blocks/cards_block.html"
+        icon= "placeholder"
+        label = "Add Cards Section "
+
 class FaqsBlock(StructBlock):
     """ AccordionBlock"""
 
@@ -115,6 +136,7 @@ class ButtonBlock(StructBlock):
     class Meta:
         icon = "edit"
         template = "blocks/button_block.html"
+
 
 # StreamBlocks
 class BaseStreamBlock(StreamBlock):
