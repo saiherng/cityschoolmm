@@ -13,8 +13,8 @@
             <div class="row d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end h-100">
                 <div class="col-md-6 text-md-start d-flex d-sm-flex align-items-center justify-content-sm-end align-items-sm-center">
                     <div class="d-flex d-xl-flex flex-column align-items-end align-items-xl-end">
-                        <h1 class="display-3 text-uppercase fw-bold text-end">{{ page.title }}</h1>
-                        
+                        <h1 class="display-3 text-uppercase fw-bold text-end">{{ page.header_title }}</h1>
+                         <p class="lead text-end my-3" data-aos="fade-left" data-aos-duration="450" style="color: var(--bs-body-bg);">{{ page.header_subtitle }}</p>
                         
                     </div>
                 </div>
@@ -41,19 +41,20 @@
             </div>
         </div>
     </section>
+
     <section id="founder">
         <div class="container py-4 py-xl-5 pt-xl-0">
             <div class="row mb-4 mb-lg-5 mb-xl-0">
                 <div class="col-xl-10 text-center mx-auto">
-                    <h1 class="display-1 mb-xl-0 py-xl-3" data-aos="fade-up" style="font-weight: bold;">Our Founder</h1>
+                    <h1 class="display-1 mb-xl-0 py-xl-3" data-aos="fade-up" style="font-weight: bold;">{{ page.founder_section_title }}</h1>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mt-xl-0 pt-xl-5">
-                <div class="col d-xxl-flex justify-content-xxl-end"><img class="img-fluid mb-3 pe-xl-0 me-xl-5" data-aos="fade-right" data-aos-duration="750" src="../../media/original_images/san.png" height="500px" style="border-radius: 30px;width: 100%;min-height: 500px;object-fit: cover;"></div>
+                <div class="col d-xxl-flex justify-content-xxl-end"><img class="img-fluid mb-3 pe-xl-0 me-xl-5" data-aos="fade-right" data-aos-duration="750" src={{ page.founder_image.file.url }} height="500px" style="border-radius: 30px;width: 100%;min-height: 500px;object-fit: cover;"></div>
                 <div class="col d-flex flex-column justify-content-xl-center">
-                    <h1 class="display-5 text-truncate fw-bolder mb-0" data-aos="fade-left" style="color: var(--bs-primary);font-family: Abel, sans-serif;font-weight: bold;"><strong>San Zaw Htet</strong></h1>
-                    <p class="lead fs-4 text-muted mb-2" data-aos="fade-left">B.Sc (Hons) Information Technology Management in Business</p>
-                    <p class="lead fs-4 fw-normal text-start py-xl-4 px-xl-5 ps-xl-0 pe-xl-0" data-aos="fade-left" style="text-align: justify;color: var(--bs-primary-text-emphasis);">San is a seasoned leader and cultivated education counsellor. He is a proud graduate of Northumbria University with a degree in Information Technology Management. <br><br>Prior to launching City School in Taunggyi, he founded Acumen International College and Intel-Bridge Education Consultancy in Yangon. He is passionate about delivering quality education to students as well as providing them with pathways towards their dream careers.</p>
+                    <h1 class="display-5 text-truncate fw-bolder mb-0" data-aos="fade-left" style="color: var(--bs-primary);font-family: Abel, sans-serif;font-weight: bold;"><strong>{{ page.founder_name }}</strong></h1>
+                    <p class="lead fs-4 text-muted mb-2" data-aos="fade-left">{{ page.founder_title }}</p>
+                    <p class="lead fs-4 fw-normal text-start py-xl-4 px-xl-5 ps-xl-0 pe-xl-0" data-aos="fade-left" style="text-align: justify;color: var(--bs-primary-text-emphasis);">{{ page.founder_description }}</p>
                 </div>
             </div>
         </div>
