@@ -64,6 +64,17 @@ class HomePage(Page):
         help_text="Choose a page to link to for the Call to Action",
     )
 
+
+    feature_section_heading = models.CharField(
+        blank=True,
+        max_length=255, help_text="Feature Section Title"
+    )
+
+    feature_section_subheading = models.CharField(
+        blank=True,
+        max_length=255, help_text="Feature Section Subheading"
+    )
+
     faqs = StreamField(
         [
             ("faqs", blocks.FaqsBlock(help_text="Input Frequently Asked Questions"))
@@ -79,9 +90,6 @@ class HomePage(Page):
         return context
     
     
-
-
-
     # modify your content_panels:
     content_panels = Page.content_panels + [
         MultiFieldPanel(
@@ -97,7 +105,31 @@ class HomePage(Page):
             heading="Main Header Section",
         ),
         InlinePanel('gallery_images', label="Logo Gallery of University and Agencies"),
+        MultiFieldPanel(
+            [
+                FieldPanel("feature_section_heading"),
+                FieldPanel("feature_section_subheading"),
+                InlinePanel('features', label="Add school features",max_num=4)
+            ],
+            heading="Features Section- ex. Reasons to Choose Us ", 
+        ),
+
         FieldPanel('faqs')
+    ]
+
+class HomePageFeatures(Orderable):
+
+    page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='features')
+    feature_image = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+    feature_title = models.CharField(blank=True, max_length=255)
+    feature_description = models.TextField(blank=True, max_length=255)
+
+    panels = [
+        FieldPanel('feature_image'),
+        FieldPanel('feature_title'),
+        FieldPanel('feature_description'),
     ]
 
 class HomePageLogoGallery(Orderable):
