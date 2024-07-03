@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-blogindexpage{% endblock %}
 
@@ -12,13 +13,13 @@
   <body style="border-bottom-style: none;background: var(--bs-white);">
     
     <section class="page-header">
-        <div data-bss-parallax-bg="true" class="page-header" style="background: linear-gradient(-90deg, rgba(101,101,101,0.8) 0%, rgba(255,255,255,0.17) 100%), url('/media/original_images/118-3.webp') center / cover no-repeat;">
+        <div data-bss-parallax-bg="true" class="page-header" style="background: linear-gradient(-90deg, rgba(101,101,101,0.8) 0%, rgba(255,255,255,0.17) 100%), url({{ page.header_image.url }}) center / cover no-repeat;">
             <div class="container h-100">
                 <div class="row d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end h-100">
                     <div class="col-md-6 text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                         <div>
-                            <h1 class="display-3 text-uppercase fw-bold text-end">Our Academics</h1>
-                            <p class="lead text-end my-3">The Cambridge IGCSE curriculum offers a variety of routes for learners with a wide range of abilities, including those whose first language is not English.</p>
+                            <h1 class="display-3 text-uppercase fw-bold text-end">{{ page.header_title }}</h1>
+                            <p class="lead text-end my-3">{{ page.header_subtitle }}</p>
                         </div>
                     </div>
                 </div>
@@ -122,134 +123,19 @@
             </div>
         </div>
         <div class="row row-cols-sm-3 row-cols-md-4">
+        {% for subject in page.subjects.all  %}
+
             <div class="col">
                 <div class="card" style="border-width: 0;">
                     <div class="card-body d-flex d-xxl-flex flex-column align-items-center justify-content-xxl-center align-items-xxl-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/language.png" height="60" width="60"></div>
-                        <h4 class="card-title">English</h4>
+                        {% image subject.subject_icon original as img %}
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src= {{ img.url }} height="60" width="60"></div>
+                        <h4 class="card-title">{{ subject.subject_title}}</h4>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex d-xxl-flex flex-column align-items-center justify-content-xxl-center align-items-xxl-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/tools.png" height="60" width="60"></div>
-                        <h4 class="card-title">Mathematics</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex d-xxl-flex flex-column align-items-center justify-content-xxl-center align-items-xxl-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/science.png" height="60" width="60"></div>
-                        <h4 class="card-title">Science</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/social-studies.png" height="60" width="60"></div>
-                        <h4 class="card-title">Social Studies</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/myanmar.png" height="60" width="60"></div>
-                        <h4 class="card-title">Myanmar</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/calligraphy.png" height="60" width="60"></div>
-                        <h4 class="card-title">Chinese</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/music.png" height="60" width="60"></div>
-                        <h4 class="card-title">Music&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/yoga.png" height="60" width="60"></div>
-                        <h4 class="card-title">PE &amp; Health&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/geography.png" height="60" width="60"></div>
-                        <h4 class="card-title">Geography&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/emotional-intelligence.png" height="60" width="60"></div>
-                        <h4 class="card-title">IQ &amp; EQ&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/parchment.png" height="60" width="60"></div>
-                        <h4 class="card-title">History&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/ux.png" height="60" width="60"></div>
-                        <h4 class="card-title">ICT</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/ethics.png" height="60" width="60"></div>
-                        <h4 class="card-title">Moral Education&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/social-media.png" height="60" width="60"></div>
-                        <h4 class="card-title">PSHE&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/life-skills.png" height="60" width="60"></div>
-                        <h4 class="card-title">Life Skills&nbsp;</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src="/media/original_images/icons/languages.png" height="60" width="60"></div>
-                        <h4 class="card-title">Other Languages</h4>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
+            
         </div>
     </div>
     <div class="container border-0 p-4 p-lg-5 py-4 py-xl-5 my-5 px-0" id="pathways" style="border-radius: 30px;background: rgb(253,249,246);">

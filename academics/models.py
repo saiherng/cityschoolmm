@@ -1,14 +1,46 @@
 from django.db import models
-
-from wagtail.models import Page
+from modelcluster.fields import ParentalKey
+from wagtail.models import Page, Orderable
 from wagtail.fields import RichTextField
-from wagtail.admin.panels import FieldPanel
+from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
 
 class AcademicsIndexPage(Page):
-    intro = RichTextField(blank=True)
-    
+
+    header_title = models.CharField(max_length=255, null=True, blank=True)
+    header_subtitle = models.CharField(max_length=255, null=True, blank=True)
+    header_image = models.ImageField(null=True,blank=True)
+
+    subject_section_title = models.CharField(max_length=100, null=True, blank=True)
+    subject_section_subtitle = models.CharField(max_length=255, null=True, blank=True)
+
 
     content_panels = Page.content_panels + [
-        FieldPanel('intro')
+
+        MultiFieldPanel(
+            [
+                FieldPanel("header_title"),
+                FieldPanel("header_subtitle"),
+                FieldPanel("header_image"),
+            ],
+            heading="Main Header Section",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel("subject_section_title"),
+                FieldPanel("subject_section_subtitle"),
+                InlinePanel('subjects', label="Add School Subjects")
+            ],
+            heading="Subjects List ", 
+        ),
+
     ]
+
+class AcademicsSubjectList(Orderable):
+
+    page = ParentalKey(AcademicsIndexPage, on_delete=models.CASCADE, related_name='subjects')
+    subject_icon = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+    subject_title = models.CharField(blank=True, max_length=255)
+
