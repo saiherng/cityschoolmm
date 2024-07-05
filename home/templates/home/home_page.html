@@ -164,8 +164,8 @@
         <div class="row g-0 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 pt-xxl-5" data-aos="fade-up" data-aos-duration="950" data-aos-delay="150">
             
             {% for program in page.programs.all %}
-                <div class="col px-xxl-0">
-                    <div class="card" style="border-radius: 20px;border-style: none;overflow: hidden;">
+                <div class="col px-xxl-0 d-flex align-items-stretch">
+                    <div class="card" style="border-radius: 20px; border-style: none; overflow: hidden;">
                         <div style="overflow: hidden;"><img class="rounded img-fluid d-block w-100 fit-cover" src={{ program.program_image.file.url }} style="height: 200px;"></div>
                         <div class="card-body d-flex flex-column justify-content-evenly align-items-start pb-md-5" style="border-bottom-left-radius: 20px;">
                             <h2 class="text-info card-title" style="font-weight: bold;">{{ program.program_title}}</h2>
