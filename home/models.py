@@ -75,6 +75,22 @@ class HomePage(Page):
         max_length=255, help_text="Feature Section Subheading"
     )
 
+    program_section_heading = models.CharField(
+        blank=True,
+        max_length=255, help_text="Feature Section Title"
+    )
+
+    program_section_subheading = models.CharField(
+        blank=True,
+        max_length=255, help_text="Feature Section Subheading"
+    )
+
+    program_section_description = models.CharField(
+        blank=True,
+        max_length=255, help_text="Feature Section Subheading"
+    )
+
+
     faqs = StreamField(
         [
             ("faqs", blocks.FaqsBlock(help_text="Input Frequently Asked Questions"))
@@ -113,6 +129,15 @@ class HomePage(Page):
             ],
             heading="Features Section- ex. Reasons to Choose Us ", 
         ),
+        MultiFieldPanel(
+            [
+                FieldPanel("program_section_heading"),
+                FieldPanel("program_section_subheading"),
+                FieldPanel("program_section_description"),
+                InlinePanel('programs', label="Add school programs")
+            ],
+            heading="Add Programs for all ages ", 
+        ),
 
         FieldPanel('faqs')
     ]
@@ -131,6 +156,25 @@ class HomePageFeatures(Orderable):
         FieldPanel('feature_title'),
         FieldPanel('feature_description'),
     ]
+
+class HomePagePrograms(Orderable):
+
+    page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='programs')
+    
+    program_image = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+    program_title = models.CharField(blank=True, max_length=255)
+    program_age = models.CharField(blank=True, max_length=255)
+    program_description = models.TextField(blank=True, max_length=255)
+
+    panels = [
+        FieldPanel('program_image'),
+        FieldPanel('program_title'),
+        FieldPanel('program_age'),
+        FieldPanel('program_description'),
+    ]
+
 
 class HomePageLogoGallery(Orderable):
 

@@ -146,62 +146,36 @@
         </div>
     </div>
 </section>
-<section id="programs" style="min-height: 100dvh;/*background: #ffffff;*/" class="py-xxl-5">
+<section id="programs" style="min-height: 100dvh;" class="py-xxl-5">
     <div class="container pt-xxl-5 pt-5">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" data-aos="fade-up">
             <div class="col ps-xxl-2">
-                <h5 class="text-danger" style="font-weight: bold;">Unlock Your Potential&nbsp;</h5>
+                <h5 class="text-danger" style="font-weight: bold;">{{ page.program_section_subheading}}</h5>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" data-aos="fade-up" data-aos-duration="950">
             <div class="col ps-xl-0">
-                <h1 class="display-4" style="font-weight: bold;font-family: Alatsi, sans-serif;">Comprehensive Educational Programs for All Ages</h1>
+                <h1 class="display-4" style="font-weight: bold;font-family: Alatsi, sans-serif;">{{ page.program_section_heading }}</h1>
             </div>
             <div class="col d-xxl-flex justify-content-xxl-end pt-xl-0 mt-xl-0">
-                <p class="lead text-primary mt-xl-0 pt-xl-0 pt-0 mt-md-2" style="text-align: justify;font-weight: bold;">At our school, we believe that every student has the potential to excel. Our dedicated teachers and innovative teaching methods ensure that each student receives the individual attention they need to thrive. Join us and unlock your full potential today.</p>
+                <p class="lead text-primary mt-xl-0 pt-xl-0 pt-0 mt-md-2" style="text-align: justify;font-weight: bold;">{{ page.program_section_description }}</p>
             </div>
         </div>
         <div class="row g-0 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 pt-xxl-5" data-aos="fade-up" data-aos-duration="950" data-aos-delay="150">
-            <div class="col px-xxl-0">
-                <div class="card" style="border-radius: 20px;border-style: none;overflow: hidden;">
-                    <div style="overflow: hidden;"><img class="rounded img-fluid d-block w-100 fit-cover" src="media/original_images/IMG_2241.webp" style="height: 200px;"></div>
-                    <div class="card-body d-flex flex-column justify-content-evenly align-items-start pb-md-5" style="border-bottom-left-radius: 20px;">
-                        <h2 class="text-info card-title" style="font-weight: bold;">Pre-School&nbsp;</h2>
-                        <h5 class="text-dark-emphasis card-title" style="font-weight: bold;">Ages 3 - 5</h5>
-                        <p class="fs-5 card-text" style="color: var(--bs-primary-text-emphasis);">In our preschool haven, little ones embark on a magical journey of discovery and gentle guidance that cultivates a joyous introduction to the wonders of early education.</p><button class="button btn-dark btn-sm" type="button" style="border-radius: 10px;">Learn More</button>
+            
+            {% for program in page.programs.all %}
+                <div class="col px-xxl-0">
+                    <div class="card" style="border-radius: 20px;border-style: none;overflow: hidden;">
+                        <div style="overflow: hidden;"><img class="rounded img-fluid d-block w-100 fit-cover" src={{ program.program_image.file.url }} style="height: 200px;"></div>
+                        <div class="card-body d-flex flex-column justify-content-evenly align-items-start pb-md-5" style="border-bottom-left-radius: 20px;">
+                            <h2 class="text-info card-title" style="font-weight: bold;">{{ program.program_title}}</h2>
+                            <h5 class="text-dark-emphasis card-title" style="font-weight: bold;">{{ program.program_age}}</h5>
+                            <p class="fs-5 card-text" style="color: var(--bs-primary-text-emphasis);">{{ program.program_description }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col px-xxl-0">
-                <div class="card" style="border-style: none;overflow: hidden;">
-                    <div style="overflow: hidden;"><img class="rounded img-fluid fit-cover" src="media/original_images/175.webp" style="height: 200px;width: 100%;"></div>
-                    <div class="card-body d-flex flex-column justify-content-evenly align-items-start pb-md-5">
-                        <h2 class="text-warning card-title" style="font-weight: bold;">Primary</h2>
-                        <h5 class="text-muted card-title" style="font-weight: bold;">Ages 5 - 11</h5>
-                        <p class="fs-5 card-text" style="color: var(--bs-primary-text-emphasis);">At our primary program, young minds bloom with curiosity and thrive in an engaging environment, laying the foundation for a lifelong learning.<br><br></p><button class="button btn-dark btn-sm" type="button" style="border-radius: 10px;">Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col px-xxl-0">
-                <div class="card" style="border-style: none;">
-                    <div style="overflow: hidden;"><img class="rounded img-fluid fit-cover w-100" src="media/original_images/352088303_807796057531886_125898962823610995_n%20(1).jpg" style="height: 200px;"></div>
-                    <div class="card-body pb-md-5">
-                        <h2 class="text-success card-title" style="font-weight: bold;">Secondary</h2>
-                        <h5 class="text-muted card-title" style="font-weight: bold;">Ages 11 - 14</h5>
-                        <p class="fs-5 card-text" style="color: var(--bs-primary-text-emphasis);">At our secondary level, students embark on an enriching educational voyage, where rigorous academics meet personal growth, fostering critical thinking and collaboration.</p><button class="button btn-dark btn-sm" type="button" style="border-radius: 10px;">Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col px-xxl-0">
-                <div class="card" style="border-style: none;border-radius: 20px;">
-                    <div style="overflow: hidden;"><img class="rounded img-fluid fit-cover" src="media/original_images/337519458_1936982393342379_8022452122497165280_n.jpg" style="height: 200px;width: 100%;"></div>
-                    <div class="card-body pb-md-5" style="border-bottom-right-radius: 21px;">
-                        <h2 class="text-danger card-title" style="font-weight: bold;">IGCSE</h2>
-                        <h5 class="text-muted card-title" style="font-weight: bold;">Ages 14 - 16</h5>
-                        <p class="fs-5 card-text" style="color: var(--bs-primary-text-emphasis);">Our IGCSE program offers a comprehensive curriculum that prepares students for the challenges of higher education.&nbsp;<br><br></p><button class="button btn-dark btn-sm" type="button" style="border-radius: 10px;">Learn More</button>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+     
         </div>
     </div>
 </section>
