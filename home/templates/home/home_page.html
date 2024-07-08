@@ -293,22 +293,23 @@
     <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 pt-4">
 
             {% for blog_page in blog_pages %}
-                <div class="col" style="border-style: none;">
-                    <div class="card" style="background-color: #ffffff; border-style: none; "  >
-                        <div class="card-body p-4  "  >
-                            <div style="overflow: hidden; border-style: none;">
-                                <img class="card-img-top w-100 d-block fit-cover" src="{{ blog_page.main_image.file.url }}">
+                <div class="col d-flex flex-column align-items-stretch" style="border-style: none;  ">
+                    <div class="card h-100 " style="background-color: #ffffff; border-style: none; border-radius:20px "  >
+                        <div class="card-body p-4 d-flex flex-column"   >
+                            
+                            <div style="overflow: hidden; border-style: none; border-radius:20px; height:300px;">
+                                <img class=" w-100 d-block fit-cover " src="{{ blog_page.main_image.file.url }}">
                             </div>
 
-                            <div style="height:250px;">
-                            <div>
-                            <p class="text-primary card-text mb-1 ">{{ blog_page.date }}</p>
-                            <h4 class="card-title fw-bold mb-0 mt-2" >{{ blog_page.title }}</h4>
+                            <p class="text-primary card-text pt-3 ">{{ blog_page.date }}</p>
+                            <h4 class="card-title fw-bold" >{{ blog_page.title }}</h4>
                             <p class="card-text muted" style="color: var(--bs-primary-text-emphasis);">{{ blog_page.intro }}</p>
-                            </div>
+                            <a href="{% pageurl blog_page %}" class="btn btn-outline-primary btn-lg mt-auto px-4 align-item-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
+</svg>&nbsp;&nbsp;Read More !</a>
+                                
 
-                            <a href="{% pageurl blog_page %}" class="btn btn-outline-primary btn-lg mt-3 mb-2 px-4">Read More!</a>
-                            </div>
+                           
                         </div>
                     </div>
                         

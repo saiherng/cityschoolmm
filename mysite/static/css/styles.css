@@ -231,9 +231,7 @@ input:hover {
   transition: 0.3s ease-out;
 }
 
-#contact-hero {
-  background: url('/media/original_images/pexels-andrea-piacquadio-3768126.webp') left / cover no-repeat fixed, #e8e7e7;
-}
+
 
 form {
   border-radius: 20px;
@@ -277,43 +275,7 @@ a {
   transform: translateY(-5px);
 }
 
-.feature-card gradient:hover {
-  position: absolute;
-  background: linear-gradient(0deg, var(--bs-primary-text-emphasis) 0%, rgba(255,255,255,0) 100%);
-}
 
-.feature-card gradient:hover {
-  position: relative;
-  background: linear-gradient(0deg, var(--bs-primary-text-emphasis) 0%, rgba(255,255,255,0) 100%);
-}
-
-.gradient {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0.53) 71%);
-}
-
-#features .icon {
-  color: #ffffff;
-  font-size: 50px;
-}
-
-features h4 {
-  font-weight: bold;
-  color: var(--bs-body-bg);
-  margin-bottom: 0px;
-}
-
-#features {
-  min-height: 500px;
-}
-
-@media (max-width: 300px) {
-  .subheader {
-    height: 300px;
-  }
-}
 
 @media (max-width: 300px) {
   .subheader {
