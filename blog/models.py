@@ -26,6 +26,7 @@ class BlogPageTag(TaggedItemBase):
         on_delete=models.CASCADE
     )
 
+
 class BlogPage(Page):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
@@ -73,6 +74,7 @@ class BlogPage(Page):
         InlinePanel('gallery_images', label="Gallery images"),
     ]
 
+
 class BlogPageGalleryImage(Orderable):
     page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='gallery_images')
     image = models.ForeignKey(
@@ -86,8 +88,6 @@ class BlogPageGalleryImage(Orderable):
     ]
 
 class BlogTagIndexPage(Page):
-
-    
     def get_context(self, request):
 
         # Filter by tag
@@ -128,7 +128,6 @@ class BlogIndexPage(Page):
 
     
     # add the get_context method:
-
 
     content_panels = Page.content_panels + [
         FieldPanel('header_title'),
