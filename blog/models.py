@@ -8,14 +8,18 @@ from taggit.models import TaggedItemBase
 from wagtail.models import Page, Orderable
 from wagtail.fields import RichTextField, StreamField
 
-from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
+from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel, PageChooserPanel
 
 from wagtail.search import index
 from wagtail.snippets.models import register_snippet
 
+
+
 from base import blocks
 from base.blocks import BaseStreamBlock
 
+from wagtail import blocks
+from wagtail.blocks import PageChooserBlock
 
 # keep the definition of BlogIndexPage model, and add the BlogPage model:
 
@@ -126,13 +130,12 @@ class BlogIndexPage(Page):
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
     header_image = models.ImageField(null=True,blank=True)
 
-    
-    # add the get_context method:
 
     content_panels = Page.content_panels + [
         FieldPanel('header_title'),
         FieldPanel('header_subtitle'),
-        FieldPanel('header_image')
+        FieldPanel('header_image'),
+        InlinePanel('featured_blogs', label="Featured Blogs"),
     ]
 
     def get_context(self, request):
@@ -141,5 +144,18 @@ class BlogIndexPage(Page):
         blogpages = self.get_children().live().order_by('-first_published_at')
         context['blogpages'] = blogpages
         return context
-    
-    
+
+class FeaturedBlogs(Orderable):
+
+   page = ParentalKey(BlogIndexPage, on_delete=models.CASCADE, related_name='featured_blogs')
+
+   featured_blog = models.ForeignKey(
+        'wagtailcore.Page',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+',
+    )
+   panels = [
+        PageChooserPanel('featured_blog','blog.BlogPage'),
+    ]
