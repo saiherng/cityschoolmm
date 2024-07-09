@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section style="min-height: 100dvh">
+<section>
   <div class="container py-5 py-xl-5 mt-5">
             <div class="row py-0 mb-0 pb-md-0 mb-md-4 mb-xxl-5 mb-xl-5 mb-lg-5" style="margin-top: 25px;margin-bottom: 60px;">
                 <div class="col text-center">
@@ -33,22 +33,20 @@
 
             {% for blog in page.featured_blogs.all %}
             {% with blog=blog.featured_blog.specific %}
-            <div class="row pt-5" styles="border-bottom:2px sollid">
+            
+            <div class="row pt-5 pb-3" styles="background: #fffff">
                 <div class="col d-flex ">
-                            <img src={{ blog.main_image.file.url }} width=300px>
-                            
-                            
+                    <img class="w-100 d-block fit-cover hover-card" src={{ blog.main_image.file.url }} height=300px >  
                 </div>
+                <div class="col-md-8 ">
+                    <h2 class="mb-0 pb-2">{{ blog.title }}</h2>
+                    <p class="muted">{{ blog.date }}</p>
+                    <p class="">{{ blog.intro }}</p>
+                    <a href="{% pageurl blog %}" class="btn btn-primary btn-lg mt-auto px-4 align-item-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
+                    </svg>&nbsp;&nbsp;Read More !</a>
 
-                        <div class="col-md-8">
-                            <h2>{{ blog.title }}</h2>
-                            <h4>{{ blog.intro }}</h4>
-                            <p class="lead">{{ blog.date }}</p>
-                            <a href="{% pageurl blog %}" class="btn btn-outline-primary btn-lg mt-auto px-4 align-item-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
-                              </svg>&nbsp;&nbsp;Read More !</a>
-
-                        </div>
+                </div>
             </div>
                 {% endwith %}
             {% endfor %}

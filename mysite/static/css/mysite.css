@@ -10,7 +10,6 @@
 
 .block-paragraph_block p {
     font-size: 1.3rem;
-
   }
 
   .intro {
@@ -27,7 +26,6 @@
     padding-top: 20px;
     padding-bottom:20px;
     font-family: var(--bs-body-font-family);
-    
   }
 
   /* stylelint-disable-next-line selector-class-pattern */
