@@ -232,7 +232,6 @@ input:hover {
 }
 
 
-
 form {
   border-radius: 20px;
   height: auto;
@@ -249,6 +248,10 @@ form {
 #footer svg:hover {
   font-size: 30px;
   color: #e4ce08;
+}
+
+#footer p {
+  color: #ffffff;
 }
 
 a {
@@ -333,8 +336,7 @@ a {
   color: #ffffff;
 }
 
-#accordion-1 {
-}
+
 
 @media (max-width: 768px) {
   .nav-item {
@@ -353,7 +355,7 @@ a {
 }
 
 #footer a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #ffda00;
 }
 

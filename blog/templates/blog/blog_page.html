@@ -31,7 +31,7 @@
     </div>
            
 
-    <div class="container my-5 pt-5 px-5 " style="border-radius: 20px; background-color:#fdfdfd" >
+    <div class="container my-5 pt-5 px-5 " style="border-radius: 25px; background-color:#fdfdfd" >
         
 
     <div class="row">
@@ -77,24 +77,26 @@
     </div>
 
        
-        
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="fw-bold">Blog Photo Gallery</h2>
+        {% if page.gallery_images %}
+
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto">
+                        <h2 class="fw-bold">Blog Photo Gallery</h2>
+                    </div>
+                </div>
+                <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
+                    {% for item in page.gallery_images.all %}
+                        <div>
+                            <div class="col item"><a href={{ item.image.file.url }}><img class="img-fluid" height=150 src={{ item.image.file.url }} /></a></div>
+                            <p>{{ item.caption }}</p>
+                        </div>
+                    {% endfor %}
+
+                    
                 </div>
             </div>
-            <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
-                {% for item in page.gallery_images.all %}
-                    <div>
-                        <div class="col item"><a href={{ item.image.file.url }}><img class="img-fluid" height=150 src={{ item.image.file.url }} /></a></div>
-                        <p>{{ item.caption }}</p>
-                    </div>
-                {% endfor %}
-
-                
-            </div>
-        </div>
+        {% endif %}
 
 
         
@@ -106,7 +108,9 @@
         {% endif %}
 
 
-         <p class="lead pt-5 pb-5"><a class="button" href="{{ page.get_parent.url }}">Return to blog</a></p>
+         <p class="lead pt-5 pb-5"><a class="button" href="{{ page.get_parent.url }}">Return to Blogs &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"/>
+</svg></a></p>
 
         </div>
     </div>
