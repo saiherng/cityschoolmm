@@ -337,13 +337,6 @@ a {
 }
 
 
-
-@media (max-width: 768px) {
-  .nav-item {
-    /*background-color: rgb(186,184,184);*/
-  }
-}
-
 #subjects .card {
   border-radius: 20px;
   background: #ffffff;

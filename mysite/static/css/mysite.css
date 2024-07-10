@@ -20,6 +20,7 @@
     .intro {
       font-size: 1.8rem;
     }
+  }
 
   h2 {
     font-weight: bold;
@@ -41,8 +42,6 @@
   }
 
   .block-paragraph_block a:hover {
-
-
     background-color: rgb(157, 157, 157);
     color:#000
 
@@ -115,6 +114,7 @@ blockquote {
 body {
 
    font-size: 1.3rem;
+   background-color: #F3F3F4;
    
 }
 
@@ -327,6 +327,3 @@ body {
 }
 
 
- 
-
-  
