@@ -109,7 +109,7 @@
             
             {% for feature in page.features.all %}
             <div class="col py-3">
-                <div style="overflow: hidden;border-radius: 20px; height: 300px;"><img class="fit-cover" src={{ feature.feature_image.file.url }} style="border-radius: 20px;width: 100%;height: 100%;"></div>
+                <div style="overflow: hidden; height: 300px;"><img class="fit-cover" src={{ feature.feature_image.file.url }} style="border-radius: 25px;"></div>
                 <h4 class="text-danger py-xl-4 mb-xl-0 pb-xl-0 mt-xl-0 pt-xl-4 py-2 mt-2" style="font-weight: bold;font-family: Alatsi, sans-serif;">{{ feature.feature_title }}</h4>
                 <p class="lead fs-5 py-xl-3" style="color: var(--bs-primary-text-emphasis);">{{ feature.feature_description}}</p>
             </div>

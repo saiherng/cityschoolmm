@@ -29,16 +29,20 @@
                 <div class="col text-center">
                     <h5 class="fw-bold text-warning text-start " data-aos="fade" style="color: #ff6b00;">Read Our Blogs</h5>
                     <h1 class="display-3 text-start" data-aos="fade-up" style="color: var(--bs-body-color);font-weight: bold;">Featured News</h1>
+                    </div>
             </div>
 
             {% for blog in page.featured_blogs.all %}
             {% with blog=blog.featured_blog.specific %}
             
-            <div class="row px-md-4 py-4 mb-4" style="background: #F3F3F4; border-radius:25px;" >
-                <div class="col" style="border-radius:25px; overflow:hidden; height:300px;" >
-                    <img class="w-100 fit-cover hover-card" src= {{ blog.main_image.file.url }}  >  
+            <div class="row px-md-3 py-4 mb-4 " style="background: #fefefe; border-radius:25px;" >
+                <div class="col">
+                    <div style=" border-radius: 25px; overflow:hidden; height:300px; " >
+                        <img class="fit-cover d-block hover-card w-100" src= {{ blog.main_image.file.url }} >  
+                    </div>
                 </div>
-                <div class="col-md-8 ">
+                
+                <div class="col-md-8 px-5 align-items-stretch">
                     <h2 class="mb-0 pb-2">{{ blog.title }}</h2>
                     <p class="text-muted">{{ blog.date }}</p>
                     <p class="text-muted">{{ blog.intro }}</p>
@@ -67,9 +71,9 @@
             {% for blog_page in blogpages %}
             {% with blog_page=blog_page.specific %}
                 <div class="col d-flex flex-column align-items-stretch" style="border-style: none;  ">
-                    <div class="card h-100 " style="background-color: #ffffff; border-style: none; border-radius:20px "  >
+                    <div class="card h-100 " style="background-color: #ffffff; border-style: none; border-radius:20px " >
                         <div class="card-body p-4 d-flex flex-column"   >
-                            
+    
                             <div style="overflow: hidden; border-style: none; border-radius:20px; height:300px;">
                             {% with blog_page.main_image as main_image %}
                                 <img class=" w-100 d-block fit-cover " src="{% if main_image %}{{ main_image.file.url }} {% endif %}">
