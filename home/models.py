@@ -120,6 +120,9 @@ class HomePage(Page):
             ],
             heading="Main Header Section",
         ),
+        InlinePanel('locations', label="School Branch Locations"),
+
+
         InlinePanel('gallery_images', label="Logo Gallery of University and Agencies"),
         MultiFieldPanel(
             [
@@ -138,7 +141,6 @@ class HomePage(Page):
             ],
             heading="Add Programs for all ages ", 
         ),
-
         FieldPanel('faqs')
     ]
 
@@ -175,9 +177,9 @@ class HomePagePrograms(Orderable):
         FieldPanel('program_description'),
     ]
 
-
 class HomePageLogoGallery(Orderable):
 
+    
     page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='gallery_images')
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
@@ -188,4 +190,36 @@ class HomePageLogoGallery(Orderable):
         FieldPanel('image'),
         FieldPanel('caption'),
     ]
+
+class HomePageLocation(Orderable):
+
+    page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='locations')
+    background = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+    school_logo = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+
+    school_name = models.CharField(blank=True, max_length=255)
+    heading = models.CharField(blank=True, max_length=255)
+    subheading = models.CharField(blank=True, max_length=255)
+    address = models.CharField(blank=True, max_length=255)
+    phone = models.CharField(blank=True, max_length=255)
+    email = models.EmailField(blank=True, max_length=255)
+
+    panels = [
+        FieldPanel('background'),
+        FieldPanel('school_name'),
+        FieldPanel('school_logo'),
+        FieldPanel('heading'),
+        FieldPanel('subheading'),
+        FieldPanel('address'),
+        FieldPanel('phone'),
+        FieldPanel('email'),
+    ]
+
+    
+   
+
 
