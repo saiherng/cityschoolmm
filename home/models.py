@@ -205,7 +205,10 @@ class HomePageLocation(Orderable):
     heading = models.CharField(blank=True, max_length=255)
     subheading = models.CharField(blank=True, max_length=255)
     address = models.CharField(blank=True, max_length=255)
-    phone = models.CharField(blank=True, max_length=255)
+    phone = StreamField(
+        [
+        ('phone', blocks.CharBlock())
+    ], null=True, blank=True, block_counts={'phone' : {'max_num': 2},})
     email = models.EmailField(blank=True, max_length=255)
 
     panels = [

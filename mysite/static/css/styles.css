@@ -176,18 +176,17 @@ input:hover {
   background: #fafafa;
 }
 
-.hover-card:hover {
+.hover-effect:hover {
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2),
     -5px -5px 5px white ;
 
 }
 
-.hover-card:hover img {
+.hover-effect:hover img {
   
   transition: 0.4s ease-in-out;
   transform: scale(1.05);
 }
-
 
 
 

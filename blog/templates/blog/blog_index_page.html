@@ -35,10 +35,10 @@
             {% for blog in page.featured_blogs.all %}
             {% with blog=blog.featured_blog.specific %}
             
-            <div class="row px-md-3 py-4 mb-4 hover-card" style="background: #fefefe; border-radius:25px;" >
+            <div class="row px-md-3 py-4 mb-4 hover-effect" style="background: #fefefe; border-radius:25px;" >
                 <div class="col">
                     <div style=" border-radius: 25px; overflow:hidden; height:300px; " >
-                        <img class="fit-cover d-block hover-card w-100" src= {{ blog.main_image.file.url }} >  
+                        <img class="fit-cover d-block  w-100" src= {{ blog.main_image.file.url }} >  
                     </div>
                 </div>
                 
@@ -71,7 +71,7 @@
             {% for blog_page in blogpages %}
             {% with blog_page=blog_page.specific %}
                 <div class="col d-flex flex-column align-items-stretch" style="border-style: none;  ">
-                    <div class="card h-100 hover-card " style="background-color: #ffffff; border-style: none; border-radius:20px " >
+                    <div class="card h-100 hover-effect " style="background-color: #ffffff; border-style: none; border-radius:20px " >
                         <div class="card-body p-4 d-flex flex-column"   >
     
                             <div style="overflow: hidden; border-style: none; border-radius:20px; height:300px;">
