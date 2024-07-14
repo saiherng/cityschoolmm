@@ -17,6 +17,10 @@ class AboutUsIndexPage(Page):
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
     header_image = models.ImageField(null=True,blank=True)
 
+    mission_statement = StreamField(
+        BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
+    )
+
 
     founder_section_title = models.CharField(
         blank=True,
@@ -67,6 +71,7 @@ class AboutUsIndexPage(Page):
             FieldPanel("header_image"),
 
         ], heading="Header Details"),
+        FieldPanel("mission_statement"),
 
         MultiFieldPanel([
             FieldPanel("founder_section_title"),
@@ -76,7 +81,7 @@ class AboutUsIndexPage(Page):
             FieldPanel("founder_description"),
         ], heading="Founder Details"),
         FieldPanel("staff_cards"),
-        
+
         MultiFieldPanel([
             FieldPanel("gallery_heading"),
             FieldPanel("gallery_subheading"),
