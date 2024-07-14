@@ -8,17 +8,18 @@
   color: var(--bg-primary);
 }
 
-.block-paragraph_block p {
-    font-size: 1.3rem;
+.block-paragraph_block p,ul,li {
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 
   .intro {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   @media (min-width: 768px) {
     .intro {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -28,6 +29,7 @@
     padding-bottom:20px;
     font-family: var(--bs-body-font-family);
   }
+
 
   /* stylelint-disable-next-line selector-class-pattern */
   .block-paragraph_block a {
@@ -47,7 +49,7 @@
 
   }
 
-  
+
   /* stylelint-disable-next-line selector-class-pattern */
   .block-embed_block iframe {
     aspect-ratio: 16 / 9;
@@ -112,12 +114,6 @@ blockquote {
   }
 
 
-body {
-
-   font-size: 1.3rem;
-   background-color: #F3F3F4;
-   
-}
 
 
 /* !

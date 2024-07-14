@@ -15,8 +15,9 @@ class AboutUsIndexPage(Page):
 
     header_title = models.CharField(max_length=100, null=True, blank=True)
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
-    header_image = models.ImageField(null=True,blank=True)
+    header_image = models.ImageField(null=True, blank=True)
 
+    mission_header = models.CharField(max_length=100, blank=False, default='Our Mission')
     mission_statement = StreamField(
         BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
     )
@@ -26,7 +27,6 @@ class AboutUsIndexPage(Page):
         blank=True,
         max_length=255, help_text="Enter Founder's Name"
     )
-
     founder_name = models.CharField(
         blank=True,
         max_length=255, help_text="Enter Founder's Name"
@@ -41,7 +41,6 @@ class AboutUsIndexPage(Page):
         max_length=522,
         help_text="Enter founder's title",
     )
-
     founder_image = models.ForeignKey(
         "wagtailimages.Image",
         null=True,
@@ -71,7 +70,12 @@ class AboutUsIndexPage(Page):
             FieldPanel("header_image"),
 
         ], heading="Header Details"),
-        FieldPanel("mission_statement"),
+
+        MultiFieldPanel([
+            FieldPanel("mission_header"),
+            FieldPanel("mission_statement"),
+
+        ], heading="Mission Statement Details"),
 
         MultiFieldPanel([
             FieldPanel("founder_section_title"),
@@ -80,6 +84,7 @@ class AboutUsIndexPage(Page):
             FieldPanel("founder_image"),
             FieldPanel("founder_description"),
         ], heading="Founder Details"),
+
         FieldPanel("staff_cards"),
 
         MultiFieldPanel([
@@ -94,9 +99,6 @@ class AboutUsIndexPage(Page):
 class AboutUsGalleryImage(Orderable):
 
     page = ParentalKey(AboutUsIndexPage, on_delete=models.CASCADE, related_name='gallery_images')
-
-    
-
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
