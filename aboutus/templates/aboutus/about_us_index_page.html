@@ -67,8 +67,9 @@
         {% include_block block %}
     {% endfor%}
     
+   
 
-            <div class="container my-5 px-5 px-md-0">
+            <div class="container my-5 px-5 px-md-0 pb-5">
                 <div class="row mb-5">
                     <div class="col-12 col-sm-auto col-md-auto col-lg-auto col-xxl-12" data-aos="fade-right" data-aos-duration="500">
                         <h1 class="display-2" style="font-weight: bold;">{{ page.gallery_heading }}</h1>
@@ -76,11 +77,14 @@
                     </div>
                 </div>
                
-                <div class="row gx-2 gy-3 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
+ 
+                <div class="row gx-5 gy-5 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
                     {% for item in page.gallery_images.all %}
-                        <div>
-                            <div class="col item"><a href={{ item.image.file.url }}><img class="img-fluid" height=200 src={{ item.image.file.url }} /></a> 
-                            <p class="text-muted fs-5 pt-3">{% if item.caption %} - {{ item.caption }} {% endif %}</p></div>
+                        <div class="col item pt-4" >
+                            <a href={{ item.image.file.url }}>
+                                <img style="border-radius:25px "class="img-fluid fit-cover" src={{ item.image.file.url }} />
+                            </a> 
+                            <p class="text-muted fs-5 pt-3">{% if item.caption %} - {{ item.caption }} {% endif %}</p>
                             
                         </div>
                     {% endfor %}
@@ -90,8 +94,6 @@
             </div>
 
       
-
-   
 
     
 
