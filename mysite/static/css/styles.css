@@ -149,11 +149,6 @@
   transition: ease-out 0.3s;
 }
 
-#pathways svg {
-  font-size: 20px;
-  color: #000000;
-}
-
 .feature-card h4 {
   font-size: 20px;
   font-weight: bold;
@@ -449,7 +444,7 @@ a {
 
 .name-banner {
   border-radius: 10px;
-  border: 3px dashed rgb(255, 255, 255);
+ 
   font-weight: bold;
   color: rgb(255,255,255);
   background: #161d46;
