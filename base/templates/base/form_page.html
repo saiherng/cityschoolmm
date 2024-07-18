@@ -12,8 +12,9 @@
             </div>
             <div class="col-md-8 index-header__body-introduction">
                 {% if page.intro %}
-                    <p class="intro" style="text-align: left;color: var(--bs-emphasis-color);">{{ page.intro|richtext }}&nbsp;</p>
-            
+                <div class="lead pb-4">
+                    {{ page.intro|richtext }}
+                </div>
                 {% endif %}
                 {% if page.body %}
                     {{ page.body }}
