@@ -52,6 +52,7 @@ class BlogPage(Page):
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
+   
 
     def main_image(self):
         gallery_item = self.gallery_images.first()
@@ -137,6 +138,11 @@ class BlogIndexPage(Page):
         FieldPanel('header_image'),
         InlinePanel('featured_blogs', label="Featured Blogs"),
     ]
+
+    subpage_types = [ 'blog.BlogPage'
+       
+    ]
+
 
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
