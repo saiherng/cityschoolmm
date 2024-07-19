@@ -28,34 +28,25 @@
     </section>
     <div class="container mt-5 pt-5">
     
-        <h1 class="fw-bold name-banner py-3 display-2 text-center text-secondary mb-0 w-100 w-lg-50 mx-auto" >Admissions are Open!</h1>
-      
-        <h4 class="text-center text-primary">We are accepting students and now is the best opportunity to enroll!</h4>
+        {% if page.programs_section_title %}
+        <h1 class="fw-bold name-banner py-3 display-2 text-center text-secondary mb-0 w-100 w-lg-50 mx-auto" >{{ page.programs_section_title }}</h1>
+        {% endif %}
+        <h4 class="text-center text-primary">{{ page.programs_section_subtitle }}</h4>
         <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5 mt-0 pt-0">
             <div class="col-10 col-sm-8 col-lg-6" style="max-height: inherit;">
-                <div class="admission-cover" style="overflow: hidden; border-radius: 50%;"><img class="rounded-circle img-fluid fit-cover" src="/media/original_images/125.webp" loading="lazy" style="height: 100%;"></div>
+                <div class="admission-cover" style="overflow: hidden; border-radius: 50%;"><img class="rounded-circle img-fluid fit-cover" src={{ page.programs_section_image.file.url }} loading="lazy" style="height: 100%;"></div>
             </div>
             <div class="col-lg-6" style="min-height: 600px;">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 mt-4 pt-0" style="padding-top: 30px;padding-bottom: 30px;">
-                    <div class="col text-start d-flex flex-column align-items-lg-start align-items-xl-start gap-2">
-                        <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div>
-                        <h4 class="fw-semibold text-success mb-0 py-2">Pre-School ( Age 3 - 5)</h4>
-                        <p class="lead text-body-secondary">IGCSE Pre-School provides a nurturing and stimulating environment for the earliest learners, laying the foundation for future academic success.&nbsp;</p>
-                    </div>
-                    <div class="col d-flex flex-column gap-2">
-                        <h4 class="fw-semibold text-success mb-0 py-2">Primary</h4>
-                        <p class="lead text-body-secondary">Primary School IGCSE offers a dynamic and engaging educational experience for young learners, focusing on a well-rounded curriculum.</p>
-                    </div>
-                    <div class="col d-flex flex-column align-items-lg-start gap-2">
-                        <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div>
-                        <h4 class="fw-semibold text-success mb-0 py-2">Secondary</h4>
-                        <p class="lead text-body-secondary">Our secondary education program is designed to inspire and challenge students as they navigate the critical years of adolescence.&nbsp;</p>
-                    </div>
-                    <div class="col d-flex flex-column align-items-lg-start gap-2">
-                        <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div>
-                        <h4 class="fw-semibold text-success mb-0 py-2">IGCSE</h4>
-                        <p class="lead text-body-secondary">Designed to cultivate a deep understanding of subjects while promoting critical thinking and practical skills, the IGCSE program provides a well-rounded education for students aged 14 to 16.&nbsp;</p>
-                    </div>
+                    {% for program in page.programs.all %}
+
+                        <div class="col text-start d-flex flex-column align-items-lg-start align-items-xl-start gap-2">
+                            <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div>
+                            <h4 class="fw-semibold text-success mb-0 py-2">{{ program.program_title }}</h4>
+                            <p class="lead text-body-secondary">{{ program.program_description }}</p>
+                        </div>
+                   
+                   {% endfor %}
                 </div>
             </div>
         </div>

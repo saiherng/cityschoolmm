@@ -14,6 +14,11 @@ class AcademicsIndexPage(Page):
     subject_section_title = models.CharField(max_length=100, null=True, blank=True)
     subject_section_subtitle = models.CharField(max_length=255, null=True, blank=True)
 
+    programs_section_title = models.CharField(blank=True, max_length=255)
+    programs_section_subtitle = models.CharField(blank=True, max_length=255)
+    programs_section_image = models.ForeignKey(
+        'wagtailimages.Image', blank=True, null=True, on_delete=models.CASCADE, related_name='+'
+    )
 
     content_panels = Page.content_panels + [
 
@@ -24,6 +29,15 @@ class AcademicsIndexPage(Page):
                 FieldPanel("header_image"),
             ],
             heading="Main Header Section",
+        ),
+         MultiFieldPanel(
+            [
+                FieldPanel("programs_section_title"),
+                FieldPanel("programs_section_subtitle"),
+                FieldPanel("programs_section_image"),
+                InlinePanel('programs', label="Add School Programs")
+            ],
+            heading="Programs List ", 
         ),
         MultiFieldPanel(
             [
@@ -36,11 +50,24 @@ class AcademicsIndexPage(Page):
 
     ]
 
+class AcademicsPrograms(Orderable):
+
+    page = ParentalKey(AcademicsIndexPage, on_delete=models.CASCADE, related_name='programs')
+    
+    program_title = models.CharField(blank=True, max_length=255)
+    program_description = models.TextField(blank=True, max_length=255)
+    
+    panels = [
+        FieldPanel('program_title'),
+        FieldPanel('program_description'),
+    ]
+
 class AcademicsSubjectList(Orderable):
 
     page = ParentalKey(AcademicsIndexPage, on_delete=models.CASCADE, related_name='subjects')
     subject_icon = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
+
     subject_title = models.CharField(blank=True, max_length=255)
 
