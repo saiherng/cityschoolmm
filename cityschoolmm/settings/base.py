@@ -64,7 +64,7 @@ MIDDLEWARE = [
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
-ROOT_URLCONF = "mysite.urls"
+ROOT_URLCONF = "cityschoolmm.urls"
 
 TEMPLATES = [
     {
@@ -86,7 +86,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "mysite.wsgi.application"
+WSGI_APPLICATION = "cityschoolmm.wsgi.application"
 
 
 # Database
@@ -167,7 +167,7 @@ STORAGES = {
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "mysite"
+WAGTAIL_SITE_NAME = "cityschoolmm"
 
 # Search
 # https://docs.wagtail.org/en/stable/topics/search/backends.html
