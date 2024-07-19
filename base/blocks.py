@@ -75,6 +75,36 @@ class LocationDetailsBlock(StructBlock):
         icon= "placeholder"
         label = "Add New School Location Details"
 
+class HeroFeaturesBlock(StructBlock):
+
+    title = blocks.CharBlock(required=True, help_text="Block Section Title")
+    subtitle = blocks.TextBlock(required=True, help_text="Block Section Subtitle")
+    image = ImageChooserBlock(required=True)
+
+
+    features = blocks.ListBlock(
+        blocks.StructBlock(
+            [   
+                ('title', TextBlock(required=True, help_text="Input Feature Title")),
+                ('subscription', TextBlock(required=True, help_text="Input Feature Description")),
+                ('icon', ImageChooserBlock())
+            ],  max_num=4
+        )
+    )
+
+    title_text_align = blocks.ChoiceBlock( choices=[
+        ('text-start','Text Left'),
+        ('text-center', 'Text Center'),
+        ('text-end', 'Text Right')
+    ], required=True, help="Select Text Alignment"
+    )
+
+    class Meta:
+        template = "blocks/hero_block.html"
+        icon= "placeholder"
+        label = "Add New Feature Block"
+
+
 
 class ImageBlock(StructBlock):
     """
