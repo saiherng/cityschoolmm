@@ -88,9 +88,8 @@ class HeroFeaturesBlock(StructBlock):
         ('text-start','Text Left'),
         ('text-center', 'Text Center'),
         ('text-end', 'Text Right')
-    ], required=True, help="Select Text Alignment"
-    
-    )
+    ], required=True, help="Select Text Alignment")
+
     subtitle = blocks.TextBlock(required=True, help_text="Block Section Subtitle")
     image = ImageChooserBlock(required=True)
 
@@ -198,6 +197,12 @@ class ImageGalleryBlock(StructBlock):
 
     title = blocks.CharBlock(required=True, help_text="Gallery title")
     subtitle = blocks.CharBlock(required=False, help_text="Gallery Subittle")
+    text_align = blocks.ChoiceBlock( choices=[
+        ('text-start','Text Left'),
+        ('text-center', 'Text Center'),
+        ('text-end', 'Text Right')
+    ], required=True, help="Select Text Alignment")
+     
     images = blocks.ListBlock(ImageChooserBlock(), help_text="Select images for the gallery")
 
     class Meta:

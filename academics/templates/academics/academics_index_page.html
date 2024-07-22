@@ -85,19 +85,19 @@
                 <p class="lead fw-bold text-warning w-lg-50">Provide most popular courses that your want to join and lets start the course for the most simply way in here</p>
             </div>
         </div>
-        <div class="row  row-cols-md-4 row-cols-sm-6">
-        {% for subject in page.subjects.all  %}
+        <div class="row row-cols-md-4 row-cols-sm-2">
+            {% for subject in page.subjects.all  %}
 
-            <div class="col">
-                <div class="card" style="border-width: 0;">
-                    <div class="card-body d-flex d-xxl-flex flex-column align-items-center justify-content-xxl-center align-items-xxl-center p-4">
-                        {% image subject.subject_icon original as img %}
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src= {{ img.url }} height="60" width="60"></div>
-                        <h4 class="card-title">{{ subject.subject_title}}</h4>
+                <div class="col">
+                    <div class="card" >
+                        <div class="card-body d-flex d-xxl-flex flex-column align-items-center justify-content-xxl-center align-items-xxl-center p-4">
+                            {% image subject.subject_icon original as img %}
+                            <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><img class="img-fluid" src= {{ img.url }} height="60" width="60"></div>
+                            <h4 class="card-title text-center">{{ subject.subject_title}}</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
             
         </div>
     </div>

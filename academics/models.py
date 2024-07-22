@@ -27,8 +27,9 @@ class AcademicsIndexPage(Page):
 
     hero_features = StreamField([
 
-        ('Paragraph', BaseStreamBlock()),
+        ('base', BaseStreamBlock()),
         ('hero_features', blocks.HeroFeaturesBlock()),
+        ('gallery', blocks.ImageGalleryBlock())
         
     ],null=True,
         blank=True)

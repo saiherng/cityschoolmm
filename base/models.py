@@ -96,9 +96,6 @@ class FormPage(AbstractEmailForm):
     
     thank_you_text = RichTextField(blank=True)
 
-
-
-
     content_panels = AbstractEmailForm.content_panels + [
         FieldPanel('intro'),
 

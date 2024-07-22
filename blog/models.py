@@ -33,9 +33,9 @@ class BlogPageTag(TaggedItemBase):
 
 class BlogPage(Page):
     date = models.DateField("Post date")
-    intro = models.CharField(max_length=250)
+    intro = models.CharField(max_length=250,verbose_name="intro")
     body = StreamField(
-        BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
+        BaseStreamBlock(), verbose_name="body", blank=True, use_json_field=True
     )
 
     signup_button = models.ForeignKey(
@@ -48,7 +48,7 @@ class BlogPage(Page):
         help_text="Choose a page to link to for the Call to Action",
     )
 
-    authors = ParentalManyToManyField('blog.Author', blank=True)
+    authors = ParentalManyToManyField('blog.Author', blank=True, verbose_name='authors')
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
@@ -64,6 +64,7 @@ class BlogPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField('intro'),
         index.SearchField('body'),
+        index.SearchField('authors'),
     ]
 
     content_panels = Page.content_panels + [
