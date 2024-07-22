@@ -77,7 +77,20 @@ class LocationDetailsBlock(StructBlock):
 
 class HeroFeaturesBlock(StructBlock):
 
+    row_align = blocks.ChoiceBlock( choices=[
+        ('flex-row','Row Left'),
+        ('flex-row-reverse', 'Row Right'),
+    ], required=True, help="Select Row Align"
+    
+    ) 
     title = blocks.CharBlock(required=True, help_text="Block Section Title")
+    title_text_align = blocks.ChoiceBlock( choices=[
+        ('text-start','Text Left'),
+        ('text-center', 'Text Center'),
+        ('text-end', 'Text Right')
+    ], required=True, help="Select Text Alignment"
+    
+    )
     subtitle = blocks.TextBlock(required=True, help_text="Block Section Subtitle")
     image = ImageChooserBlock(required=True)
 
@@ -86,25 +99,18 @@ class HeroFeaturesBlock(StructBlock):
         blocks.StructBlock(
             [   
                 ('title', TextBlock(required=True, help_text="Input Feature Title")),
-                ('subscription', TextBlock(required=True, help_text="Input Feature Description")),
-                ('icon', ImageChooserBlock())
+                ('description', TextBlock(required=True, help_text="Input Feature Description")),
+                ('icon', ImageChooserBlock(required=False))
             ],  max_num=4
         )
     )
 
-    title_text_align = blocks.ChoiceBlock( choices=[
-        ('text-start','Text Left'),
-        ('text-center', 'Text Center'),
-        ('text-end', 'Text Right')
-    ], required=True, help="Select Text Alignment"
-    )
+    
 
     class Meta:
-        template = "blocks/hero_block.html"
+        template = "blocks/hero_features_block.html"
         icon= "placeholder"
         label = "Add New Feature Block"
-
-
 
 class ImageBlock(StructBlock):
     """
@@ -129,6 +135,7 @@ class HeadingBlock(StructBlock):
     size = ChoiceBlock(
         choices=[
             ("", "Select a header size"),
+            ("h1", "H1"),
             ("h2", "H2"),
             ("h3", "H3"),
             ("h4", "H4"),
@@ -167,7 +174,6 @@ class ButtonBlock(StructBlock):
         icon = "edit"
         template = "blocks/button_block.html"
 
-
 # StreamBlocks
 class BaseStreamBlock(StreamBlock):
     """
@@ -186,3 +192,19 @@ class BaseStreamBlock(StreamBlock):
         template="blocks/embed_block.html",
     )
     button_block = ButtonBlock()
+
+
+class ImageGalleryBlock(StructBlock):
+
+    title = blocks.CharBlock(required=True, help_text="Gallery title")
+    subtitle = blocks.CharBlock(required=False, help_text="Gallery Subittle")
+    images = blocks.ListBlock(ImageChooserBlock(), help_text="Select images for the gallery")
+
+    class Meta:
+        template = "blocks/image_gallery_block.html"
+        icon = "image"
+        label = "Image Gallery"
+
+
+
+

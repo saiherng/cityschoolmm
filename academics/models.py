@@ -1,9 +1,14 @@
 from django.db import models
 from modelcluster.fields import ParentalKey
 from wagtail.models import Page, Orderable
-from wagtail.fields import RichTextField
+from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
+
+from base import blocks
+from base.blocks import BaseStreamBlock, RichTextBlock
+
+from wagtail.images.blocks import ImageChooserBlock
 
 class AcademicsIndexPage(Page):
 
@@ -17,8 +22,16 @@ class AcademicsIndexPage(Page):
     programs_section_title = models.CharField(blank=True, max_length=255)
     programs_section_subtitle = models.CharField(blank=True, max_length=255)
     programs_section_image = models.ForeignKey(
-        'wagtailimages.Image', blank=True, null=True, on_delete=models.CASCADE, related_name='+'
+        'wagtailimages.Image', blank=True, null=True, on_delete=models.SET_NULL, related_name='+'
     )
+
+    hero_features = StreamField([
+
+        ('Paragraph', BaseStreamBlock()),
+        ('hero_features', blocks.HeroFeaturesBlock()),
+        
+    ],null=True,
+        blank=True)
 
     content_panels = Page.content_panels + [
 
@@ -39,6 +52,8 @@ class AcademicsIndexPage(Page):
             ],
             heading="Programs List ", 
         ),
+        FieldPanel('hero_features'),
+
         MultiFieldPanel(
             [
                 FieldPanel("subject_section_title"),
@@ -61,6 +76,7 @@ class AcademicsPrograms(Orderable):
         FieldPanel('program_title'),
         FieldPanel('program_description'),
     ]
+
 
 class AcademicsSubjectList(Orderable):
 

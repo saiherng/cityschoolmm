@@ -1,7 +1,7 @@
 {% load wagtailimages_tags %}
 
 <figure>
-    {% image self.image original as img %}
-    <img src={{ img.url }} class="img-fluid pt-4 pb-4">
+   
+    <img src={{ self.image.file.url }} class="img-fluid pt-4 pb-4 rounded mx-auto d-block"  >
     <figcaption>{{ self.caption }} - {{ self.attribution }}</figcaption>
 </figure>

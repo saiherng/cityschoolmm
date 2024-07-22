@@ -3,8 +3,6 @@
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 
-{% block body_class %}template-blogindexpage{% endblock %}
-
 
 
 {% block content %}
@@ -26,10 +24,12 @@
             </div>
         </div>
     </section>
-    <div class="container mt-5 pt-5">
+
+
+    <div class="container mt-5 pt-5 text-center">
     
         {% if page.programs_section_title %}
-        <h1 class="fw-bold name-banner py-3 display-2 text-center text-secondary mb-0 w-100 w-lg-50 mx-auto" >{{ page.programs_section_title }}</h1>
+        <h1 class="d-inline justify-content-center  px-5 py-3 my-5 fw-bold name-banner py-3 display-2  text-secondary " >{{ page.programs_section_title }}</h1>
         {% endif %}
         <h4 class="text-center text-primary">{{ page.programs_section_subtitle }}</h4>
         <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5 mt-0 pt-0">
@@ -51,53 +51,13 @@
             </div>
         </div>
     </div>
-    <div class="container py-4 py-xl-5">
-        <div class="row gy-4 gy-md-0">
-            <div class="col-xxl-12">
-                <h1 class="display-2 fw-bold text-center" style="color: var(--bs-indigo);">Childhood is our Passion</h1>
-                <p class="fs-4 fw-bold text-center">Our Preschool is where curiosity meets creativity in a nurturing environment designed for our youngest learners. Our dedicated team of educators is committed to cultivating a love for learning through play and exploration.</p>
-            </div>
-        </div>
-        <div class="row gx-5 gy-md-0 mt-lg-5">
-            <div class="col-md-12 col-lg-6 d-lg-flex d-xxl-flex align-items-lg-center align-items-xxl-center pe-lg-5">
-                <div style="overflow: hidden;background-color: var(--bs-secondary-bg-subtle);border-radius: 10%;height: 600px;"><img class="img-fluid fit-cover" src="/media/original_images/1-2.webp" style="position: relative;height: 100%;"></div>
-            </div>
-            <div class="col ps-4">
-                <div class="d-flex justify-content-center">
-                    <div class="row gx-5 gy-2 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 mt-4 pt-0" style="padding-top: 30px;padding-bottom: 30px;">
-                        <div class="col text-start d-flex flex-column align-items-lg-start align-items-xl-start gap-2"><img src="/media/original_images/icons/playground.png" style="height: 80px;width: 80px;">
-                            <h4 class="text-uppercase fw-bold text-dark mb-0 py-2" style="color: rgb(102,16,242);">Play To Learn</h4>
-                            <p class="lead text-body-secondary">Empower young minds through interactive play-based learning, fostering creativity, critical thinking, and a lifelong love for knowledge.</p>
-                        </div>
-                        <div class="col d-flex flex-column gap-2"><img src="/media/original_images/icons/study.png" style="height: 80px;" width="80" height="80">
-                            <h4 class="text-uppercase fw-semibold text-dark mb-0 py-2">&nbsp;Easy To Learn</h4>
-                            <p class="lead text-body-secondary">Effortlessly engage young learners with making education easy and enjoyable through interactive activities.</p>
-                        </div>
-                        <div class="col d-flex flex-column align-items-lg-start gap-2">
-                            <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div><img src="/media/original_images/icons/teacher.png" style="height: 80px;width: 80px;">
-                            <h4 class="text-uppercase fw-semibold text-dark mb-0 py-2">Professional Educators</h4>
-                            <p class="lead text-body-secondary">Enrich your child's learning journey with boasting a team of dedicated professional educators who ensure a top-notch and personalized educational experience.</p>
-                        </div>
-                        <div class="col d-flex flex-column align-items-lg-start gap-2">
-                            <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div><img src="/media/original_images/icons/yoga.png" style="height: 80px;width: 80px;">
-                            <h4 class="text-uppercase fw-semibold text-dark mb-0 py-2">&nbsp;Sports Program</h4>
-                            <p class="lead text-body-secondary">Elevate physical and mental well-being with our school's dynamic sports program, offering a diverse range of activities to instill teamwork and a passion for an active lifestyle.</p>
-                        </div>
-                        <div class="col d-flex flex-column align-items-lg-start gap-2">
-                            <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div><img src="/media/original_images/icons/yoga.png" style="height: 80px;width: 80px;">
-                            <h4 class="text-uppercase fw-semibold text-dark mb-0 py-2">&nbsp;Sports Program</h4>
-                            <p class="lead text-body-secondary">Elevate physical and mental well-being with our school's dynamic sports program, offering a diverse range of activities to instill teamwork and a passion for an active lifestyle.</p>
-                        </div>
-                        <div class="col d-flex flex-column align-items-lg-start gap-2">
-                            <div class="d-inline-flex justify-content-center align-items-center feature-icon-small rounded-3"></div><img src="/media/original_images/icons/yoga.png" style="height: 80px;width: 80px;">
-                            <h4 class="text-uppercase fw-semibold text-dark mb-0 py-2">&nbsp;Sports Program</h4>
-                            <p class="lead text-body-secondary">Elevate physical and mental well-being with our school's dynamic sports program, offering a diverse range of activities to instill teamwork and a passion for an active lifestyle.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container px-2 py-5">
+    {% for block in page.hero_features %}
+        {% include_block block %}
+    {% endfor%}
     </div>
+
+    
     <section style="background: #004677;" class="py-lg-5">
         <div class="container d-flex flex-column align-items-center py-4 py-xl-5">
             <div class="row gy-4 row-cols-1 row-cols-md-2 w-100">

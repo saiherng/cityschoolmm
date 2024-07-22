@@ -18,6 +18,7 @@ class AboutUsIndexPage(Page):
     header_image = models.ImageField(null=True, blank=True)
 
     mission_header = models.CharField(max_length=100, blank=False, default='Our Mission')
+    
     mission_statement = StreamField(
         BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
     )
