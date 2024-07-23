@@ -195,7 +195,7 @@ class BaseStreamBlock(StreamBlock):
 
 class ImageGalleryBlock(StructBlock):
 
-    title = blocks.CharBlock(required=True, help_text="Gallery title")
+    title = blocks.CharBlock(required=False, help_text="Gallery title")
     subtitle = blocks.CharBlock(required=False, help_text="Gallery Subittle")
     text_align = blocks.ChoiceBlock( choices=[
         ('text-start','Text Left'),
@@ -209,6 +209,25 @@ class ImageGalleryBlock(StructBlock):
         template = "blocks/image_gallery_block.html"
         icon = "image"
         label = "Image Gallery"
+
+
+class ImageCarouselBlock(StructBlock):
+
+    title = blocks.CharBlock(required=False, help_text="Gallery title")
+    subtitle = blocks.CharBlock(required=False, help_text="Gallery Subittle")
+
+    text_align = blocks.ChoiceBlock( choices=[
+        ('text-start','Text Left'),
+        ('text-center', 'Text Center'),
+        ('text-end', 'Text Right')
+    ], required=True, help="Select Text Alignment")
+     
+    images = blocks.ListBlock(ImageChooserBlock(), help_text="Select images for the gallery")
+
+    class Meta:
+        template = "blocks/carousel_block.html"
+        icon = "image"
+        label = "Image Carousel"
 
 
 

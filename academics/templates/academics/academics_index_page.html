@@ -26,7 +26,7 @@
     </section>
 
 
-    <div class="container mt-5 pt-5 text-center">
+    {% comment %} <div class="container mt-5 pt-5 text-center">
     
         {% if page.programs_section_title %}
         <h1 class="d-inline justify-content-center  px-5 py-3 my-5 fw-bold name-banner py-3 display-2  text-secondary " >{{ page.programs_section_title }}</h1>
@@ -50,10 +50,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> {% endcomment %}
+   
     <div class="container px-2 py-5">
-    {% for block in page.hero_features %}
-        {% include_block block %}
+        {% for block in page.hero_features %}
+            {% include_block block %}
     {% endfor%}
     </div>
 

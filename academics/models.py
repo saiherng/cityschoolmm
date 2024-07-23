@@ -29,7 +29,8 @@ class AcademicsIndexPage(Page):
 
         ('base', BaseStreamBlock()),
         ('hero_features', blocks.HeroFeaturesBlock()),
-        ('gallery', blocks.ImageGalleryBlock())
+        ('gallery', blocks.ImageGalleryBlock()),
+         ('carousel', blocks.ImageCarouselBlock()),
         
     ],null=True,
         blank=True)

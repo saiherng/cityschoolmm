@@ -1,6 +1,6 @@
 
 
-<div class="container">
+<div class="container px-4">
                 <div class="row mb-5">
                     <div class="col">
                         <h1 class="display-3 fw-bold text-primary {{self.text_align}}">{{ self.title }}</h1>
@@ -12,11 +12,15 @@
                         <div class="col item ">
                             <div class="" style="overflow: hidden; border-radius:25px">
                             <a href={{ item.file.url }}><img class="img-fluid fit-cover" height=150 src={{ item.file.url }} /></a> </div>
-                            <p class="fst-italic fs-6 pt-1">- {{ item.caption }}</p>
+                           
                             
                         </div>
                     {% endfor %}
 
                     
                 </div>
-    </div>
+</div> 
+
+
+
+
