@@ -213,8 +213,8 @@ class ImageGalleryBlock(StructBlock):
 
 class ImageCarouselBlock(StructBlock):
 
-    title = blocks.CharBlock(required=False, help_text="Gallery title")
-    subtitle = blocks.CharBlock(required=False, help_text="Gallery Subittle")
+    title = blocks.CharBlock(required=False, help_text="Carousel title")
+    subtitle = blocks.CharBlock(required=False, help_text="Carousel Subittle")
 
     text_align = blocks.ChoiceBlock( choices=[
         ('text-start','Text Left'),

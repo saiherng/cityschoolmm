@@ -1,21 +1,44 @@
-<div class="container px-4">
+<div class="container px-4 py-1 py-md-5">
 
     {% if self.title %} <h1 class="display-3 fw-bold text-primary {{self.text_align}}">{{ self.title }}</h1> {% endif %}
     
     {% if self.subtitle %} <p class="fs-4 fw-bold {{self.text_align}}">{{ self.subtitle }}</p> {% endif %}
 
 
-    <div id="carousel-1" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-inner " >
+    <div id="carousel-1" class="carousel slide pt-5" data-bs-ride="false" >
+        <div class="carousel-inner" >
             {% for item in self.images %}
-                <div class="carousel-item {% if forloop.counter == 1 %} justify-align-center  active {% endif %}" style="height:400px; object-fit:cover; ">
-                    <img class="w-100 d-block"  src={{ item.file.url }} alt={{ item.alt }} >
+                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}" >
+                    <img class="w-100 img-fluid d-flex justify-content-center"  src={{ item.file.url }} alt={{ item.alt }} >
+                     <div class="carousel-caption mb-5 d-none d-md-block bg-dark bg-gradient rounded" style="--bs-bg-opacity: .8;">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
                 </div>
                 
             {% endfor %}
         </div>
-        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
-        <div class="carousel-indicators"><button class="active" type="button" data-bs-target="#carousel-1" data-bs-slide-to="0"></button><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
+        <div>
+            <a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span></a>
+
+            <a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        
+        <div class="carousel-indicators">
+            {% for image in self.images %}
+                {% if forloop.first %}
+                    <button class="active" type="button" data-bs-target="#carousel-1" data-bs-slide-to="{{forloop.counter0}}"></button>
+                {% else %}
+                    <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="{{forloop.counter0}}"></button>
+                {% endif %}
+                {% endfor %}
+
+        </div>
     </div>
 
 </div>
