@@ -111,6 +111,33 @@ class HeroFeaturesBlock(StructBlock):
         icon= "placeholder"
         label = "Add New Feature Block"
 
+class HeroBasicBlock(StructBlock):
+
+    row_align = blocks.ChoiceBlock( choices=[
+        ('flex-row','Row Left'),
+        ('flex-row-reverse', 'Row Right'),
+    ], required=True, help="Select Row Align"
+    
+    ) 
+    title = blocks.CharBlock(required=True, help_text="Block Section Title")
+    title_text_align = blocks.ChoiceBlock( choices=[
+        ('text-start','Text Left'),
+        ('text-center', 'Text Center'),
+        ('text-end', 'Text Right')
+    ], required=True, help="Select Text Alignment")
+
+    body = blocks.RichTextBlock(
+        icon="pilcrow", template="blocks/paragraph_block.html"
+    )
+    image = ImageChooserBlock(required=True)
+
+    class Meta:
+        template = "blocks/hero_basic_block.html"
+        icon= "placeholder"
+        label = "Add New Basic Block"
+
+
+
 class ImageBlock(StructBlock):
     """
     Custom `StructBlock` for utilizing images with associated caption and
@@ -166,7 +193,6 @@ class ButtonBlock(StructBlock):
     """
     
     title = blocks.CharBlock(required=True, help_text="Button Title")
-    
     button_url = blocks.PageChooserBlock(required=True, help="Choose Link To Internal Page")
 
     class Meta:
@@ -203,7 +229,15 @@ class ImageGalleryBlock(StructBlock):
         ('text-end', 'Text Right')
     ], required=True, help="Select Text Alignment")
      
-    images = blocks.ListBlock(ImageChooserBlock(), help_text="Select images for the gallery")
+    images = blocks.ListBlock(
+        blocks.StructBlock(
+            [
+                ('image', ImageChooserBlock(help_text="Select images for the gallery")),
+                ('caption', CharBlock(help_text="Image Caption"))
+                ]
+        )
+    )
+        
 
     class Meta:
         template = "blocks/image_gallery_block.html"

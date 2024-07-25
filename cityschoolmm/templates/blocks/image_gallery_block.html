@@ -11,7 +11,8 @@
                     {% for item in self.images %}
                         <div class="col item ">
                             <div class="" style="overflow: hidden; border-radius:25px">
-                            <a href={{ item.file.url }}><img class="img-fluid fit-cover" height=150 src={{ item.file.url }} /></a> </div>
+                            <a href={{ item.image.file.url }}><img class="img-fluid fit-cover" height=150 src={{ item.image.file.url }} /></a> </div>
+                            <p class="fs-2 lead"> - {{item.caption}} </p>
                            
                             
                         </div>
