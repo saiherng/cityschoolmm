@@ -231,14 +231,14 @@ class ImageGalleryBlock(StructBlock):
      
     images = blocks.ListBlock(
         blocks.StructBlock(
-            [
-                ('image', ImageChooserBlock(help_text="Select images for the gallery")),
-                ('caption', CharBlock(help_text="Image Caption"))
-                ]
+            [   
+                ('image', ImageChooserBlock()),
+                ('caption', TextBlock(help_text="Input Image Caption"))
+            ]
         )
     )
-        
-
+    
+  
     class Meta:
         template = "blocks/image_gallery_block.html"
         icon = "image"

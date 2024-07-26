@@ -8,6 +8,7 @@
 {% block content %}
 
   {% include 'includes/dark_nav.html' %}
+  
   <body style="border-bottom-style: none;background: var(--bs-white);">
     
     <section class="page-header">
@@ -52,9 +53,9 @@
         </div>
     </div> {% endcomment %}
    
-    <div class="container px-2 py-5">
-        {% for block in page.hero_features %}
-            {% include_block block %}
+   
+        {% for block in page.body %}
+            <div class="container px-3 py-5"> {% include_block block %} </div>
         {% endfor %}
     </div>
 
@@ -65,7 +66,7 @@
                 <div class="col order-md-first"><img class="img-fluid" src="/media/original_images/420763436_393268173224306_8668695095705199916_n-1.webp"></div>
                 <div class="col d-md-flex align-items-center order-first justify-content-md-start align-items-xxl-center">
                     <div class="ps-0 me-0 pe-0 ps-lg-5">
-                        <h1 class="display-2 text-secondary fw-bold">Age Appropriate Activities</h1>
+                        <h1 class="display-2 text-secondary fw-bold " style="font-family: Alatsi, sans-serif;">Age Appropriate Activities</h1>
                         <p class="text-light " style="font-size: 20px;">We provide age-appropriate activities tailored to each child's developmental stage, from toddlers to pre-teens.Our engaging curriculum, led by experienced educators, fosters a love for learning through play-based exploration and structured lessons.</p>
                     </div>
                 </div>
@@ -82,7 +83,7 @@
     <div class="container py-4 py-xl-5" id="subjects">
         <div class="row text-center d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-md-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center mb-5">
             <div class="col-md-8 col-xl-9">
-                <h1 class="display-2 fw-bolder text-primary" style="font-weight: bold;font-family: Rubik, sans-serif;">Our Subjects</h1>
+                <h1 class="display-2 fw-bolder text-primary" style="font-weight: bold;font-family: Alatsi, sans-serif;">Our Subjects</h1>
                 <p class="lead fw-bold text-warning w-lg-50">Provide most popular courses that your want to join and lets start the course for the most simply way in here</p>
             </div>
         </div>
@@ -105,7 +106,7 @@
     <div class="container border-0 p-4 p-lg-5 py-4 py-xl-5 my-5 px-0" id="pathways" style="border-radius: 30px;background: rgb(253,249,246);">
         <div class="row text-start mb-5" data-aos="fade-up" data-aos-duration="500">
             <div class="col-12 text-start my-0 py-3 mx-0" style="border-bottom: 1px solid var(--bs-primary-bg-subtle);">
-                <h1 class="display-2 px-3" style="font-weight: bold;color: rgb(125,19,19);">Pathways After Cambridge IGCSE</h1>
+                <h1 class="display-2 px-3" style="font-weight: bold; color: rgb(125,19,19); font-family: Alatsi, sans-serif;">Pathways After Cambridge IGCSE</h1>
                 <h3 style="margin-bottom: 39px;color: var(--bs-primary-text-emphasis);" class="px-3 mb-0">We provide a wide range of teaching support and resource materials for each Cambridge IGCSE subject.</h3>
             </div>
         </div>

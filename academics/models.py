@@ -25,15 +25,14 @@ class AcademicsIndexPage(Page):
         'wagtailimages.Image', blank=True, null=True, on_delete=models.SET_NULL, related_name='+'
     )
 
-    hero_features = StreamField([
+    body = StreamField([
 
         ('base', BaseStreamBlock()),
-        ('hero_features', blocks.HeroFeaturesBlock()),
-        ('gallery', blocks.ImageGalleryBlock()),
+        ('hero_feature', blocks.HeroFeaturesBlock()),
+        ('hero_basic', blocks.HeroBasicBlock()),
         ('carousel', blocks.ImageCarouselBlock()),
-        ('hero_basic', blocks.HeroBasicBlock())
-        
-    ],null=True,
+        ('image_gallery', blocks.ImageGalleryBlock()),
+    ],  null=True,
         blank=True)
 
     content_panels = Page.content_panels + [
@@ -55,7 +54,7 @@ class AcademicsIndexPage(Page):
             ],
             heading="Programs List ", 
         ),
-        FieldPanel('hero_features'),
+        FieldPanel('body'),
 
         MultiFieldPanel(
             [
