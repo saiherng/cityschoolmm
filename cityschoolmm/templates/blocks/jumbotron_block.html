@@ -1,0 +1,12 @@
+
+
+
+<div class="container py-5 ">
+        <div class="shadow-lg d-flex d-xxl-flex flex-column justify-content-center align-items-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" style="background: 
+    linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0)), 
+    url({{ self.background.file.url }}) center / cover no-repeat; height: 400px;border-radius: 30px;">
+            <h1 class="display-4 fw-bold mb-2 text-primary" >{{ self.heading }}</h1>
+            <h4 class="text-center mb-0 lead fs-4 text-primary" >{{ self.subheading }}</h4>
+            <a class="button btn-primary mt-5 text-uppercase" role="button" style="padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;font-weight: bold;font-size: 20px;border-radius: 10px;" href={{ self.button_url.url }}>{{ self.button_heading}}</a>
+        </div>
+</div>

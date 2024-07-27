@@ -4,6 +4,7 @@ body { overflow-x:hidden;
 
 h1 {
   font-family: Alatsi, sans-serif;
+  color: var(--bg-primary);
 }
 
 h2 {
@@ -12,13 +13,14 @@ h2 {
   padding-top: 15px;
   padding-bottom:15px;
   font-family: var(--bs-body-font-family);
+  color: var(--bg-primary);
 }
 
 .block-heading_block h1,h2,h3,h4 {
   font-weight: bold;
   padding-top: 15px;
   padding-bottom:15px;
-  
+  font-family: var(--bs-body-font-family);
   color: var(--bg-primary);
 }
 

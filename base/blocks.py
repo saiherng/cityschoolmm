@@ -12,6 +12,21 @@ from wagtail import blocks
 
 
 
+class JumbotronBlock(StructBlock):
+
+    heading = blocks.CharBlock(required=True, help_text="Jumbotron Heading")
+    subheading = blocks.TextBlock(required=False, help_text="Jumbotron Subheading")
+    background = ImageChooserBlock(required=False, help_text="Background Image")
+
+    button_heading = blocks.CharBlock(required=True, help_text="Button Text")
+    button_url = blocks.PageChooserBlock(required=True, help="Choose Link To Internal Page")
+
+    class Meta:
+        icon = "edit"
+        template = "blocks/jumbotron_block.html"
+
+
+
 class CardsBlock(StructBlock):
 
     title = blocks.CharBlock(required=True, help_text="Section Title")
@@ -42,7 +57,7 @@ class FaqsBlock(StructBlock):
         blocks.StructBlock(
             [
                 ('question', TextBlock(required=True, help_text="Input Question")),
-                ('answer', TextBlock(required=True, help_text="Input Question"))
+                ('answer', RichTextBlock(required=True, help_text="Input Question"))
             ]
         )
     )

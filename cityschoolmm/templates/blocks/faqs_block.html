@@ -17,10 +17,10 @@
        
         {% for faq in self.faqs %}
                 <div class="accordion-item">
-                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-{{ forloop.counter }}" aria-expanded="false" aria-controls="accordion-1 .item-{{ forloop.counter }}">{{ faq.question }}</button></h2>
+                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed fw-bold fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-{{ forloop.counter }}" aria-expanded="false" aria-controls="accordion-1 .item-{{ forloop.counter }}">{{ faq.question }}</button></h2>
                     <div class="accordion-collapse collapse item-{{ forloop.counter }}" role="tabpanel" data-bs-parent="#accordion-1">
                         <div class="accordion-body">
-                            <p class="mb-0" style=" color: var(--bs-primary-text-emphasis);">{{ faq.answer }}</p>
+                            <div class="lead fs-4">{{ faq.answer }}</div>
                         </div>
                     </div>
                 </div>

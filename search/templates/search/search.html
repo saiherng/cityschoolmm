@@ -9,7 +9,7 @@
 
 {% include 'includes/dark_nav.html' %}
 
-<div class="container">
+<div class="container pt-5" style="height:400px">
 
     <h1>Search</h1>
     
@@ -18,6 +18,7 @@
         <input type="submit" value="Search" class="button">
     </form>
     
+    <div class="py-5">
     {% if search_results %}
     <ul>
         {% for result in search_results %}
@@ -29,6 +30,8 @@
         </li>
         {% endfor %}
     </ul>
+
+    </div>
     
     {% if search_results.has_previous %}
     <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}">Previous</a>

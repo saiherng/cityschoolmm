@@ -32,6 +32,7 @@ class AcademicsIndexPage(Page):
         ('hero_basic', blocks.HeroBasicBlock()),
         ('carousel', blocks.ImageCarouselBlock()),
         ('image_gallery', blocks.ImageGalleryBlock()),
+        ('jumbotron', blocks.JumbotronBlock()),
     ],  null=True,
         blank=True)
 
