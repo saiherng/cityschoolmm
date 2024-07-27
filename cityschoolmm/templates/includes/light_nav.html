@@ -1,15 +1,38 @@
-<nav id="light-nav" class="navbar navbar-expand-lg focus-ring">
+{% load wagtailcore_tags navigation_tags %}
+
+{% comment %} <nav id="light-nav" class="navbar navbar-expand-lg focus-ring">
     <div class="container"><a class="navbar-brand d-flex align-items-center main-logo" href="#"><img src="/media/original_images/logo2.png" height="75" />
             <h1 class="text-uppercase text-center text-sm-center text-md-start text-lg-start text-xl-start text-xxl-start light">City<span>School</span></h1>
         </a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div id="navcol-1" class="collapse navbar-collapse flex-row flex-grow-0 align-items-start align-content-center justify-content-xl-center" style="/*z-index: 3;*/">
             <ul class="navbar-nav navbar-nav-scroll text-uppercase">
                 <li class="nav-item text-uppercase"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/academics">academics</a></li>
+                <li class="nav-item"><a class="nav-link" href="/academics">Academics</a></li>
                 <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="/contacts">Contacts </a></li>
                 <li class="nav-item"><a class="nav-link" href="/blogs">Blogs</a></li>
             </ul>
         </div>
     </div>
+</nav> {% endcomment %}
+{% get_site_root as site_root %}
+<nav id="light-nav" class="navbar navbar-expand-lg focus-ring">
+    <div class="container"><a class="navbar-brand d-flex align-items-center main-logo" href="#"><img src="/media/original_images/logo2.png" height="75" />
+            <h1 class="text-uppercase text-center text-sm-center text-md-start text-lg-start text-xl-start text-xxl-start light">City<span>School</span></h1>
+        </a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div id="navcol-1" class="collapse navbar-collapse flex-row flex-grow-0 align-items-start align-content-center justify-content-xl-center" style="/*z-index: 3;*/">
+            <ul class="navbar-nav navbar-nav-scroll text-uppercase">
+                
+                
+                <li class="nav-item text-uppercase"><a class="nav-link" href={% pageurl site_root %} >{{ site_root.title }}</a></li>
+
+                 {% for menuitem in site_root.get_children.live.in_menu %}
+                    <li class="nav-item"><a class="nav-link" href={% pageurl menuitem %}> {{ menuitem.title }}</a></li> 
+                 {% endfor %}
+
+                
+            </ul>
+        </div>
+    </div>
+    
 </nav>
