@@ -16,7 +16,7 @@ from wagtail.snippets.models import register_snippet
 
 
 from base import blocks
-from base.blocks import BaseStreamBlock
+from base.blocks import BaseStreamBlock, JumbotronBlock
 
 from wagtail import blocks
 from wagtail.blocks import PageChooserBlock
@@ -35,24 +35,17 @@ class BlogPage(Page):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250,verbose_name="intro")
     body = StreamField(
-        BaseStreamBlock(), verbose_name="body", blank=True, use_json_field=True
-    )
+        [
+        ('base',BaseStreamBlock(verbose_name="body", blank=True, use_json_field=True)),
+        ('jumbotron', JumbotronBlock()),
+        
 
-    signup_button = models.ForeignKey(
-        "wagtailcore.Page",
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name="+",
-        verbose_name="Signup Button",
-        help_text="Choose a page to link to for the Call to Action",
+        ]
     )
 
     authors = ParentalManyToManyField('blog.Author', blank=True, verbose_name='authors')
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
-
-   
 
     def main_image(self):
         gallery_item = self.gallery_images.first()
@@ -76,7 +69,6 @@ class BlogPage(Page):
         ], heading="Blog information"),
         FieldPanel('intro'),
         FieldPanel('body'),
-        FieldPanel('signup_button'),
         InlinePanel('gallery_images', label="Gallery images"),
     ]
 
