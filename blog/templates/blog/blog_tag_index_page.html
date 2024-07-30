@@ -10,7 +10,7 @@
     {% endif %}
 
     {% for blogpage in blogpages %}
-          <p>
+          <p class="lead fs-4">
               <strong><a href="{% pageurl blogpage %}">{{ blogpage.title }}</a></strong><br />
               <small>Revised: {{ blogpage.latest_revision_created_at }}</small><br />
           </p>
