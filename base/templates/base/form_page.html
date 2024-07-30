@@ -7,12 +7,12 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="index-header__title"></h1>
-                <h1 class="text-uppercase" style="font-weight: bold;color: rgb(6,53,108);">{{ page.title }}</h1>
+            
+                <h1 class="text-uppercase display-4" style="font-weight: bold;color: rgb(6,53,108);">{{ page.title }}</h1>
             </div>
             <div class="col-md-8 index-header__body-introduction">
                 {% if page.intro %}
-                <div class="lead pb-4">
+                <div class="lead pb-4 fs-4">
                     {{ page.intro|richtext }}
                 </div>
                 {% endif %}
@@ -40,23 +40,23 @@
                         </ol>
                     {% endif %}
 
-                    <div class="row row-cols-1 row-cols-sm-2 d-flex flex-row">
+                    <div class="row row-cols-1 d-flex ">
                     {% for field in form %}
                         <div class="col">
-                        <div class="form-page__field mb-3" aria-required={% if field.field.required %}"true"{% else %}"false"{% endif %}>
+                            <div class="form-page__field mb-3" aria-required={% if field.field.required %}"true" {% else %} "false" {% endif %}>
 
-                            <label class="form-label text-uppercase">{{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}</label>
-{% comment %} 
-                            {% if field.help_text %}
-                                <p class="help fst-italic fs-7">{{ field.help_text }}</p>
-                            {% endif %} {% endcomment %}
+                                <label class="form-label text-uppercase fs-5" style="padding-right:30px;">{{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}</label>
+                                {% comment %} 
+                                {% if field.help_text %}
+                                    <p class="help fst-italic fs-7">{{ field.help_text }}</p>
+                                {% endif %} {% endcomment %}
 
-                            {{ field }}
-                        </div>
+                                {{ field }} 
+                            </div>
                         </div>
                     {% endfor %}
                     </div>
-                    <input type="submit">
+                    <button type="submit" class="btn btn-outline-primary btn-lg rounded my-5 px-5">Submit</button>
                 </form>
             </div>
         </div>
