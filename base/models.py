@@ -1,4 +1,13 @@
 from django.db import models
+from modelcluster.fields import ParentalKey
+from wagtail.models import Page, Orderable
+from wagtail.fields import RichTextField
+
+# import MultiFieldPanel:
+from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
+
+from wagtail.fields import StreamField
+from base import blocks
 
 # import RichTextField:
 from wagtail.fields import RichTextField, StreamField
@@ -109,6 +118,26 @@ class FormPage(AbstractEmailForm):
             FieldPanel('subject'),
         ], "Email"),
     ]
+
+
+class StandardPage(Page):
+
+    body = StreamField([
+
+        ('base', BaseStreamBlock()),
+        ('hero_feature', blocks.HeroFeaturesBlock()),
+        ('hero_basic', blocks.HeroBasicBlock()),
+        ('carousel', blocks.ImageCarouselBlock()),
+        ('image_gallery', blocks.ImageGalleryBlock()),
+        ('jumbotron', blocks.JumbotronBlock()),
+    ],  null=True,
+        blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("body"),
+
+    ]
+
 
 
 
