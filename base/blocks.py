@@ -2,6 +2,8 @@ from wagtail.blocks import (
     CharBlock,
     ChoiceBlock,
     RichTextBlock,
+    FloatBlock,
+    StructBlock,
     StreamBlock,
     StructBlock,
     TextBlock,
@@ -9,6 +11,12 @@ from wagtail.blocks import (
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail import blocks
+
+from wagtail.contrib.table_block.blocks import TableBlock
+from wagtail.contrib.typed_table_block.blocks import TypedTableBlock
+
+
+
 
 
 
@@ -232,6 +240,19 @@ class BaseStreamBlock(StreamBlock):
         template="blocks/embed_block.html",
     )
     button_block = ButtonBlock()
+    table_block = TableBlock(group="Content")
+    typed_table_block = TypedTableBlock(
+        [
+            ("text", CharBlock()),
+            ("numeric", FloatBlock()),
+            ("rich_text", RichTextBlock()),
+            ("image", ImageChooserBlock()),
+        ],
+        group="Content",
+    )
+    
+    
+
 
 
 class ImageGalleryBlock(StructBlock):

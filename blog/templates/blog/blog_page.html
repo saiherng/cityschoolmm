@@ -27,7 +27,7 @@
     <div class="container px-5 " style="border-left: 1rem solid #32a1ce; margin-top:100px">
         <h1 class="display-3 fw-bold">{{ page.title }}</h1>
         <div class="intro"><p>{{ page.intro }}<p></div>
-        <p class="meta lead pt-3">Date: {{ page.date }}</p>
+        <p class="meta lead pt-3 fst-italic">Date Posted: {{ page.date }}</p>
     </div>
            
 
@@ -82,14 +82,15 @@
 
             <div class="container">
                 <div class="row mb-5">
-                    <div class="col-md-8 col-xl-6 mx-auto">
-                        <h3 class="fw-bold display-4 text-center">Blog Photo Gallery</h3>
+                    <div class="col-md-8 col-xl-6">
+                        <h1 class="fw-bold display-5 pb-2 text-start">Blog Gallery</h1>
                     </div>
                 </div>
                 <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
                     {% for item in page.gallery_images.all %}
+                    {% image item.image fill-300x300 as img%}
                         <div>
-                            <div class="col item"><a href={{ item.image.file.url }}><img class="img-fluid" height=150 src={{ item.image.file.url }} /></a> 
+                            <div class="col item "><a href={{ img.url }}><img class="img-fluid rounded" src={{ img.url }} /></a> 
                             <p class="fst-italic fs-6 pt-1">- {{ item.caption }}</p></div>
                             
                         </div>
