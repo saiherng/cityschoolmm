@@ -13,13 +13,14 @@ from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel, PageC
 from wagtail.search import index
 from wagtail.snippets.models import register_snippet
 
-
-
 from base import blocks
 from base.blocks import BaseStreamBlock, JumbotronBlock
 
 from wagtail import blocks
 from wagtail.blocks import PageChooserBlock
+
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+
 
 # keep the definition of BlogIndexPage model, and add the BlogPage model:
 
@@ -124,7 +125,6 @@ class BlogIndexPage(Page):
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
     header_image = models.ImageField(null=True,blank=True)
 
-
     content_panels = Page.content_panels + [
         FieldPanel('header_title'),
         FieldPanel('header_subtitle'),
@@ -140,8 +140,30 @@ class BlogIndexPage(Page):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
         blogpages = self.get_children().live().order_by('-first_published_at')
+        
+         #paginator
+        paginator = Paginator(blogpages, 3)
+        # Try to get the ?page=x value
+        page = request.GET.get("page")
+        try:
+            # If the page exists and the ?page=x is an int
+            blogpages = paginator.page(page)
+        except PageNotAnInteger:
+            # If the ?page=x is not an int; show the first page
+            blogpages = paginator.page(1)
+        except EmptyPage:
+            # If the ?page=x is out of range (too high most likely)
+            # Then return the last page
+            blogpages = paginator.page(paginator.num_pages)
+
+        # "posts" will have child pages; you'll need to use .specific in the template
+        # in order to access child properties, such as youtube_video_id and subtitle
+        
         context['blogpages'] = blogpages
         return context
+    
+
+
 
 class FeaturedBlogs(Orderable):
 

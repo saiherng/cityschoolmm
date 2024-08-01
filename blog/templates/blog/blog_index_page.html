@@ -58,11 +58,44 @@
 </section>
 
 <section style="/*background: #eeeeee;*/ min-height: 100vh;">
-    <div class="container py-5 py-xl-5">
+    <div class="container py-5 py-xl-5" id="blogs">
             <div class="row py-0 mb-0 pb-md-0 mb-md-4 mb-xxl-5 mb-xl-5 mb-lg-5" style="margin-top: 25px;margin-bottom: 60px;">
                 <div class="col text-center">
                     <h5 class="fw-bold text-warning mb-md-0" data-aos="fade" style="color: #ff6b00;">News and Resources</h5>
                     <h1 class="display-3 text-center" data-aos="fade-up" style="color: var(--bs-body-color);font-weight: bold;">Read All Our Blogs</h1>
+                    {% if blogpages.paginator.num_pages > 1 %}
+                <div class="container pt-5 d-flex justify-content-center ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <div class="pagination">
+                            {% if blogpages.has_previous %}
+                            <li class="page-item">
+                                <a href="?page={{ blogpages.previous_page_number }}#blogs" class="page-link fw-bold text-primary fs-6">
+                                <span>&laquo;</span>
+                                </a>
+                            </li>
+                            {% endif %}
+
+                        {% for page_num in blogpages.paginator.page_range %}
+                        <li class="page-item {% if page_num == blogpages.number %} active fw-bold{% endif %} fs-6">
+                            <a href="?page={{ page_num }}#blogs" class="page-link fs-6">
+                            {{ page_num }}
+                            </a>
+                        </li>
+                        {% endfor %}
+
+                        {% if blogpages.has_next %}
+                        <li class="page-item">
+                            <a href="?page={{ blogpages.next_page_number }}#blogs" class="page-link fs-6 text-primary">
+                            <span>&raquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            {% endif %}
             </div>
     </div>
 
@@ -85,8 +118,8 @@
                             <h4 class="card-title fw-bold" >{{ blog_page.title }}</h4>
                             <p class="card-text text-muted fs-5" >{{ blog_page.intro }}</p>
                             <a href="{% pageurl blog_page %}" class="btn btn-outline-primary btn-lg mt-auto px-4 align-item-start rounded"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
-</svg>&nbsp;&nbsp;Read More !</a>
+                            <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
+                            </svg>&nbsp;&nbsp;Read More !</a>
                                 
 
                            
@@ -96,16 +129,15 @@
                 </div>
                 {% endwith %}
             {% endfor %}
+
+            </div>
+
+
     </div>
-
-
-
-
-
-
-        
-    </div>
+    
+             
 </section>
+
 
         
 {% endblock %}
