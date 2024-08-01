@@ -94,7 +94,7 @@ class LocationDetailsBlock(StructBlock):
     )
 
 
-    def render(self, value, context=None;)
+    
 
     class Meta:
         template = "blocks/location_details_block.html"

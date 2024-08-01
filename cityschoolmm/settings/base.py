@@ -31,7 +31,10 @@ INSTALLED_APPS = [
     "blog",
     "home",
     "search",
-     "anymail",
+    "anymail",
+    'django_recaptcha',
+    "wagtailcaptcha",
+
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -196,9 +199,8 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 
 WAGTAIL_PASSWORD_RESET_ENABLED = True
-
-
-
-
 WAGTAILADMIN_NOTIFICATION_INCLUDE_SUPERUSERS = True
 WAGTAILADMIN_NOTIFICATION_USE_HTML = True
+
+
+NOCAPTCHA = True

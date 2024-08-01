@@ -41,6 +41,12 @@ from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 
 from .blocks import BaseStreamBlock
 
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha import widgets
+
+
+from wagtailcaptcha.models import WagtailCaptchaEmailForm
+
 @register_setting
 class NavigationSettings(BaseGenericSetting):
     twitter_url = models.URLField(verbose_name="Twitter URL", blank=True)
@@ -99,7 +105,10 @@ class FormField(AbstractFormField):
     page = ParentalKey("FormPage", related_name="form_fields", on_delete=models.CASCADE)
 
 
-class FormPage(AbstractEmailForm):
+
+class FormPage(WagtailCaptchaEmailForm):
+  
+  
     intro = RichTextField(blank=True)
     body = StreamField(BaseStreamBlock(), use_json_field=True, null=True)
     

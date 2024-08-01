@@ -32,6 +32,11 @@
         {% endcomment %}
                 <form action="{% pageurl page %}" method="POST">
                     {% csrf_token %}
+                    {% if form.wagtailcaptcha.errors %}
+                        <div class="alert alert-danger">
+                            {{ form.wagtailcaptcha.errors }}
+                        </div>
+                    {% endif %}
                     {% if form.subject.errors %}
                         <ol>
                             {% for error in form.subject.errors %}
@@ -41,21 +46,25 @@
                     {% endif %}
 
                     <div class="row row-cols-1 d-flex ">
-                    {% for field in form %}
+                    {% for field in form%}
                         <div class="col">
                             <div class="form-page__field mb-3" aria-required={% if field.field.required %}"true" {% else %} "false" {% endif %}>
 
                                 <label class="form-label text-uppercase fs-5" style="padding-right:30px;">{{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}</label>
-                                {% comment %} 
+                               
                                 {% if field.help_text %}
                                     <p class="help fst-italic fs-7">{{ field.help_text }}</p>
-                                {% endif %} {% endcomment %}
+                                {% endif %}
 
                                 {{ field }} 
                             </div>
                         </div>
                     {% endfor %}
                     </div>
+
+                  
+                    
+                     
                     <button type="submit" class="btn btn-outline-primary btn-lg rounded my-5 px-5">Submit</button>
                 </form>
             </div>
