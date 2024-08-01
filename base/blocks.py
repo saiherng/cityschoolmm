@@ -93,6 +93,9 @@ class LocationDetailsBlock(StructBlock):
     ], required=True, help="Select background theme"
     )
 
+
+    def render(self, value, context=None;)
+
     class Meta:
         template = "blocks/location_details_block.html"
         icon= "placeholder"

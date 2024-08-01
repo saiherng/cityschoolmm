@@ -1,1 +1,28 @@
 .DS_Store
+.env
+.env.*
+
+
+# Python files
+*.py[cod]
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# Django and Wagtail
+*.log
+*.pot
+*.pyc
+*.pyo
+
+
+*.mo
+*.pid
+
