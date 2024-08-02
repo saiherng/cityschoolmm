@@ -10,10 +10,10 @@
 
   {% include "includes/dark_nav.html" %}
   
-    <div class="container px-3 py-5">
+    <div class="container px-3 py-5" style="min-height:50dvh">
     {% for block in page.body %}
         {% include_block block %}
-    {% endfor %}\
+    {% endfor %}
     </div>
 
 {% endblock content %}
