@@ -7,7 +7,9 @@ from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
 from wagtail.fields import StreamField
+
 from base import blocks
+from base.blocks import BaseStreamBlock, RichTextBlock
 
 
 from blog.models import BlogPage
@@ -90,6 +92,17 @@ class HomePage(Page):
         max_length=255, help_text="Feature Section Subheading"
     )
 
+    body = StreamField([
+
+        ('base', BaseStreamBlock()),
+        ('hero_feature', blocks.HeroFeaturesBlock()),
+        ('hero_basic', blocks.HeroBasicBlock()),
+        ('carousel', blocks.ImageCarouselBlock()),
+        ('image_gallery', blocks.ImageGalleryBlock()),
+        ('jumbotron', blocks.JumbotronBlock()),
+    ],  null=True,
+        blank=True)
+
 
     faqs = StreamField(
         [
@@ -141,6 +154,7 @@ class HomePage(Page):
             ],
             heading="Add Programs for all ages ", 
         ),
+        FieldPanel('body'),
         FieldPanel('faqs')
     ]
 
