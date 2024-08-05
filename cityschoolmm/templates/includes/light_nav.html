@@ -28,9 +28,8 @@
 
                     {% if menuitem.get_children.live.in_menu %}
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ menuitem.title}}
-                        </a>
+                          <a class="nav-link dropdown-toggle" href={% pageurl menuitem %} id="navbarDropdown" role="button"  aria-expanded="false">
+                            {{ menuitem.title}}</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         {% for submenu in menuitem.get_children.live.in_menu %}
                             <li><a class="dropdown-item" href={% pageurl submenu %} >{{ submenu.title }}</a></li>
