@@ -7,6 +7,12 @@
   }
 }
 
+@media (max-width: 991px) {
+  .dropdown .dropdown-menu {
+    display: block;
+  }
+}
+
 
 @media (max-width: 300px) {
   .navbar-nav {
