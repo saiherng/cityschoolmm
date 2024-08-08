@@ -119,6 +119,7 @@ class Author(models.Model):
         verbose_name_plural = 'Authors'
 
 
+
 class BlogIndexPage(Page):
 
     header_title = models.CharField(max_length=100, null=True, blank=True)

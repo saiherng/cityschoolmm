@@ -68,6 +68,9 @@ class AcademicsIndexPage(Page):
 
     ]
 
+    subpage_types = [ 'base.StandardPage','base.FormPage'
+    ]
+
 class AcademicsPrograms(Orderable):
 
     page = ParentalKey(AcademicsIndexPage, on_delete=models.CASCADE, related_name='programs')

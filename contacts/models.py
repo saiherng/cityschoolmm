@@ -33,5 +33,7 @@ class ContactsIndexPage(Page):
 
     ]
 
+    subpage_types = [ 'base.StandardPage' ,'base.FormPage'
+    ]
 
 
