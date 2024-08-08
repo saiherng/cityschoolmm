@@ -1,0 +1,51 @@
+
+<div class="table-responsive">
+<table class="table table-light table-bordered table-hover  ">
+    {% if table_header %}
+        <thead class="thead-dark">
+        <tr >
+            {% for column in table_header %}
+                <th  scope="col" class="py-3 px-3 fs-4">
+                    {% if column.strip %}
+                        {% if html_renderer %}
+                            {{ column.strip|safe|linebreaksbr }}
+                        {% else %}
+                            {{ column.strip|linebreaksbr }}
+                        {% endif %}
+                    {% endif %}
+                </th>
+            {% endfor %}
+        </tr>
+        </thead>
+    {% endif %}
+    <tbody>
+    {% for row in data %}
+        <tr >
+            {% for column in row %}
+                {% if first_col_is_header and forloop.first %}
+                    <th scope="row" class="fs-4 py-3 px-3 ">
+                        {% if column.strip %}
+                            {% if html_renderer %}
+                                {{ column.strip|safe|linebreaksbr }}
+                            {% else %}
+                                {{ column.strip|linebreaksbr }}
+                            {% endif %}
+                        {% endif %}
+                    </th>
+                 {% else %}
+                    <td class="fs-5 py-3 px-3 ">
+                        {% if column.strip %}
+                            {% if html_renderer %}
+                                {{ column.strip|safe|linebreaksbr }}
+                            {% else %}
+                                {{ column.strip|linebreaksbr }}
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                 {% endif %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>

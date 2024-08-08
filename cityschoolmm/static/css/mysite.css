@@ -86,15 +86,24 @@ h2 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  
-  /* stylelint-disable-next-line selector-class-pattern */
-  :is(.block-table_block, .block-typed_table_block) :is(table, tr, td, th) {
-    border: 1px solid var(--dark);
-    padding: 0.25em;
+ 
+.block-typed_table_block td, th {
+    border: 1px solid;
+    padding: 1rem;
+
+  }
+
+  .block-typed_table_block img {
+    aspect-ratio: 16 / 9;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+
   }
   
+
   /* stylelint-disable-next-line selector-class-pattern */
-  :is(.block-table_block, .block-typed_table_block) table {
+  :is(.block-typed_table_block) table {
     margin-bottom: 30px;
   }
 

@@ -18,8 +18,6 @@ from wagtail.contrib.typed_table_block.blocks import TypedTableBlock
 
 
 
-
-
 class JumbotronBlock(StructBlock):
 
     heading = blocks.CharBlock(required=True, help_text="Jumbotron Heading")
@@ -243,7 +241,7 @@ class BaseStreamBlock(StreamBlock):
         template="blocks/embed_block.html",
     )
     button_block = ButtonBlock()
-    table_block = TableBlock(group="Content")
+    table_block = TableBlock(group="Content", template='blocks/table_block.html')
     typed_table_block = TypedTableBlock(
         [
             ("text", CharBlock()),
@@ -251,7 +249,9 @@ class BaseStreamBlock(StreamBlock):
             ("rich_text", RichTextBlock()),
             ("image", ImageChooserBlock()),
         ],
-        group="Content",
+        group="Content"
+
+        
     )
     
     

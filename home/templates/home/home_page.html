@@ -160,10 +160,12 @@
 </section>
 
    {% for block in page.body %}
-       <div class="container">
-        {% include_block block %}
-        </div>
+
+    <div class="container">
+      {% include_block block %} 
+    </div>
     {% endfor %}
+
 
 <div class="container py-4 py-xl-5 pb-xl-0">
     <div class="row gy-4 gy-md-0">
