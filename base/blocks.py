@@ -223,6 +223,8 @@ class ButtonBlock(StructBlock):
         icon = "edit"
         template = "blocks/button_block.html"
 
+
+
 # StreamBlocks
 class BaseStreamBlock(StreamBlock):
     """
@@ -241,15 +243,16 @@ class BaseStreamBlock(StreamBlock):
         template="blocks/embed_block.html",
     )
     button_block = ButtonBlock()
-    table_block = TableBlock(group="Content", template='blocks/table_block.html')
+    table_block = TableBlock(group="Content")
     typed_table_block = TypedTableBlock(
         [
+            ("rich_text", RichTextBlock()),
             ("text", CharBlock()),
             ("numeric", FloatBlock()),
-            ("rich_text", RichTextBlock()),
             ("image", ImageChooserBlock()),
         ],
-        group="Content"
+        group="Content", template='blocks/typed_table_block.html'
+        
 
         
     )

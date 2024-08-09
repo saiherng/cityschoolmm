@@ -4,7 +4,6 @@
 {% load wagtailimages_tags %}
 
 
-
 {% block content %}
 
   {% include 'includes/dark_nav.html' %}
@@ -53,9 +52,14 @@
         </div>
     </div> {% endcomment %}
    
-   
+    
         {% for block in page.body %}
+
+            {% if block.block_type == 'table' %}
+                {% include_block block %}
+            {% else %}
             <div class="container px-3 py-5"> {% include_block block %} </div>
+            {% endif %}
         {% endfor %}
     </div>
 
