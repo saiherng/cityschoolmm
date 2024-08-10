@@ -251,7 +251,7 @@ class BaseStreamBlock(StreamBlock):
             ("numeric", FloatBlock()),
             ("image", ImageChooserBlock()),
         ],
-        group="Content", template='blocks/typed_table_block.html'
+        group="Content"
         
 
         
