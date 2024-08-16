@@ -48,13 +48,13 @@
                         </ol>
                     {% endif %}
 
-                    <table style="width:100%">
+                    <table style="width:100%; border: 1px solid black;" >
                         {% for field in form%}
-                        <tr>
-                            <td><div class="form-page__field mb-3" aria-required={% if field.field.required %} "true" {% else %} "false" {% endif %}>
-                                <label class="form-label text-uppercase fs-5" style="padding-right:30px;"> {{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}</label>
+                        <tr class ="py-5" style="border: 1px solid black;">
+                            <td  style=" border: 1px solid black;><div class="form-page__field mb-3" aria-required={% if field.field.required %} "true" {% else %} "false" {% endif %}>
+                                <label class="form-label text-uppercase fs-5"> {{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}</label>
                                 {% if field.help_text %}
-                                    <p class="help fst-italic fs-7">{{ field.help_text }}</p>
+                                    <p class="help fst-italic fs-7 mt-0">{{ field.help_text }}</p>
                                 {% endif %}
                                 </div>
                             </td>
