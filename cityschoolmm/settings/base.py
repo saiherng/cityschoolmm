@@ -196,11 +196,12 @@ WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'tx
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
+WAGTAILDOCS_EXTENSIONS = ['pdf', 'docx']
+
+WAGTAILDOCS_DOCUMENT_FORM_BASE = 'base.forms.CustomDocumentForm'
 
 
 WAGTAIL_PASSWORD_RESET_ENABLED = True
 WAGTAILADMIN_NOTIFICATION_INCLUDE_SUPERUSERS = True
 WAGTAILADMIN_NOTIFICATION_USE_HTML = True
-
-
 NOCAPTCHA = True
