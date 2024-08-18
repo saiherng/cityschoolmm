@@ -34,7 +34,7 @@ class BlogPageTag(TaggedItemBase):
 
 class BlogPage(Page):
     date = models.DateField("Post date")
-    intro = models.CharField(max_length=250, verbose_name="intro")
+    intro = models.CharField(max_length=322, verbose_name="intro")
     body = StreamField(
         [
         ('base', BaseStreamBlock(verbose_name="body", blank=True, use_json_field=True)),
