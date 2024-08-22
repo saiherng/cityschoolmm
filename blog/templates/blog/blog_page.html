@@ -88,9 +88,9 @@
                 </div>
                 <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
                     {% for item in page.gallery_images.all %}
-                    {% image item.image fill-300x300 as img%}
+                    
                         <div>
-                            <div class="col item "><a href={{ img.url }}><img class="img-fluid rounded" src={{ img.url }} /></a> 
+                            <div class="col item" style="height: 300px; overflow:hidden;"><a href={{ item.image.file.url }}><img class="img-fluid rounded fit-cover" src={{ item.image.file.url }} /></a> 
                             <p class="fst-italic fs-6 pt-1">- {{ item.caption }}</p></div>
                             
                         </div>
