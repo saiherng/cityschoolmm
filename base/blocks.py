@@ -253,12 +253,8 @@ class BaseStreamBlock(StreamBlock):
         ],
         group="Content"
         
-
-        
     )
     
-    
-
 
 
 class ImageGalleryBlock(StructBlock):
@@ -275,7 +271,7 @@ class ImageGalleryBlock(StructBlock):
         blocks.StructBlock(
             [   
                 ('image', ImageChooserBlock()),
-                ('caption', TextBlock(help_text="Input Image Caption"))
+                ('caption', TextBlock( required=False, help_text="Input Image Caption"))
             ]
         )
     )

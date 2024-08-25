@@ -79,7 +79,7 @@ class BlogPageGalleryImage(Orderable):
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
-    caption = models.CharField(blank=True, max_length=250)
+    caption = models.CharField(blank=True,null=True, max_length=250)
 
     panels = [
         FieldPanel('image'),
