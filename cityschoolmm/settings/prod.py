@@ -8,7 +8,7 @@ DEBUG = False
 
 import os
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 SECRET_KEY = os.environ['RANDOM_SECRET_KEY']
 
