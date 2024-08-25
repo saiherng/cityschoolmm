@@ -8,7 +8,7 @@ DEBUG = False
 
 import os
 
-ALLOWED_HOSTS = [os.environ['VIRTUAL_HOST']]
+ALLOWED_HOSTS = [*]
 
 SECRET_KEY = os.environ['RANDOM_SECRET_KEY']
 
@@ -22,20 +22,28 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Change this to a different backend or SMTP server to use your own.
 EMAIL_BACKEND = 'django_sendmail_backend.backends.EmailBackend'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': os.environ['DB_HOST'],
+#         'NAME': os.environ['DB_NAME'],
+#         'USER': os.environ['DB_USER'],
+#         'PASSWORD': os.environ['DB_PASSWORD'],
+#         'OPTIONS': {
+#             'ssl': {},
+#             'charset': 'utf8mb4',
+#             'collation': 'utf8mb4_0900_ai_ci',
+#         },
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': os.environ['DB_HOST'],
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASSWORD'],
-        'OPTIONS': {
-            'ssl': {},
-            'charset': 'utf8mb4',
-            'collation': 'utf8mb4_0900_ai_ci',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 MAILGUN_API_KEY = os.environ["MAILGUN_API_KEY"]
@@ -58,5 +66,3 @@ WAGTAIL_PASSWORD_RESET_ENABLED = True
 
 RECAPTCHA_PUBLIC_KEY = os.environ["RECAPTCHA_PUBLIC_KEY"]
 RECAPTCHA_PRIVATE_KEY = os.environ["RECAPTCHA_PRIVATE_KEY"]
-
-GOOGLE_MAPS_API_KEY = os.environ["GOOGLE_MAPS_API_KE"]

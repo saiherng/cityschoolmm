@@ -10,7 +10,7 @@
                 <div class="row gx-5 gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox>
                     {% for item in self.images %}
                         <div class="col item ">
-                            <div class="" style="overflow: hidden; border-radius:25px; height:300px">
+                            <div class="" style="overflow: hidden; border-radius:25px; max-height:500px">
                             <a href={{ item.image.file.url }}><img class="img-fluid fit-cover" src={{ item.image.file.url }} /></a> </div>
                             <p class="fst-italic text-muted fs-5 pt-3"> - {{item.caption}} </p>
                            
