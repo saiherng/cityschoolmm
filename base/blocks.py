@@ -243,7 +243,7 @@ class BaseStreamBlock(StreamBlock):
         template="blocks/embed_block.html",
     )
     button_block = ButtonBlock()
-    table_block = TableBlock(group="Content")
+    table_block = TableBlock(group="Table Content")
     typed_table_block = TypedTableBlock(
         [
             ("rich_text", RichTextBlock()),

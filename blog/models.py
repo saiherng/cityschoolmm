@@ -39,8 +39,6 @@ class BlogPage(Page):
         [
         ('base', BaseStreamBlock(verbose_name="body", blank=True, use_json_field=True)),
         ('jumbotron', JumbotronBlock()),
-        
-
         ]
     )
 
