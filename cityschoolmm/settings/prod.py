@@ -22,29 +22,27 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Change this to a different backend or SMTP server to use your own.
 EMAIL_BACKEND = 'django_sendmail_backend.backends.EmailBackend'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': os.environ['DB_HOST'],
-#         'NAME': os.environ['DB_NAME'],
-#         'USER': os.environ['DB_USER'],
-#         'PASSWORD': os.environ['DB_PASSWORD'],
-#         'OPTIONS': {
-#             'ssl': {},
-#             'charset': 'utf8mb4',
-#             'collation': 'utf8mb4_0900_ai_ci',
-#         },
-#     }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'HOST': os.environ["DB_HOST"],
+         'NAME': os.environ["DB_NAME"],
+         'USER': os.environ["DB_USER"],
+         'PASSWORD': os.environ["DB_PASSWORD"],
+         'OPTIONS': {
+             'ssl': {},
+             'charset': 'utf8mb4',
+             'collation': 'utf8mb4_0900_ai_ci',
+         },
+     }
 }
 
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 MAILGUN_API_KEY = os.environ["MAILGUN_API_KEY"]
 MAILGUN_SENDER_DOMAIN = os.environ["MAILGUN_SENDER_DOMAIN"]
