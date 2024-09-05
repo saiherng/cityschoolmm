@@ -8,7 +8,7 @@ DEBUG = False
 
 import os
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ['ALLOWED_H0STS'].split()
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
@@ -29,7 +29,6 @@ DATABASES = {
          'NAME': os.environ["DB_NAME"],
          'USER': os.environ["DB_USER"],
          'PASSWORD': os.environ["DB_PASSWORD"],
-         'PORT' : '5432',
      }
 }
 
