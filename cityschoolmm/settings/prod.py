@@ -29,11 +29,7 @@ DATABASES = {
          'NAME': os.environ["DB_NAME"],
          'USER': os.environ["DB_USER"],
          'PASSWORD': os.environ["DB_PASSWORD"],
-         'OPTIONS': {
-       
-              'charset': 'utf8mb4',
-              'collation': 'utf8mb4_0900_ai_ci',
-          },
+         
      }
 }
 
