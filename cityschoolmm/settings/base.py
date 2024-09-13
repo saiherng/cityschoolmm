@@ -100,28 +100,28 @@ WSGI_APPLICATION = "cityschoolmm.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    }
-}
-
-
 # DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.mysql',
-#          'HOST': os.environ["DB_HOST"],
-#          'NAME': os.environ["DB_NAME"],
-#          'USER': os.environ["DB_USER"],
-#          'PASSWORD': os.environ["DB_PASSWORD"],
-#          'OPTIONS': {
-#              'ssl': {},
-#              'charset': 'utf8mb4',
-#              'collation': 'utf8mb4_0900_ai_ci',
-#          },
-#      }
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+#     }
 # }
+
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'HOST': os.environ["DB_HOST"],
+         'NAME': os.environ["DB_NAME"],
+         'USER': os.environ["DB_USER"],
+         'PASSWORD': os.environ["DB_PASSWORD"],
+         'OPTIONS': {
+             'ssl': {},
+             'charset': 'utf8mb4',
+             'collation': 'utf8mb4_0900_ai_ci',
+         },
+     }
+}
 
 
 # Password validation
