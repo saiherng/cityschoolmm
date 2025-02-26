@@ -12,7 +12,6 @@ from base.blocks import BaseStreamBlock, RichTextBlock
 
 class AboutUsIndexPage(Page):
 
-
     header_title = models.CharField(max_length=100, null=True, blank=True)
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
     header_image = models.ImageField(null=True, blank=True)
@@ -22,7 +21,6 @@ class AboutUsIndexPage(Page):
     mission_statement = StreamField(
         BaseStreamBlock(), verbose_name="Page body", blank=True, use_json_field=True
     )
-
 
     founder_section_title = models.CharField(
         blank=True,
