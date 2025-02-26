@@ -14,7 +14,7 @@ class ContactsIndexPage(Page):
     
     header_title = models.CharField(max_length=100, null=True, blank=True)
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
-
+    header_image = models.ImageField(null=True, blank=True)
 
     school_locations = StreamField(
 
@@ -29,6 +29,7 @@ class ContactsIndexPage(Page):
 
         FieldPanel("header_title"),
         FieldPanel("header_subtitle"),
+        FieldPanel("header_image"),
         FieldPanel("school_locations")
 
     ]
