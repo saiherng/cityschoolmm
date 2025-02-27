@@ -7,14 +7,19 @@ from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 
 
-
 from base import blocks
 
 class ContactsIndexPage(Page):
     
     header_title = models.CharField(max_length=100, null=True, blank=True)
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
-    header_image = models.ImageField(null=True, blank=True)
+    header_image =   models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
 
     school_locations = StreamField(
 
@@ -30,11 +35,12 @@ class ContactsIndexPage(Page):
         FieldPanel("header_title"),
         FieldPanel("header_subtitle"),
         FieldPanel("header_image"),
+    
+      
         FieldPanel("school_locations")
 
     ]
 
     subpage_types = [ 'base.StandardPage' ,'base.FormPage'
     ]
-
 

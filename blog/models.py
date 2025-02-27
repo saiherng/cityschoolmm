@@ -124,12 +124,19 @@ class BlogIndexPage(Page):
 
     header_title = models.CharField(max_length=100, null=True, blank=True)
     header_subtitle = models.CharField(max_length=100, null=True, blank=True)
-    header_image = models.ImageField(null=True,blank=True)
+    header_image =   models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
 
     content_panels = Page.content_panels + [
         FieldPanel('header_title'),
         FieldPanel('header_subtitle'),
         FieldPanel('header_image'),
+        
         InlinePanel('featured_blogs', label="Featured Blogs"),
     ]
 
