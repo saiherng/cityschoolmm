@@ -12,7 +12,7 @@ To Do
 
 Features 
 ----------
-1. Implement blog page
-2. Implement events page
+1. Implement blog page - Done
+2. Implement events page 
 
 
