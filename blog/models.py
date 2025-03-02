@@ -73,6 +73,9 @@ class BlogPage(Page):
         InlinePanel('gallery_images', label="Gallery images"),
     ]
 
+    class Meta:
+        ordering = ["-date"]
+
 
 class BlogPageGalleryImage(Orderable):
     page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='gallery_images')
@@ -147,7 +150,9 @@ class BlogIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
-        blogpages = self.get_children().live().order_by('-first_published_at')
+        
+        #blogpages = self.get_children().live().specific().order_by('-date')
+        blogpages = BlogPage.objects.live().order_by('-date')
         
          #paginator
         paginator = Paginator(blogpages, 3)
