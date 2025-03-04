@@ -75,14 +75,13 @@
 
 .button {
   font-weight: bolder;
-  border-style: none;
-  color: #ffffff;
+  
   padding-right: 44px;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 44px;
   border-radius: 20px;
-  background-color: #161d46;
+  
   text-decoration: none;
 }
 
