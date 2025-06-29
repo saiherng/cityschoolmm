@@ -1,6 +1,6 @@
 
 
-Visit
+Built with Django, Wagtail CMS, MySQL, Bootstrap, Google ReCaptcha, Mailgun API
 -----------
 https://www.cityschoolmm.com
 
