@@ -10,9 +10,13 @@ python manage.py runserver
 
 To Do 
 
-Features 
+Visit
+-----------
+https://www.cityschoolmm.com
+
+Screenshots 
 ----------
-1. Implement blog page - Done
-2. Implement events page 
+![header](header.png)
+![offices](offices.png)
 
 
